@@ -33,6 +33,17 @@ function unimelb_preprocess_html(&$variables) {
   }
   $keywords[] = $variables['page_title'];
   $keywords[] = $variables['site_name'];
+
+  // There could be node keywords from an earlier hook_preprocess_html().
+  if (!empty($variables['node_keywords'])) {
+    // Store the node keywords in a temp variable and then merge them
+    // with the site keywords. A direct assignment leads to a segfault
+    // or an empty variable.
+    $frog = explode(', ', $variables['node_keywords']);
+    $keywords = array_merge($keywords, $frog);
+  }
+
+  // Sanitise the keywords.
   $variables['unimelb_meta_keywords'] = check_plain(implode(', ', $keywords));
 
   $variables['unimelb_meta_description'] = $variables['site_name'] . ': ' . $variables['page_title'];
