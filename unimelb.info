@@ -59,7 +59,7 @@ settings[unimelb_settings_date-created]   = ""
 ; Manual stylesheets.
 stylesheets[all][] = css/unimelb_drupal_distro.css
 stylesheets[all][] = css/unimelb_wysiwyg.css
-stylesheets[all][] = css/override/admin_menu.css
+;stylesheets[all][] = css/override/admin_menu.css
 stylesheets[all][] = css/override/jquerymenu.css
 stylesheets[all][] = css/override/misc.css
 
