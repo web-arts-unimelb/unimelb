@@ -30,7 +30,7 @@
       @include gradient(#FFFFFF, #EEEEEE);
       border-color: #CCC;
       border-style: solid;
-      border-width: 1px 0 1px 1px;
+      border-width: 1px 1px 0 1px;
       overflow: hidden;
       padding: 4px 0px 0px 6px;
       font-size: 13px;
@@ -39,8 +39,8 @@
     }
 
    div#views_slideshow_pager_field_item_top_slider-block_4.views-slideshow-pager-field-item {
-     /* border-bottom: none; */
-     height: 48px;
+     border-bottom-width: 1px;
+     height: 47px;
    }
 
     // Active pager item.
