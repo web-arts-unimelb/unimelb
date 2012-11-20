@@ -70,3 +70,11 @@
     margin-top: none;
   }
 }
+
+/* Override the slider border of backstretch is active on the page. */
+#backstretch-wrapper {
+  #slider {
+    border: none;
+    background: transparent;
+  }
+}
