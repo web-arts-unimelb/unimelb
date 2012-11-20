@@ -71,6 +71,7 @@ stylesheets[all][] = scss/local.scss
 ; Screen output-only CSS.
 stylesheets[screen][] = css/responsive.css
 
+scripts[] = js/jquery.backstretch.min.js
 scripts[] = js/local.js
 
 version = "7.x-2.0"

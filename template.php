@@ -82,6 +82,22 @@ function unimelb_preprocess_html(&$variables) {
     $variables['styles_system'] = $variables['styles_default'] = '';
     $variables['styles_theme'] = drupal_get_css();
   }
+
+  // Background images.
+  $background = theme_get_setting('background_front_path');
+  $backstretch = theme_get_setting('backstretch');
+  if ($variables['is_front'] == FALSE) {
+    $background = theme_get_setting('background_secondary_path');
+    if (empty($background)) {
+      $background = theme_get_setting('background_front_path');
+    }
+  }
+
+  $variables['backstretch'] = $backstretch;
+  if (!empty($background) && !empty($backstretch)) {
+    drupal_add_js(array('unimelb' => array('background' => file_create_url($background), 'backstretch' => $backstretch)), 'setting');
+  }
+
 }
 
 /**
@@ -140,6 +156,8 @@ function unimelb_preprocess_page(&$variables) {
   if (!empty($vars)) {
     drupal_add_js($vars, 'setting');
   }
+
+  $variables['backstretch'] = theme_get_setting('backstretch');
 }
 
 
