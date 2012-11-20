@@ -114,6 +114,8 @@
     </div>
   <?php endif; ?>
 
+  <?php if ($backstretch): ?><div id="backstretch-wrapper"><?php endif; ?>
+
   <?php if (!empty($page['feature_menu'])): ?>
     <div class="feature col-8">
       <div id="feature-menu" class="col-6">
@@ -267,6 +269,8 @@
         </li>
       <?php endif; ?>
     </ul>
+
+  <?php if ($backstretch): ?></div><?php endif; ?>
 
 <?php endif; ?>
 

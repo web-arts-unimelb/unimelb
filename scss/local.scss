@@ -399,3 +399,9 @@ body.html {
 .view-id-staff th.views-field-nothing-1 {
   min-width: 70px;
 }
+
+#backstretch-wrapper {
+  float: left;
+  background-image: url('../images/bg_white_90.png');
+  @include rounded($radius: 0.5em);
+}

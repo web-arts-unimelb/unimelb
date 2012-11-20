@@ -96,8 +96,8 @@ function unimelb_preprocess_html(&$variables) {
   $variables['backstretch'] = $backstretch;
   if (!empty($background) && !empty($backstretch)) {
     drupal_add_js(array('unimelb' => array('background' => file_create_url($background), 'backstretch' => $backstretch)), 'setting');
+    $variables['classes_array'][] = 'backstretch';
   }
-
 }
 
 /**
