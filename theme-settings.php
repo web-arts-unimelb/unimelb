@@ -30,7 +30,7 @@ function unimelb_form_system_theme_settings_alter(&$form, $form_state) {
   // Front page background.
   $form['unimelb']['img']['background_front_path'] = array(
     '#type' => 'textfield',
-    '#title' => t('Path to home page packground image'),
+    '#title' => t('Path to home page background image'),
     '#default_value' => theme_get_setting('background_front_path'),
   );
   // Upload a front page background image.
