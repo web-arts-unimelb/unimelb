@@ -16,13 +16,18 @@
       });
 
       var useBackStretch = Drupal.settings.unimelb.backstretch;
-      console.log(Drupal.settings.unimelb);
 
       if (useBackStretch) {
         var bgPath = Drupal.settings.unimelb.background;
         $.backstretch(bgPath, {
           speed: 800
         });
+      }
+      else {
+        var bgPath = Drupal.settings.unimelb.background;
+        if (bgPath) {
+          $('body').css('background-image', 'url(' + bgPath + ')').css('background-repeat', 'no-repeat');
+        }
       }
     }
   }
