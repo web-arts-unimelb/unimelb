@@ -33,6 +33,17 @@ function unimelb_preprocess_html(&$variables) {
   }
   $keywords[] = $variables['page_title'];
   $keywords[] = $variables['site_name'];
+
+  // There could be node keywords from an earlier hook_preprocess_html().
+  if (!empty($variables['node_keywords'])) {
+    // Store the node keywords in a temp variable and then merge them
+    // with the site keywords. A direct assignment leads to a segfault
+    // or an empty variable.
+    $frog = explode(', ', $variables['node_keywords']);
+    $keywords = array_merge($keywords, $frog);
+  }
+
+  // Sanitise the keywords.
   $variables['unimelb_meta_keywords'] = check_plain(implode(', ', $keywords));
 
   $variables['unimelb_meta_description'] = $variables['site_name'] . ': ' . $variables['page_title'];
@@ -70,6 +81,22 @@ function unimelb_preprocess_html(&$variables) {
   if (!module_exists('css_splitter')) {
     $variables['styles_system'] = $variables['styles_default'] = '';
     $variables['styles_theme'] = drupal_get_css();
+  }
+
+  // Background images.
+  $background = theme_get_setting('background_front_path');
+  $backstretch = theme_get_setting('backstretch');
+  if ($variables['is_front'] == FALSE) {
+    $background = theme_get_setting('background_secondary_path');
+    if (empty($background)) {
+      $background = theme_get_setting('background_front_path');
+    }
+  }
+
+  $variables['backstretch'] = $backstretch;
+  if (!empty($background) && !empty($backstretch)) {
+    drupal_add_js(array('unimelb' => array('background' => file_create_url($background), 'backstretch' => $backstretch)), 'setting');
+    $variables['classes_array'][] = 'backstretch';
   }
 }
 
@@ -129,6 +156,8 @@ function unimelb_preprocess_page(&$variables) {
   if (!empty($vars)) {
     drupal_add_js($vars, 'setting');
   }
+
+  $variables['backstretch'] = theme_get_setting('backstretch');
 }
 
 

@@ -9,7 +9,7 @@ engine = phptemplate
 regions[help]            = Help
 regions[feature_menu]    = Feature menu
 cegions[site_search]     = Site search
-regions[slider]          = Slider
+regions[slider]          = Banner 
 regions[content]         = Content
 regions[navigation]      = Navigation
 regions[highlight]       = Highlight
@@ -58,7 +58,8 @@ settings[unimelb_settings_date-created]   = ""
 
 ; Manual stylesheets.
 stylesheets[all][] = css/unimelb_drupal_distro.css
-stylesheets[all][] = css/override/admin_menu.css
+stylesheets[all][] = css/unimelb_wysiwyg.css
+;stylesheets[all][] = css/override/admin_menu.css
 stylesheets[all][] = css/override/jquerymenu.css
 stylesheets[all][] = css/override/misc.css
 
@@ -70,6 +71,7 @@ stylesheets[all][] = scss/local.scss
 ; Screen output-only CSS.
 stylesheets[screen][] = css/responsive.css
 
+scripts[] = js/jquery.backstretch.min.js
 scripts[] = js/local.js
 
 version = "7.x-2.0"

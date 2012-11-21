@@ -4,6 +4,7 @@
 
 #slider {
   width: 900px;
+  background: white;
   border: 1px solid #ccc;
   padding: 10px 10px 5px 10px;
 
@@ -24,12 +25,12 @@
       float: left;
       cursor: pointer;
       width: 194px;
-      height: 42px;
+      height: 43px;
       color: black;
       @include gradient(#FFFFFF, #EEEEEE);
       border-color: #CCC;
       border-style: solid;
-      border-width: 0 0 1px 0;
+      border-width: 1px 1px 0 1px;
       overflow: hidden;
       padding: 4px 0px 0px 6px;
       font-size: 13px;
@@ -38,8 +39,8 @@
     }
 
    div#views_slideshow_pager_field_item_top_slider-block_4.views-slideshow-pager-field-item {
-     border-bottom: none;
-     height: 48px;
+     border-bottom-width: 1px;
+     height: 42px;
    }
 
     // Active pager item.
@@ -56,11 +57,11 @@
     .caption {
       position: absolute;
       bottom: 5px;
-      width: 691px;
+      width: 670px;
       background: rgb(0, 51, 102);
       background: rgba(0, 51, 102, 0.6);
       color: #fff;
-      padding: 0px 5px 5px 20px;
+      padding: 10px 5px 5px 20px;
     }
   }
 

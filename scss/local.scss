@@ -59,6 +59,17 @@ ul, ol {
   }
 }
 
+/* Override the margin on the right-side region so its title lines up */
+.rightside {
+  padding: 20px 0 0 0;
+  margin-top: 20px;
+
+  .aside h2,
+  h2.block-title {
+    color: $link-visited
+  }
+}
+
 /* Space out the highlights block title a bit. */
 h2 {
   #block-views-highlights-news,
@@ -387,4 +398,11 @@ body.html {
 /* Staff list views: office field. */
 .view-id-staff th.views-field-nothing-1 {
   min-width: 70px;
+}
+
+#backstretch-wrapper {
+  padding-top: 20px;
+  float: left;
+  background-image: url('../images/bg_white_90.png');
+  @include rounded($radius: 0.5em);
 }

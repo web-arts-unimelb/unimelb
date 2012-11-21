@@ -18,6 +18,50 @@ function unimelb_form_system_theme_settings_alter(&$form, $form_state) {
     '#description' => t('Settings specific to the University of Melbourne theme.'),
   );
 
+  // Images.
+  $form['unimelb']['img'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Images'),
+    '#description' => t("Upload background and page header images."),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  // Front page background.
+  $form['unimelb']['img']['background_front_path'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Path to home page packground image'),
+    '#default_value' => theme_get_setting('background_front_path'),
+  );
+  // Upload a front page background image.
+  $form['unimelb']['img']['background_front_upload'] = array(
+    '#type' => 'file',
+    '#title' => t('Upload front page background image'),
+  );
+
+  // Sub-page background.
+  $form['unimelb']['img']['background_secondary_path'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Path to sub-page background image'),
+    '#default_value' => theme_get_setting('background_secondary_path'),
+  );
+  // Upload a sub-page background image.
+  $form['unimelb']['img']['background_secondary_upload'] = array(
+    '#type' => 'file',
+    '#title' => t('Upload sub-page background image'),
+  );
+
+  $form['unimelb']['img']['backstretch'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Stretch background image'),
+    '#description' => t('Scale the background image with the page'),
+    '#default_value' => theme_get_setting('backstretch'),
+    '#required' => false,
+  );
+
+  // Validate handler to save images to disk.
+  $form['#validate'][] = '_unimelb_settings_img_validate';
+
   $version = theme_get_setting('unimelb_settings_template');
   // Create the settings form.
   $form['unimelb']['unimelb_settings_template'] = array(
@@ -268,4 +312,52 @@ function unimelb_form_system_theme_settings_alter(&$form, $form_state) {
   );
 
   return $form;
+}
+
+/**
+ * Validate handler to process uploaded background images.
+ */
+function _unimelb_settings_img_validate($form, &$form_state) {
+  $file = file_save_upload('background_front_upload');
+  if (isset($file)) {
+    if ($file) {
+      // Put the temporary file in form_values so we can save it on submit.
+      $form_state['values']['background_front_upload'] = $file;
+    }
+    else {
+      // File upload failed.
+      form_set_error('background_front_upload', t('The front page background image could not be uploaded.'));
+    }
+  }
+
+  $file = file_save_upload('background_secondary_upload');
+  if (isset($file)) {
+    // File upload was attempted.
+    if ($file) {
+      // Put the temporary file in form_values so we can save it on submit.
+      $form_state['values']['background_secondary_upload'] = $file;
+    }
+    else {
+      // File upload failed.
+      form_set_error('background_secondary_upload', t('The sub-page background image could not be uploaded.'));
+    }
+  }
+
+  $values = $form_state['values'];
+
+  // Check for a new uploaded header_image_front, and use that if available.
+  if ($file = $values['background_front_upload']) {
+    unset($values['background_front_upload']);
+    $filename = file_unmanaged_copy($file->uri);
+    $values['background_front_path'] = $filename;
+    form_set_value($form['unimelb']['img']['background_front_path'], $values['background_front_path'], $form_state);
+  }
+
+  // Check for a new uploaded header_image_secondary, and use that if available.
+  if ($file = $values['background_secondary_upload']) {
+    unset($values['background_secondary_upload']);
+    $filename = file_unmanaged_copy($file->uri);
+    $values['background_secondary_path'] = $filename;
+    form_set_value($form['unimelb']['img']['background_secondary_path'], $values['background_secondary_path'], $form_state);
+  }
 }

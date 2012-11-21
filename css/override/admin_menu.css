@@ -14,7 +14,7 @@
 
 .html #admin-menu ul a 
 {
-	font-size: 14px;
+	font-size: 1em;
 	margin: 4px 5px 4px 0px; /* Only change the first level item. Level below will be margin:0px */
 }
 

@@ -113,6 +113,8 @@
     </div>
   <?php endif; ?>
 
+  <?php if ($backstretch): ?><div id="backstretch-wrapper"><?php endif; ?>
+
   <?php if (!empty($page['feature_menu'])): ?>
     <div class="feature col-8">
       <div id="feature-menu" class="col-6">
@@ -136,6 +138,8 @@
 
   <!-- Include a layout-specific template file on the front page. -->
   <?php include($variables['layout']); ?>
+
+  <?php if ($backstretch): ?></div><?php endif; ?>
 
 </div><!-- end wrapper -->
 
