@@ -10,12 +10,12 @@
       td {
         background: none;
         border: none;
+        padding: 0px;
       }
     }
-  }
-  .cols-3 {
-    td {
-      width: 33%;
+    .cols-3 td {
+      width: 220px;
+      display: inline;
     }
   }
 }
