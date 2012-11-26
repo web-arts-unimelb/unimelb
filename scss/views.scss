@@ -13,9 +13,19 @@
         padding: 0px;
       }
     }
-    .cols-3 td {
-      width: 220px;
-      display: inline;
+
+    &.cols-3
+      tbody {
+        td {
+          width: 220px;
+          margin-left: 20px;
+          display: inline;
+
+          &.view-col-1 {
+            margin-left: 0px;
+          }
+        }
+      }
     }
   }
 }
