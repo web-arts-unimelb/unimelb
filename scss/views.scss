@@ -4,6 +4,8 @@
 
 .view-id-landing_pages {
   table {
+    margin-top: 0px;
+
     tbody {
       tr,
       tr:nth-child(2n+1),
@@ -11,6 +13,10 @@
         background: none;
         border: none;
         padding: 0px;
+      }
+
+      tr.row-1 td.page-preview {
+        margin-top: 0px;
       }
     }
 

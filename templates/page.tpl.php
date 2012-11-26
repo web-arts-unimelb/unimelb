@@ -215,10 +215,9 @@
     </div>
   <?php endif; ?>
 
+  </div>
 
 </div><!-- end wrapper -->
-
-
 
 <hr /><div class="footer"><div id="local" class="wrapper">
   <p class="footertitle"><?php print _unimelb_space_tags($site_name); ?></p>
