@@ -66,4 +66,9 @@
       <?php if(!empty($page['home_column_12'])): print render($page['home_column_12']); endif; ?>
     </div>
   </div>
+
+  <div class="col-8 first page-preview">
+    <?php print render($page['content']); ?>
+  </div>
+
 </div>
