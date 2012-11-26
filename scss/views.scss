@@ -2,6 +2,9 @@
  * Styles specific to Views.
  */
 
+/**
+ * Emulate the sizing and spacing of front page blocks on a grid view..
+ */
 .view-id-landing_pages {
   table {
     margin-top: 0px;
@@ -18,20 +21,49 @@
       tr.row-1 td.page-preview {
         margin-top: 0px;
       }
-    }
 
-    &.cols-3
-      tbody {
-        td {
-          width: 220px;
-          margin-left: 20px;
-          display: inline;
+      td {
+        margin-left: 20px;
+        display: inline;
 
-          &.view-col-1 {
-            margin-left: 0px;
-          }
+        &.view-col-1 {
+          margin-left: 0px;
         }
       }
     }
+
+    &.cols-2 tbody td {
+      width: 340px;
+    }
+
+    &.cols-3 tbody td {
+      width: 220px;
+    }
+
+    &.cols-4 tbody td {
+      width: 100px;
+    }
   }
 }
+
+/**
+ * Calendar views.
+ */
+.view-id-calendar {
+  table tbody {
+    tr,
+    tr:nth-child(2n+1) {
+      background: none;
+      border: none;
+    }
+  }
+}
+
+.calendar-calendar td.has-events {
+  background-color: #234c77;
+
+  a, a:link {
+    color: white;
+  }
+}
+
