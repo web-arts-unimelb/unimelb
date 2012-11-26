@@ -1,0 +1,21 @@
+/**
+ * Styles specific to Views.
+ */
+
+.view-id-landing_pages {
+  table {
+    tbody {
+      tr,
+      tr:nth-child(2n+1),
+      td {
+        background: none;
+        border: none;
+      }
+    }
+  }
+  .cols-3 {
+    td {
+      width: 33%;
+    }
+  }
+}
