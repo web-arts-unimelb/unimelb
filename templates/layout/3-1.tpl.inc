@@ -79,7 +79,7 @@
     </div>
   <?php endif; ?>
 
-  <?php if (!empty($page['content'])): ?>
+  <?php if (!empty($page['content']) && empty($page['home_column_1'])): ?>
     <div class="col-6 first page-preview">
       <?php print render($page['content']); ?>
     </div>
