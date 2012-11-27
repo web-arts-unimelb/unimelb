@@ -42,7 +42,7 @@
   }
 }
 
-@mixin button($color: $red, $text_color: $white) {
+@mixin button_base() {
   display: inline-block;
   outline: none;
   cursor: pointer;
@@ -52,6 +52,10 @@
   text-shadow: 0 1px 1px rgba(0,0,0,.3);
   @include rounded();
   @include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.2));
+}
+
+@mixin button($color: $red, $text_color: $white) {
+  @include button_base();
 
   color: $text_color !important;
   font-weight: bold;
@@ -70,6 +74,22 @@
     top: 1px;
     color: saturate($color, 15%);
     @include gradient(saturate($color, 15%), lighten($color, 15%));
+  }
+}
+
+@mixin feature_menu_button($color_top: $red, $color_bottom: $blue, $color_text: $white) {
+  @include button_base();
+
+  color: $color_text !important;
+  font-weight: bold;
+  border: solid 1px darken($color_bottom, 18%);
+  background: $color_top;
+  @include gradient($color_top, $color_bottom);
+
+  &:hover {
+    text-decoration: none;
+    background: saturate($color_top, 10%);
+    @include gradient(saturate($color_top, 5%), darken($color_bottom, 5%));
   }
 }
 
