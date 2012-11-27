@@ -15,26 +15,36 @@
 
 
 <div class="main col-6" role="main" id="main-content">
-  <div class="col-6 first">
-    <div class="col-3 first page-preview">
-      <?php if(!empty($page['home_column_1'])): print render($page['home_column_1']); endif; ?>
-    </div>
+  <?php if (!empty($page['home_column_1']) || !empty($page['home_column_2'])): ?>
+    <div class="col-6 first">
+      <div class="col-3 first page-preview">
+        <?php if(!empty($page['home_column_1'])): print render($page['home_column_1']); endif; ?>
+      </div>
 
-    <div class="col-3 page-preview">
-      <?php if(!empty($page['home_column_2'])): print render($page['home_column_2']); endif; ?>
+      <div class="col-3 page-preview">
+        <?php if(!empty($page['home_column_2'])): print render($page['home_column_2']); endif; ?>
+      </div>
     </div>
-  </div>
+  <?php endif; ?>
 
-  <div class="col-6 first">
-    <div class="col-3 first page-preview">
-      <?php if(!empty($page['home_column_3'])): print render($page['home_column_3']); endif; ?>
+  <?php if (!empty($page['home_column_3']) || !empty($page['home_column_4'])): ?>
+    <div class="col-6 first">
+      <div class="col-3 first page-preview">
+        <?php if(!empty($page['home_column_3'])): print render($page['home_column_3']); endif; ?>
+      </div>
+
+      <div class="col-3 page-preview">
+        <?php if(!empty($page['home_column_4'])): print render($page['home_column_4']); endif; ?>
+      </div>
     </div>
+  <?php endif; ?>
 
-    <div class="col-3 page-preview">
-      <?php if(!empty($page['home_column_4'])): print render($page['home_column_4']); endif; ?>
+  <?php if (!empty($page['content'])): ?>
+    <div class="col-6 first page-preview">
+      <?php print render($page['content']); ?>
     </div>
+  <?php endif; ?>
 
-  </div>
 </div>
 
 <div class="col-2 rightside">

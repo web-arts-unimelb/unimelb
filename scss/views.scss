@@ -1,0 +1,98 @@
+/**
+ * Styles specific to Views.
+ */
+
+/**
+ * Emulate the sizing and spacing of front page blocks on a grid view..
+ */
+.view-id-landing_pages {
+  table {
+    margin-top: 0px;
+
+    tbody {
+      tr,
+      tr:nth-child(2n+1),
+      td {
+        background: none;
+        border: none;
+        padding: 0px;
+      }
+
+      tr.row-1 td.page-preview {
+        margin-top: 0px;
+      }
+
+      td {
+        margin-left: 20px;
+        display: inline;
+
+        &.view-col-1 {
+          margin-left: 0px;
+        }
+      }
+    }
+
+    &.cols-2 tbody td {
+      width: 340px;
+    }
+
+    &.cols-3 tbody td {
+      width: 220px;
+    }
+
+    &.cols-4 tbody td {
+      width: 100px;
+    }
+  }
+}
+
+/* Blog-ish view, teaser floating image. */
+.page-preview .node-teaser {
+  .field-name-field-shared-images {
+    float: right;
+    margin-left: 2em;
+    img {
+      margin-top: 0px;
+    }
+  }
+} 
+
+/**
+ * Calendar views.
+ */
+.view-id-calendar {
+  .date-nav {
+    padding-bottom: 0px;
+  }
+
+  table tbody {
+    tr,
+    tr:nth-child(2n+1) {
+      background: white;
+      // border: none;
+
+      td.has-events {
+        background-color: #234c77;
+
+        a, a:link {
+          color: white;
+        }
+      }
+    }
+  }
+
+  // Mini calendar clock.
+  &.view-display-id-block_1 {
+    .date-heading {
+      text-align: left;
+    }
+    .pager {
+      display: none;
+    }
+
+    .mini-day-on, .mini-day-off {
+      padding-right: 2px;
+    }
+
+  }
+}

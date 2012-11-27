@@ -114,8 +114,6 @@
     </div>
   <?php endif; ?>
 
-  <?php if ($backstretch): ?><div id="backstretch-wrapper"><?php endif; ?>
-
   <?php if (!empty($page['feature_menu'])): ?>
     <div class="feature col-8">
       <div id="feature-menu" class="col-6">
@@ -130,6 +128,8 @@
       <?php endif;?>
     </div>
   <?php endif; ?>
+
+  <?php if ($backstretch): ?><div id="backstretch-wrapper"><?php endif; ?>
 
   <?php if (!empty($page['slider'])): ?>
     <div class="col-8" role="complementary" id="slider">
@@ -173,7 +173,7 @@
       </div>
 
       <?php if($page["sidebar_right"]): ?>
-        <div class="sidebar-right">
+        <div class="sidebar-right aside">
           <?php print render($page["sidebar_right"]); ?>
         </div>
       <?php endif; ?>
@@ -208,17 +208,16 @@
       </div>
 
       <?php if($page["sidebar_right"]): ?>
-        <div class="sidebar-right">
+        <div class="sidebar-right aside">
           <?php print render($page["sidebar_right"]); ?>
         </div>
       <?php endif; ?>
     </div>
   <?php endif; ?>
 
+  </div>
 
 </div><!-- end wrapper -->
-
-
 
 <hr /><div class="footer"><div id="local" class="wrapper">
   <p class="footertitle"><?php print _unimelb_space_tags($site_name); ?></p>

@@ -15,61 +15,75 @@
 
 
 <div class="main col-6" role="main" id="main-content">
-  <div class="col-6 first">
-    <div class="col-2 first page-preview">
-      <?php if(!empty($page['home_column_1'])): print render($page['home_column_1']); endif; ?>
-    </div>
+  <?php if (!empty($page['home_column_1']) || !empty($page['home_column_2']) || !empty($page['home_column_3'])): ?>
+    <div class="col-6 first">
+      <div class="col-2 first page-preview">
+        <?php if(!empty($page['home_column_1'])): print render($page['home_column_1']); endif; ?>
+      </div>
 
-    <div class="col-2 page-preview">
-      <?php if(!empty($page['home_column_2'])): print render($page['home_column_2']); endif; ?>
-    </div>
+      <div class="col-2 page-preview">
+        <?php if(!empty($page['home_column_2'])): print render($page['home_column_2']); endif; ?>
+      </div>
 
-    <div class="col-2 page-preview">
-      <?php if(!empty($page['home_column_3'])): print render($page['home_column_3']); endif; ?>
+      <div class="col-2 page-preview">
+        <?php if(!empty($page['home_column_3'])): print render($page['home_column_3']); endif; ?>
+      </div>
     </div>
-  </div>
+  <?php endif; ?>
 
-  <div class="col-6 first">
-    <div class="col-2 first page-preview">
-      <?php if(!empty($page['home_column_4'])): print render($page['home_column_4']); endif; ?>
-    </div>
+  <?php if (!empty($page['home_column_4']) || !empty($page['home_column_5']) || !empty($page['home_column_6'])): ?>
+    <div class="col-6 first">
+      <div class="col-2 first page-preview">
+        <?php if(!empty($page['home_column_4'])): print render($page['home_column_4']); endif; ?>
+      </div>
 
-    <div class="col-2 page-preview">
-      <?php if(!empty($page['home_column_5'])): print render($page['home_column_5']); endif; ?>
-    </div>
+      <div class="col-2 page-preview">
+        <?php if(!empty($page['home_column_5'])): print render($page['home_column_5']); endif; ?>
+      </div>
 
-    <div class="col-2 page-preview">
-      <?php if(!empty($page['home_column_6'])): print render($page['home_column_6']); endif; ?>
+      <div class="col-2 page-preview">
+        <?php if(!empty($page['home_column_6'])): print render($page['home_column_6']); endif; ?>
+      </div>
     </div>
-  </div>
+  <?php endif; ?>
 
-  <div class="col-6 first">
-    <div class="col-2 first page-preview">
-      <?php if(!empty($page['home_column_7'])): print render($page['home_column_7']); endif; ?>
-    </div>
+  <?php if (!empty($page['home_column_7']) || !empty($page['home_column_8']) || !empty($page['home_column_9'])): ?>
+    <div class="col-6 first">
+      <div class="col-2 first page-preview">
+        <?php if(!empty($page['home_column_7'])): print render($page['home_column_7']); endif; ?>
+      </div>
 
-    <div class="col-2 page-preview">
-      <?php if(!empty($page['home_column_8'])): print render($page['home_column_8']); endif; ?>
-    </div>
+      <div class="col-2 page-preview">
+        <?php if(!empty($page['home_column_8'])): print render($page['home_column_8']); endif; ?>
+      </div>
 
-    <div class="col-2 page-preview">
-      <?php if(!empty($page['home_column_9'])): print render($page['home_column_9']); endif; ?>
+      <div class="col-2 page-preview">
+        <?php if(!empty($page['home_column_9'])): print render($page['home_column_9']); endif; ?>
+      </div>
     </div>
-  </div>
+  <?php endif; ?>
 
-  <div class="col-6 first">
-    <div class="col-2 first page-preview">
-      <?php if(!empty($page['home_column_10'])): print render($page['home_column_10']); endif; ?>
-    </div>
+  <?php if (!empty($page['home_column_10']) || !empty($page['home_column_11']) || !empty($page['home_column_12'])): ?>
+    <div class="col-6 first">
+      <div class="col-2 first page-preview">
+        <?php if(!empty($page['home_column_10'])): print render($page['home_column_10']); endif; ?>
+      </div>
 
-    <div class="col-2 page-preview">
-      <?php if(!empty($page['home_column_11'])): print render($page['home_column_11']); endif; ?>
-    </div>
+      <div class="col-2 page-preview">
+        <?php if(!empty($page['home_column_11'])): print render($page['home_column_11']); endif; ?>
+      </div>
 
-    <div class="col-2 page-preview">
-      <?php if(!empty($page['home_column_12'])): print render($page['home_column_12']); endif; ?>
+      <div class="col-2 page-preview">
+        <?php if(!empty($page['home_column_12'])): print render($page['home_column_12']); endif; ?>
+      </div>
     </div>
-  </div>
+  <?php endif; ?>
+
+  <?php if (!empty($page['content']) && empty($page['home_column_1'])): ?>
+    <div class="col-6 first page-preview">
+      <?php print render($page['content']); ?>
+    </div>
+  <?php endif; ?>
 </div>
 
 <div class="col-2 rightside">

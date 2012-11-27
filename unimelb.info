@@ -68,6 +68,9 @@ stylesheets[all][] = scss/quicktabs.scss
 stylesheets[all][] = scss/slider.scss
 stylesheets[all][] = scss/local.scss
 
+; Add in overrides for views.
+stylesheets[all][] = scss/views.scss
+
 ; Screen output-only CSS.
 stylesheets[screen][] = css/responsive.css
 
