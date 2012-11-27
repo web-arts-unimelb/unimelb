@@ -112,14 +112,7 @@ table {
   ul > li {
     float: left;
     a {
-      @include feature_menu_button($button-menu-inactive-top, $button-menu-inactive-bottom, $button-text);
-    }
-
-    &:active {
-      position: relative;
-      top: 1px;
-      color: $button-text;
-      @include gradient($button-menu-active-top, $button-menu-active-bottom);
+      @include feature_menu_button($button-menu-inactive-top, $button-menu-inactive-bottom, $button-menu-active-top, $button-menu-active-bottom, $button-text);
     }
   }
 }

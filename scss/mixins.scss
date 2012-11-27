@@ -77,7 +77,7 @@
   }
 }
 
-@mixin feature_menu_button($color_top: $red, $color_bottom: $blue, $color_text: $white) {
+@mixin feature_menu_button($color_top: $red, $color_bottom: $blue, $active_top: $green, $active_bottom: $black, $color_text: $white) {
   @include button_base();
 
   color: $color_text !important;
@@ -90,6 +90,13 @@
     text-decoration: none;
     background: saturate($color_top, 10%);
     @include gradient(saturate($color_top, 5%), darken($color_bottom, 5%));
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+    color: $color_text;
+    @include gradient($active_top, $active_bottom:);
   }
 }
 
