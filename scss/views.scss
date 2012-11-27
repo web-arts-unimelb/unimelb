@@ -46,24 +46,53 @@
   }
 }
 
+/* Blog-ish view, teaser floating image. */
+.page-preview .node-teaser {
+  .field-name-field-shared-images {
+    float: right;
+    margin-left: 2em;
+    img {
+      margin-top: 0px;
+    }
+  }
+} 
+
 /**
  * Calendar views.
  */
 .view-id-calendar {
+  .date-nav {
+    padding-bottom: 0px;
+  }
+
   table tbody {
     tr,
     tr:nth-child(2n+1) {
-      background: none;
-      border: none;
+      background: white;
+      // border: none;
+
+      td.has-events {
+        background-color: #234c77;
+
+        a, a:link {
+          color: white;
+        }
+      }
     }
   }
-}
 
-.calendar-calendar td.has-events {
-  background-color: #234c77;
+  // Mini calendar clock.
+  &.view-display-id-block_1 {
+    .date-heading {
+      text-align: left;
+    }
+    .pager {
+      display: none;
+    }
 
-  a, a:link {
-    color: white;
+    .mini-day-on, .mini-day-off {
+      padding-right: 2px;
+    }
+
   }
 }
-

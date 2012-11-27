@@ -401,8 +401,16 @@ body.html {
 }
 
 #backstretch-wrapper {
+  // Naughty, add breakpoints!
+  width: 980px;
   padding-top: 20px;
+  padding-bottom: 20px;
   float: left;
   background-image: url('../images/bg_white_90.png');
   @include rounded($radius: 0.5em);
+}
+
+/* Why do fieldset legends need to live off-screen? */
+form legend {
+  text-indent: 0px;
 }

@@ -113,7 +113,6 @@
     </div>
   <?php endif; ?>
 
-  <?php if ($backstretch): ?><div id="backstretch-wrapper"><?php endif; ?>
 
   <?php if (!empty($page['feature_menu'])): ?>
     <div class="feature col-8">
@@ -130,6 +129,8 @@
     </div>
   <?php endif; ?>
 
+  <?php if ($backstretch): ?><div id="backstretch-wrapper"><?php endif; ?>
+
   <?php if (!empty($page['slider'])): ?>
     <div class="col-8" role="complementary" id="slider">
       <?php print render($page['slider']); ?>
@@ -138,7 +139,7 @@
 
   <!-- Include a layout-specific template file on the front page. -->
   <!-- The layout prints the front page blocks fist, followed by  -->
-  <!-- whatever is in $page['content'].                           -->
+  <!-- whatever is in $page['content'].       <?php print $variables['layout']; ?>  -->
   <?php include($variables['layout']); ?>
 
   <?php if ($backstretch): ?></div><?php endif; ?>
