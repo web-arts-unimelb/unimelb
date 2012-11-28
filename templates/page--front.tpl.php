@@ -95,6 +95,13 @@
 
       <h1><a href="<?php print $front_page; ?>" title="Home" rel="home"><?php print $site_name; ?></a></h1>
     <?php endif; ?>
+
+    <?php if (!empty($page['header_menu'])): ?>
+      <div id="header-menu">
+        <?php print render($page['header_menu']); ?>
+      </div>
+  <?php endif; ?>
+
   </div><!-- end hgroup -->
 
   <?php if (!empty($unimelb_ht_right) && $is_front): ?>

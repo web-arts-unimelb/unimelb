@@ -101,6 +101,44 @@ table {
   }
 }
 
+/* Header menu */
+#header-menu {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+
+  ul {
+    li {
+      border-top: 1px solid white;
+      text-align: right;
+
+      color: white;
+      text-shadow: .5px .5px 2px #024;
+      -webkit-text-shadow: .5px .5px 2px #024;
+      -moz-text-shadow: .5px .5px 2px #024;
+      -o-text-shadow: .5px .5px 2px #024;
+
+      &, &.leaf {
+        padding-right: 0px;
+      }
+
+      &.first,
+      &.first.last {
+        border-top: none;
+      }
+
+      a, a:link, a:active {
+        color: white;
+
+        &:hover {
+          color: #f5faff;
+        }
+      }
+
+    }
+  }
+}
+
 /* Feature menu */
 #feature-menu {
   margin-left: 0px;
