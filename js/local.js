@@ -15,18 +15,22 @@
         }
       });
 
-      var useBackStretch = Drupal.settings.unimelb.backstretch;
+      // Do not cause javascript errors (and break wysiwyg) if there are no
+      // settings to check for.
+      if (Drupal.settings.unimelb) {
+        var useBackStretch = Drupal.settings.unimelb.backstretch;
 
-      if (useBackStretch) {
-        var bgPath = Drupal.settings.unimelb.background;
-        $.backstretch(bgPath, {
-          speed: 800
-        });
-      }
-      else {
-        var bgPath = Drupal.settings.unimelb.background;
-        if (bgPath) {
-          $('body').css('background-image', 'url(' + bgPath + ')').css('background-repeat', 'no-repeat');
+        if (useBackStretch) {
+          var bgPath = Drupal.settings.unimelb.background;
+          $.backstretch(bgPath, {
+            speed: 800
+          });
+        }
+        else {
+          var bgPath = Drupal.settings.unimelb.background;
+          if (bgPath) {
+            $('body').css('background-image', 'url(' + bgPath + ')').css('background-repeat', 'no-repeat');
+          }
         }
       }
     }
