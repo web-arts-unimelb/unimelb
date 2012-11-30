@@ -129,8 +129,8 @@
       </div>
 
       <?php if(!empty($site_search_box)): ?>
-        <div id="site-search" class="col-2">
-          <a id="search-button" href="#">Search</a><input id="search-input"/>
+        <div id="site-search" class="rightside">
+          <?php print render(drupal_get_form('search_block_form')); ?>
         </div>
       <?php endif;?>
     </div>
