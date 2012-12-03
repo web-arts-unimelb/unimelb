@@ -32,8 +32,22 @@
         height: 0px;
       }
 
-      tr, th {
-        border-bottom: 0px;
+      thead {
+        tr, th {
+          border-bottom: 0px;
+        }
+      }
+    }
+  }
+
+  .attachment-after {
+    .view-content {
+      table {
+        caption {
+          position: relative;
+          left: auto;
+          height: auto;
+        }
       }
     }
   }
