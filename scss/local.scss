@@ -479,3 +479,13 @@ body.html {
 form legend {
   text-indent: 0px;
 }
+
+/* Right side block hilights (manual). */
+.sidebar-right {
+  .front-hilight {
+    background-color: $button-menu-active-bottom;
+    padding: 0.5em;
+    margin-left: -1px;
+    @include rounded($radius: 0.5em);
+  }
+}
