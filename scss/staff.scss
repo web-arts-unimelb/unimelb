@@ -1,0 +1,45 @@
+/**
+ * Style staff lists in quicktabs block.
+ */
+
+.main {
+  #quickset-staff_lists {
+    .ui-corner-bottom,
+    .ui-corner-all, .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default,
+    .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+      border: none;
+      background: none;
+      -moz-border-radius: 0px;
+      -webkit-border-radius: 0px;
+      border-radius: 0px;
+    }
+    h3 {
+      a {
+        font-style: normal;
+        font-size: 18px;
+        font-weight: bold;
+        color: #4c5e71;
+        font-family: 'Droid Sans','Helvetica Neue',Arial,sans-serif;
+      }
+    }
+  }
+
+  .view-content {
+    table {
+      caption {
+        position: absolute;
+        left: -9999px;
+        height: 0px;
+      }
+    }
+  }
+
+  .ui-accordion .ui-accordion-content {
+    padding: 0px;
+    border: none;
+    background: none;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+  }
+}

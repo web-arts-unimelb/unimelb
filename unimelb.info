@@ -72,6 +72,9 @@ stylesheets[all][] = scss/local.scss
 ; Add in overrides for views.
 stylesheets[all][] = scss/views.scss
 
+; Add in overrides for staff lists.
+stylesheets[all][] = scss/staff.scss
+
 ; Screen output-only CSS.
 stylesheets[screen][] = css/responsive.css
 
