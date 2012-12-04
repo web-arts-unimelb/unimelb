@@ -489,3 +489,33 @@ form legend {
     @include rounded($radius: 0.5em);
   }
 }
+
+
+/* Start - form */
+form h1, 
+form h2, 
+form h3, 
+form h4, 
+form h5
+{
+	text-align:left;
+	margin-left: 0px;
+	border-bottom: 0px;
+	font-weight: bold;
+	
+	margin:0px;
+	padding:0px;
+}
+
+form h3
+{
+	font-size: 18px;
+}
+
+
+form p
+{
+	font-weight: normal;
+}
+
+/* End - form */
