@@ -71,8 +71,10 @@
     </div>
   </div>
 
-  <div class="col-8 first page-preview">
-    <?php print render($page['content']); ?>
-  </div>
+  <?php if (!empty($page['content']) && empty($page['home_column_1'])): ?>
+    <div class="col-8 first page-preview">
+      <?php print render($page['content']); ?>
+    </div>
+  <?php endif; ?>
 
 </div>
