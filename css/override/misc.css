@@ -86,14 +86,14 @@ input#edit-submit,
 input.button,
 a.button 
 {
-	
-margin: 0px 0px 0px 4px;
-padding: 2px 4px 2px 4px;
+  text-decoration: none;
 
--webkit-padding-before: 3px;
--webkit-padding-after: 3px;
--webkit-margin-before: 1px;
+  margin: 0px 0px 0px 4px;
+  padding: 2px 4px 2px 4px;
 
+  -webkit-padding-before: 3px;
+  -webkit-padding-after: 3px;
+  -webkit-margin-before: 1px;
 }
 /* end button */
 
