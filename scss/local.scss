@@ -252,7 +252,8 @@ body ul.jquerymenu li.parent span.closed {
       &:link, &:active, &:visited {
         @include decoration;
       }
-      .tabledrag-handle {
+      &.tabledrag-handle,
+      &.button {
         &:link, &:active, &:visited {
           @include no-decoration;
         }
