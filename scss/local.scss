@@ -537,6 +537,9 @@ form p
 
 
 /* Links. */
-ul.links.inline {
+ul.links.inline,
+ul.links.inline li,
+ul.inline,
+ul.inline li {
   float: none;
 }
