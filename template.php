@@ -163,6 +163,9 @@ function unimelb_preprocess_page(&$variables) {
   }
 
   $variables['backstretch'] = theme_get_setting('backstretch');
+
+  // Force a re-sort of the page contents.
+  $variables['page']['content']['#sorted'] = FALSE;
 }
 
 
