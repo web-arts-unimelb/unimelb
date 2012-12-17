@@ -50,9 +50,9 @@ div.col-2 {
 }
 
 /* Override header if the top block and not the block title. */
-.sidebar-right > h3:first {
+.sidebar-right > h3,
+.sidebar-right > .view > .view-header > h3.block-title {
   margin-top: 0em;
-  padding-top: 0em;
 }
 
 
