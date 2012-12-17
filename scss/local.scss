@@ -49,6 +49,13 @@ div.col-2 {
   }
 }
 
+/* Override header if the top block and not the block title. */
+.sidebar-right > h3:first {
+  margin-top: 0em;
+  padding-top: 0em;
+}
+
+
 /* Paragraph bottom spacing. */
 p {
   margin-bottom: 1.1em;
