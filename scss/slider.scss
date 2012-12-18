@@ -95,6 +95,18 @@
 }
 
 /* Hide the border as screens get smaller. */
+@media screen and (max-width: 960px) {
+  #slider {
+    border: none;
+
+    /* On tiny screens, only show the pager items and float them. */
+    #views_slideshow_cycle_main_slider-block {
+      margin-right: 210px;
+    }
+  }
+}
+
+/* Hide the border as screens get smaller. */
 @media screen and (max-width: 630px) {
   #slider {
     border: none;
