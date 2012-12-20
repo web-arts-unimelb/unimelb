@@ -96,7 +96,7 @@
     position: relative;
     top: 1px;
     color: $color_text;
-    @include gradient($active_top, $active_bottom:);
+    @include gradient($active_top, $active_bottom);
   }
 }
 

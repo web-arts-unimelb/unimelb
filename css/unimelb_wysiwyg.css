@@ -1,14 +1,3 @@
-/* Use header styles in WYSIWYG Editor. */
-h1, h2, h3, h4, h5, h6 {
-  color:#003366;
-}
-
-h2 { margin-top:1em;}
-h3 { margin-top:1.2em;}
-h4,h5,h6{ margin-top:1.6em;}
-h5 { font-size:14px;}
-h6 { font-size:12px;}
-
 /* Float images. */
 .wysiwyg-right img,
 img.wysiwyg-right {
