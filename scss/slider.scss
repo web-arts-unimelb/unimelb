@@ -2,8 +2,9 @@
 
 @import "mixins.scss";
 
+
 #slider {
-  width: 900px;
+  max-width: 900px;
   background: white;
   border: 1px solid #ccc;
   padding: 10px 10px 5px 10px;
@@ -11,10 +12,11 @@
   .view-content {
     position: relative;
   }
+
   #widget_pager_top_slider-block.views-slideshow-pager-fields {
     // Position the pager div.
     position: absolute;
-    left: 700px;
+    right: 7px;
     top: 0px;
     width: 194px;
 
@@ -38,10 +40,10 @@
       color: #4f4f4f;
     }
 
-   div#views_slideshow_pager_field_item_top_slider-block_4.views-slideshow-pager-field-item {
-     border-bottom-width: 1px;
-     height: 42px;
-   }
+    div#views_slideshow_pager_field_item_top_slider-block_4.views-slideshow-pager-field-item {
+      border-bottom-width: 1px;
+      height: 42px;
+    }
 
     // Active pager item.
     div.views-slideshow-pager-field-item.active {
@@ -50,18 +52,31 @@
     }
   }
 
+  /* Make some space for the floating controls. */
+  #views_slideshow_cycle_main_slider-block {
+    margin-right: 210px;
+  }
+
   .slider-item {
+    width: auto;
     position: relative;
     overflow: hidden;
+
+    img {
+      width: 100%;
+    }
 
     .caption {
       position: absolute;
       bottom: 5px;
-      width: 660px;
+      width: 100%;
       background: rgb(0, 51, 102);
       background: rgba(0, 51, 102, 0.6);
       color: #fff;
-      padding: 10px 15px 5px 15px;
+
+      h1, h2, h3, h4, h5, h6, p {
+        margin: 5px 10px 5px 10px;
+      }
     }
   }
 
@@ -76,5 +91,43 @@
   #slider {
     border: none;
     background: transparent;
+  }
+}
+
+/* Hide the border as screens get smaller. */
+@media screen and (max-width: 960px) {
+  #slider {
+    border: none;
+
+    /* On tiny screens, only show the pager items and float them. */
+    #views_slideshow_cycle_main_slider-block {
+      margin-right: 210px;
+    }
+  }
+}
+
+/* Hide the border as screens get smaller. */
+@media screen and (max-width: 630px) {
+  #slider {
+    border: none;
+
+    /* On tiny screens, only show the pager items and float them. */
+    #views_slideshow_cycle_main_slider-block {
+      margin-right: 210px;
+    }
+  }
+}
+
+/* Just plain hide the image on tiny screens. */
+@media screen and (max-width: 480px) {
+  #slider {
+    /* On tiny screens, only show the pager items and float them. */
+    #widget_pager_top_slider-block.views-slideshow-pager-fields {
+      position: relative;
+      width: auto;
+    }
+    #views_slideshow_cycle_main_slider-block {
+      display: none;
+    }
   }
 }

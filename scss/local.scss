@@ -158,16 +158,31 @@ body.backstretch #site-search {
 }
 
 /* jQuery menu */
-body ul.jquerymenu li.parent span.open {
-  background-image: url('../images/collapse-arrow.png');
-  background-position: 50% 0.4em;
-  background-color: transparent;
-}
+body ul.jquerymenu {
+  li.parent {
+    position: relative;
+    span {
+      position: absolute;
+      left: -15px;
+      border: none;
+      overflow: hidden;
 
-body ul.jquerymenu li.parent span.closed {
-  background-image: url('../images/expand-arrow.png');
-  background-position: 50% 0.4em;
-  background-color: transparent;
+      &.parent {
+        margin-left: 0px;
+      }
+
+      &.open {
+        background-image: url('../images/collapse-arrow.png');
+        background-position: 50% 0.4em;
+        background-color: transparent;
+      }
+      &.closed {
+        background-image: url('../images/expand-arrow.png');
+        background-position: 50% 0.4em;
+        background-color: transparent;
+      }
+    }
+  }
 }
 
 /* Ouch! Ugly! */
