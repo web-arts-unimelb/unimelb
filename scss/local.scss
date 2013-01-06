@@ -6,7 +6,7 @@
 /* Override header margin if the first element on the page or if in a block. */
 div.field-item,
 div.col-2 {
-  > h2, > h3, > h4, > h5, > h6 {
+  & + h2, & + h3, & + h4, & + h5, & + h6 {
     margin-top: 0em;
     padding-top: 0em;
   }
