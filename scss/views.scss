@@ -100,3 +100,14 @@
 
   }
 }
+
+/* Award details block. */
+.view-id-awards .views-field.inline-list {
+  ul,
+  & li {
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+  }
+}
