@@ -2,6 +2,9 @@
  * Styles specific to Views.
  */
 
+@import "variables.scss";
+@import "mixins.scss";
+
 .views-row.page-preview {
   clear: both;
 }
@@ -102,12 +105,25 @@
 }
 
 /* Award details block. */
-.view-id-awards .views-field.inline-list {
-  ul,
-  & li {
-    display: inline;
-    margin: 0px;
-    padding: 0px;
-    list-style-type: none;
+.view-id-awards {
+  &.view-display-id-block_1 {
+    padding: 1em;
+    background-color: $block-background;
+    @include rounded();
+  }
+  .views-field.inline-list {
+    ul,
+    & li {
+      display: inline;
+      margin: 0px;
+      padding: 0px;
+      list-style-type: none;
+    }
+  }
+  .award-value-caveat {
+    font-weight: normal;
+    font-size: smaller;
   }
 }
+
+
