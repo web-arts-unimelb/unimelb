@@ -146,6 +146,8 @@ body.backstretch #site-search {
   border: solid 1px #a7c6e5;
   @include gradient(white, #eef4fa);
 
+  width: 180px;
+
   form {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -154,6 +156,15 @@ body.backstretch #site-search {
       margin: 0px;
       border: 1px solid #ccc;
     }
+
+    input.form-text {
+	float: left;
+    }
+
+    input.form-submit {
+	float:right;
+	margin-top:-1px;   
+    }   
   }
 }
 
@@ -191,11 +202,11 @@ body ul.jquerymenu {
     li {
       padding-bottom: 0em;
       ul {
-        margin-top: 0.3em;
+        margin-top: 0.3m;
       }
     }
     li.parent {
-      margin-top: -1em;
+      margin-top: -0.2em;
       position: relative;
       span {
        .open, .closed {
