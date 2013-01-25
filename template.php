@@ -359,5 +359,6 @@ function _unimelb_space_tags($text) {
   // May contain encoded entities from drupal_get_title().
   $text = html_entity_decode($text);
   $text = preg_replace('/<[^>]*?>/', ' ', $text);
-  return check_plain($text);
+  //return check_plain($text);
+  return $text; 
 }
