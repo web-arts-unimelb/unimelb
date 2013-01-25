@@ -30,12 +30,18 @@
       }
 
       td {
-        margin-left: 20px;
         display: inline;
+	border: 0px;
+	margin:0 0 0 12px;
+	padding:0px;
 
         &.view-col-1 {
           margin-left: 0px;
         }
+      }
+
+      tr {
+	border: none;
       }
     }
 
@@ -120,7 +126,8 @@
       list-style-type: none;
     }
   }
-  .award-value-caveat {
+  .award-value-caveat,
+  .award-value-caveat strong {
     font-weight: normal;
     font-size: smaller;
   }
