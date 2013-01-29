@@ -59,6 +59,37 @@
   }
 }
 
+/*
+ * Event date as calendar icon.
+ */
+.view-display-id-home_event {
+  .views-row {
+    margin-bottom: 1em;
+  }
+
+  .soll-event-date {
+    width: 36px;
+    float: left;
+    text-align: center;
+    background-color: #ddd;
+    margin-right: 5px;
+    @include rounded(3px);
+
+    .soll-event-date-day {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .soll-event-date-my {
+      font-size: 0.7em;
+      display: block;
+      background-color: $uni-blue;
+      color: #fff;
+      @include rounded_bottom(3px);
+    }
+  }
+}
+
 /* Blog-ish view, teaser floating image. */
 .page-preview .node-teaser {
   .field-name-field-shared-images {

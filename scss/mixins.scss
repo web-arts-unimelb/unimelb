@@ -29,6 +29,24 @@
   border-radius: $radius;
 }
 
+@mixin rounded_top($radius: 0.5em) {
+  border-bottom-right-radius: $radius;
+  -moz-border-radius-bottomright: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+  -moz-border-radius-bottomleft: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+}
+
+@mixin rounded_bottom($radius: 0.5em) {
+  border-bottom-right-radius: $radius;
+  -moz-border-radius-bottomright: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+  -moz-border-radius-bottomleft: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+}
+
 /* Drop shadow. */
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
   @if $inset {
