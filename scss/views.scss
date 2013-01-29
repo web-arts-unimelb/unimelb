@@ -60,7 +60,7 @@
 }
 
 /*
- * Event date as calendar icon.
+ * Event date as calendar icon on front page.
  */
 .view-display-id-home_event {
   .views-row {
@@ -87,6 +87,47 @@
       color: #fff;
       @include rounded_bottom(3px);
     }
+  }
+}
+
+/* Events listing pages. */
+.view-id-events {
+  .soll-event-date {
+    width: 60px;
+    float: left;
+    text-align: center;
+    background-color: #ddd;
+    @include rounded(3px);
+
+    .soll-event-date-day {
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .soll-event-date-my {
+      display: block;
+      background-color: $uni-blue;
+      color: #fff;
+      @include rounded_bottom(3px);
+    }
+  }
+
+  .soll-event-details {
+    vertical-align: baseline;
+    margin-left: 70px;
+
+    h2, h3, h4, .pullquote {
+      padding: 0 0 3px;
+      clear: none;
+    }
+  }
+
+  .views-row {
+    border-bottom: 1px dotted #999;
+    padding: 10px 0;
+    float: left;
+    width: 100%;
+    clear: both;
   }
 }
 
