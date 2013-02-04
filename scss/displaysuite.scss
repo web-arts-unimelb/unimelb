@@ -1,0 +1,21 @@
+/**
+ * SCSS rules for displaysuite classes.
+ */
+div.group-left {
+  float: left;
+  width: 120px;
+}
+
+div.group-right {
+  margin-left: 120px;
+}
+
+.group-left,
+.group-right {
+  .clearfix,
+  .clearfix:after,
+  h2, h3, .pullquote,
+  h2.no-clear, h3.no-clear {
+    clear: none;
+  }
+}
