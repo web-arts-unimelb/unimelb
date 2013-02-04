@@ -92,7 +92,7 @@
 
 /* Events listing pages. */
 .view-id-events {
-  .event-date {
+  .event-date,
   .soll-event-date {
     width: 60px;
     float: left;
@@ -100,7 +100,7 @@
     background-color: #ddd;
     @include rounded(3px);
 
-    .event-date-day {
+    .event-date-day,
     .soll-event-date-day {
       font-size: 40px;
       font-weight: bold;
@@ -115,7 +115,7 @@
     }
   }
 
-  .event-details {
+  .event-details,
   .soll-event-details {
     vertical-align: baseline;
     margin-left: 70px;
