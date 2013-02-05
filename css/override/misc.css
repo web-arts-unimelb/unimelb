@@ -97,6 +97,13 @@ a.button
 }
 /* end button */
 
+/* start complement button */
+a.complement_button
+{
+	padding-left: 20px;
+}
+
+/* end complement button */
 
 /* start button, ie7 only */
 *+html button,
