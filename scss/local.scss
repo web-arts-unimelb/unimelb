@@ -472,6 +472,33 @@ body.html {
   float: left;
   background-image: url('../images/bg_white_90.png');
   @include rounded($radius: 0.5em);
+  
+  
+  /* Control table columns' width radio */
+	td.the_column_1 {
+		width: 60%;
+	}
+
+	td.the_column_2 {
+		width: 20%;
+	}
+
+	td.the_column_3 {
+		width: 20%;
+	}
+	
+	/* Input button in view filter */
+	.view-filters {
+		.views-exposed-form {
+			.views-exposed-widget {
+				.form-submit {
+					margin-top: 2.15em;
+					-webkit-margin-before: 1.95em;
+				}
+			}
+		}
+	}
+	
 }
 
 /* Why do fieldset legends need to live off-screen? */
@@ -528,18 +555,6 @@ ul.inline li {
   float: none;
 }
 
-/* Control table columns' width radio */
-td.the_column_1
-{
-	width: 60%;
-}
 
-td.the_column_2
-{
-	width: 20%;
-}
 
-td.the_column_3
-{
-	width: 20%;
-}
+
