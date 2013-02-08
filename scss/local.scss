@@ -499,6 +499,17 @@ body.html {
 		}
 	}
 	
+	/* Control the view exposed filter position */
+	div.views-widget-filter-field_award_study_level_value
+	{
+		margin-right: 10em;
+	}
+	
+	div.views-widget-filter-field_award_travel_support_value
+	{
+		margin-right: 11em;
+	}
+	
 }
 
 /* Why do fieldset legends need to live off-screen? */
