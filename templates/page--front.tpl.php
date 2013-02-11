@@ -121,7 +121,7 @@
   <?php endif; ?>
 
 
-  <?php if (!empty($page['feature_menu'])): ?>
+  <?php if (!empty($page['feature_menu']) || !empty($site_search_box)): ?>
     <div class="feature col-8">
       <div id="feature-menu" class="col-6">
         <?php print render($page['feature_menu']); ?>
