@@ -41,20 +41,19 @@
  * @see template_process()
  */
 
-// print '<div id="' . $block_html_id . '" class="' . $classes . '" ' . $attributes .'>';
+print '<div id="' . $block_html_id . '" class="' . $classes . '" ' . $attributes .'>';
 
-if($block->subject) 
-{
-	$site_frontpage = variable_get('site_frontpage', 'node');
+if ($block->subject) {
+  $site_frontpage = variable_get('site_frontpage', 'node');
 
-	print render($title_prefix); 
-	//print "<h2 id='$block_html_id' class='block-title $title_attributes'>". "<a href='$site_frontpage'>". $block->subject. "</a>". '</h2>';
-	print "<h2 id='$block_html_id' class='block-title $title_attributes'>". $block->subject. '</h2>';
-	print render($title_suffix); 	
-} 
+  print render($title_prefix); 
+  // print "<h2 id='$block_html_id' class='block-title $title_attributes'>". "<a href='$site_frontpage'>". $block->subject. "</a>". '</h2>';
+  print "<h2 id='$block_html_id' class='block-title $title_attributes'>". $block->subject. '</h2>';
+  print render($title_suffix); 
+}
 
 print $content;
 
-// print '</div>';
+print '</div>';
 
 ?>
