@@ -326,6 +326,64 @@ function unimelb_image_widget($variables) {
 }
 
 /**
+ * Implements phptemplate_jquerymenu_links().
+ *
+ * Override the theme function for a jQuerymenu entry. Used to override menu
+ * item status for specific URLs.
+ */
+function unimelb_jquerymenu_links($variables) {
+
+  // Open the Scholarships item if we'er looking at a node.
+  if ($variables['title'] == 'Scholarships') {
+    $object = menu_get_object();
+    // Check that we're looking at an award node.
+    if (!empty($object->nid) && $object->type == 'award') {
+      $variables['state'] = 'open';
+      if (($idx = array_search('closed', $variables['classes'])) !== FALSE) {
+        unset($variables['classes'][$idx]);
+      }
+      $variables['classes'][] = 'open';
+    }
+  }
+
+  // create values from the parameter array
+  $title        = $variables["title"];
+  $path         = $variables["path"];
+  $options      = $variables["options"];
+  $state        = $variables["state"];
+  $classes      = $variables["classes"];
+  $has_children = $variables["has_children"];
+  $edit_path    = $variables["edit_path"];
+  $edit_text    = $variables["edit_text"];
+  $edit_access  = $variables["edit_access"];
+
+  $parentlink = variable_get('jquerymenu_parentlink', 0);
+  $output = '';
+
+  // This is the span that becomes the little plus and minus symbol.
+  $plus = '<span' . (empty($classes) ? '>' : ' class="' . implode(' ', $classes) . '">') . '</span>';
+  $link = l($title, $path, $options);
+  if ($edit_path != NULL && user_access($edit_access)) {
+    $edit_box = jquerymenu_edit_box($edit_path, $edit_text);
+    if ($has_children != 0) {
+      $output .= $parentlink ? $edit_box . $plus . $title : $edit_box . $plus . $link;
+    }
+    else {
+      $output .= $edit_box . $link;
+    }
+  }
+  else {
+    if ($has_children != 0) {
+      $output .= $parentlink ? $plus . $title : $plus . $link;
+    }
+    else {
+      $output .= $link;
+    }
+  }
+  return $output;
+}
+
+/**
  * Search form.
  */
 function unimelb_form_search_block_form_alter(&$form, &$form_state) {
