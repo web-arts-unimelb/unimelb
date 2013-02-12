@@ -384,7 +384,7 @@ function unimelb_jquerymenu_links($variables) {
 }
 
 /**
- * Search form.
+ * Custom search form.
  */
 function unimelb_form_search_block_form_alter(&$form, &$form_state) {
   $form['search_block_form']['#title'] = ''; // Set a default value for the textfield
