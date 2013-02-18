@@ -75,6 +75,9 @@
 ?>
 
 <div class="wrapper">
+
+  <?php if ($backstretch): ?><div id="backstretch-wrapper" class="col-8"> </div><?php endif; ?>
+
   <div class="header <?php if(!empty($unimelb_ht_right) && $is_front) { ?>with-ht<?php } else { ?>without-ht<?php } ?>">
 
   <div class="hgroup">
@@ -82,16 +85,9 @@
       <a href="<?php print $front_page; ?>" title="Home" rel="home"><img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" /></a>
     <?php else: ?>
 
-    <?php
-      if(!empty($unimelb_meta_parent_org_url))
-        $home_page_url = $unimelb_meta_parent_org_url;
-      else
-        $home_page_url = $front_page;
-    ?>
-
-    <?php if(!empty($unimelb_meta_parent_org)): ?>
-      <p><a href="<?php echo $home_page_url ?>"><?php echo $unimelb_meta_parent_org ?></a></p>
-    <?php endif; ?>
+      <?php if(!empty($unimelb_meta_parent_org)): ?>
+        <p><a href="<?php echo $home_page_url ?>"><?php echo $unimelb_meta_parent_org ?></a></p>
+      <?php endif; ?>
 
       <h1><a href="<?php print $front_page; ?>" title="Home" rel="home"><?php print $site_name; ?></a></h1>
     <?php endif; ?>
@@ -120,23 +116,20 @@
     </div>
   <?php endif; ?>
 
-
   <?php if (!empty($page['feature_menu']) || !empty($site_search_box)): ?>
     <div class="feature col-8">
-      <div id="feature-menu" class="col-6">
+      <div id="feature-menu" class="col-6 first">
         <?php print render($page['feature_menu']); ?>
-        <?php if (function_exists('social_icons')): echo social_icons(); endif; ?>
+        <?php // @TODO: preprocess this  if (function_exists('social_icons')): echo social_icons(); endif; ?>
       </div>
 
       <?php if(!empty($site_search_box)): ?>
-        <div id="site-search" class="rightside">
+        <div id="site-search" class="col-2 rightside">
           <?php print render(drupal_get_form('search_block_form')); ?>
         </div>
       <?php endif;?>
     </div>
   <?php endif; ?>
-
-  <?php if ($backstretch): ?><div id="backstretch-wrapper"><?php endif; ?>
 
   <?php if (!empty($page['slider'])): ?>
     <div class="col-8" role="complementary" id="slider">
@@ -149,7 +142,6 @@
   <!-- whatever is in $page['content'].       <?php print $variables['layout']; ?>  -->
   <?php include($variables['layout']); ?>
 
-  <?php if ($backstretch): ?></div><?php endif; ?>
 
 </div><!-- end wrapper -->
 

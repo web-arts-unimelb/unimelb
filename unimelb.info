@@ -78,8 +78,8 @@ stylesheets[all][] = scss/displaysuite.scss
 ; Add in overrides for staff lists.
 stylesheets[all][] = scss/staff.scss
 
-; Screen output-only CSS.
-stylesheets[screen][] = css/responsive.css
+; Be responsive, but on our own terms.
+stylesheets[all][] = scss/responsive.scss
 
 scripts[] = js/jquery.backstretch.min.js
 scripts[] = js/local.js

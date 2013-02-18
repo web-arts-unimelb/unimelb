@@ -158,6 +158,13 @@ function unimelb_preprocess_page(&$variables) {
     $vars['parentorgurl'] = $variables['unimelb_parent_org_url'] = $value;
   }
 
+  if (!empty($variables['unimelb_meta_parent_org_url'])) {
+    $variables['home_page_url'] = $variables['unimelb_meta_parent_org_url'];
+  }
+  else {
+    $variables['home_page_url'] = $variables['front_page'];
+  }
+
   if (!empty($vars)) {
     drupal_add_js($vars, 'setting');
   }
