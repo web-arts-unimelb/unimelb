@@ -6,6 +6,10 @@
 #slider {
   padding-top: 5px;
 
+  .col-2 {
+    width: 240px;
+  }
+
   .rightside {
     margin-top: 0px;
   }
@@ -14,6 +18,10 @@
   #widget_pager_top_slider-block,
   #widget_pager_bottom_slider-block {
     margin-right: 7px;
+  }
+
+  .views-content-field-slider-pager {
+    margin-left: 13px;
   }
 
   // Normal (inactive) pager item.
