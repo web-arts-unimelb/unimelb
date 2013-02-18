@@ -159,12 +159,12 @@ body.backstretch #site-search {
     }
 
     input.form-text {
-	float: left;
+  float: left;
     }
 
     input.form-submit {
-	float:right;
-	margin-top:-1px;   
+  float:right;
+  margin-top:-1px;   
     }   
   }
 }
@@ -364,33 +364,33 @@ body.home.front div.view-content a {
   }
 
   /* 
-	If profile is edited by academic, we disable the 
-	weight option and use drag and drop only 
+  If profile is edited by academic, we disable the 
+  weight option and use drag and drop only 
   */
   .tabledrag-toggle-weight-wrapper {
-	display: none;
+  display: none;
   }
 
   /* 
-	Increase the weight of toggle links
+  Increase the weight of toggle links
   */
   .fieldset-legend .fieldset-title {
-	font-weight: bold;
-	color: #353535;
+  font-weight: bold;
+  color: #353535;
   }
 
   /* 
-	Increase the weight of toggle links
-  */	
+  Increase the weight of toggle links
+  */  
   fieldset .form-type-managed-file label {
     display: none;
   }
 
   /*
-	Make more space between text field and field-group
+  Make more space between text field and field-group
   */
   .text-format-wrapper {
-	margin-bottom: 15px;
+  margin-bottom: 15px;
   }
 }
 
@@ -478,57 +478,56 @@ body.html {
   float: left;
   background-image: url('../images/bg_white_90.png');
   @include rounded($radius: 0.5em);
-  
-  
-  /* Control table columns' width radio */
-	td.the_column_1 {
-		width: 60%;
-	}
 
-	td.the_column_2 {
-		width: 20%;
-	}
+}
 
-	td.the_column_3 {
-		width: 20%;
-	}
-	
-	/* Input button in view filter */
-	.view-filters {
-		.views-exposed-form {
-			.views-exposed-widget {
-				.form-submit {
-					margin-top: 2.15em;
-					-webkit-margin-before: 1.95em;
-				}
-			}
-		}
-	}
-	
-	/* Control the view exposed filter position */
-	div.views-widget-filter-field_award_study_level_value
-	{
-		margin-right: 10em;
-	}
-	
-	div.views-widget-filter-field_award_travel_support_value
-	{
-		margin-right: 11em;
-	}
-	
-	
-	/* Advanced search */
-	#search-form label
-	{
-		display: inline;
-	}
-	
-	fieldset.search-advanced
-	{
-		background:transparent; 
-		border:0;
-	}
-	
+/* Award search results. */
+.page-node-317 .view-id-awards {
+  td.the_column_1,
+  td.views-field-title {
+    width: 50%;
+  }
+
+  td.the_column_2,
+  td.views-field-field-award-study-area {
+    width: 25%;
+  }
+
+  td.the_column_3,
+  td.views-field-nothing {
+    width: 25%;
+  }
+
+  /* Input button in view filter */
+  .view-filters {
+    .views-exposed-form {
+      .views-exposed-widget {
+        .form-submit {
+          margin-top: 2.15em;
+          -webkit-margin-before: 1.95em;
+        }
+      }
+    }
+  }
+
+  /* Control the view exposed filter position */
+  div.views-widget-filter-field_award_study_level_value {
+    margin-right: 10em;
+  }
+
+  div.views-widget-filter-field_award_travel_support_value {
+    margin-right: 11em;
+  }
+
+  /* Advanced search */
+  #search-form label {
+    display: inline;
+  }
+
+  fieldset.search-advanced {
+    background:transparent;
+    border:0;
+  }
 }
 
 /* Why do fieldset legends need to live off-screen? */
@@ -548,43 +547,31 @@ form legend {
 
 
 /* Start - form */
-form h1, 
-form h2, 
-form h3, 
-form h4, 
-form h5
-{
-	text-align:left;
-	margin-left: 0px;
-	border-bottom: 0px;
-	font-weight: bold;
-	
-	margin:0px;
-	padding:0px;
-}
+form {
+  h1, h2, h3, h4, h5 {
+    text-align:left;
+    margin-left: 0px;
+    border-bottom: 0px;
+    font-weight: bold;
 
-form h3
-{
-	font-size: 18px;
-}
+    margin:0px;
+    padding:0px;
+  }
 
+  h3 {
+    font-size: 18px;
+  }
 
-form p
-{
-	font-weight: normal;
+  p {
+    font-weight: normal;
+  }
 }
 
 /* End - form */
 
-
 /* Links. */
-ul.links.inline,
-ul.links.inline li,
 ul.inline,
-ul.inline li {
+ul.links.inline {
+ li {
   float: none;
 }
-
-
-
-
