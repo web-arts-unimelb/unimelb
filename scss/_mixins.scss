@@ -1,4 +1,26 @@
 /**
+ * @file
+ * SCSS variables and functions.
+ */
+$uni-blue: #036;
+
+$page-background: white;
+$block-background: #dfe9f4;
+
+$button-menu-background: #1d4772;
+$button-first-background: #1d4772;
+$button-background: #1d4772;
+$button-text: #345b8c;
+
+$button-menu-active-top: #f5faff;
+$button-menu-active-bottom: #d8e8fb;
+
+$button-menu-inactive-top: #ffffff;
+$button-menu-inactive-bottom: #eef4fa;
+
+$link-visited: #4d476b;
+
+/**
  * Mixins.
  */
 

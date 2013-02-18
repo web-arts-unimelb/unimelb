@@ -1,8 +1,5 @@
 /* GSHSS Slider CSS. */
 
-@import "mixins.scss";
-@import "variables.scss";
-
 #slider {
   padding-top: 5px;
 
@@ -37,7 +34,7 @@
     @include gradient(#FFFFFF, #EEEEEE);
     border-color: #CCC;
     border-style: solid;
-    border-width: 1px 1px 0 1px;
+    border-width: 1px 1px 0px 0px;
     overflow: hidden;
     padding: 4px 0px 0px 6px;
     font-size: 13px;

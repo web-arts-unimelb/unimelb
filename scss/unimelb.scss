@@ -1,7 +1,10 @@
-/* Local overrides to theme elements. */
+/* Unimelb overrides to theme elements.  */
 
-@import "variables.scss";
-@import "mixins.scss";
+/* Settings! */
+@import "mixins";
+
+/* Styling for output produces by various modules. */
+@import "displaysuite", "quicktabs", "staff", "views", "slider", "responsive";
 
 /* Override header margin if the first element on the page or if in a block. */
 div.field-item,
@@ -104,9 +107,13 @@ table {
           color: #f5faff;
         }
       }
-
     }
   }
+}
+
+/* Add some spacing to the feature region. */
+.wrapper .feature {
+  margin-bottom: 10px;
 }
 
 /* Feature menu */
@@ -468,8 +475,8 @@ body.html {
 #backstretch-wrapper {
   position: absolute;
   z-index: -999;
-  top: 167px;
-  bottom: 440px;
+  top: 150px;
+  bottom: 430px;
   margin-left: 10px;
 
   padding-right: 20px;

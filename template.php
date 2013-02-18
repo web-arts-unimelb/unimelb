@@ -135,7 +135,13 @@ function unimelb_preprocess_page(&$variables) {
   // Body class that is used by templates to show or not show the university logo.
   $variables['brand_logo'] = theme_get_setting('unimelb_settings_custom_logo', '') ? 'logo' : 'no-logo';
 
-  $variables['site_search_box'] = theme_get_setting('unimelb_settings_site_search_box');
+  $search_form = theme_get_setting('unimelb_settings_site_search_box');
+  if (!empty($search_form)) {
+    $variables['site_search_box'] = drupal_get_form('search_block_form');
+  }
+  else {
+    $variables['site_search_box'] = FALSE;
+  }
   $variables['unimelb_ht_right'] = theme_get_setting('unimelb_settings_ht-right', '');
   $variables['unimelb_ht_left'] = theme_get_setting('unimelb_settings_ht-left', '');
 

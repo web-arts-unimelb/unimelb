@@ -124,7 +124,7 @@
 
       <?php if(!empty($site_search_box)): ?>
         <div id="site-search" class="col-2 rightside">
-          <?php print render(drupal_get_form('search_block_form')); ?>
+          <?php print render($site_search_box); ?>
         </div>
       <?php endif;?>
     </div>

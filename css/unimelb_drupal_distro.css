@@ -324,8 +324,9 @@ height:240px;
 }
 
 
-.front .header.without-ht,.header {
-margin:0 0 36px;
+.front .header.without-ht,
+.header {
+margin:0 0 16px;
 }
 
 a:hover h2,a h2:hover,blockquote.opening-hours p.event-title a:hover,blockquote.opening-hours p.event-title a:hover {

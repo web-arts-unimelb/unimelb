@@ -60,26 +60,11 @@ settings[unimelb_settings_date-created]   = ""
 ; Manual stylesheets.
 stylesheets[all][] = css/unimelb_drupal_distro.css
 stylesheets[all][] = css/unimelb_wysiwyg.css
-;stylesheets[all][] = css/override/admin_menu.css
 stylesheets[all][] = css/override/jquerymenu.css
 stylesheets[all][] = css/override/misc.css
 
 ; Sassy proccessed stylesheets.
-stylesheets[all][] = scss/quicktabs.scss
-stylesheets[all][] = scss/slider.scss
-stylesheets[all][] = scss/local.scss
-
-; Add in overrides for views.
-stylesheets[all][] = scss/views.scss
-
-; Add in overrides for Display Suite classes.
-stylesheets[all][] = scss/displaysuite.scss
-
-; Add in overrides for staff lists.
-stylesheets[all][] = scss/staff.scss
-
-; Be responsive, but on our own terms.
-stylesheets[all][] = scss/responsive.scss
+stylesheets[all][] = scss/unimelb.scss
 
 scripts[] = js/jquery.backstretch.min.js
 scripts[] = js/local.js
