@@ -28,8 +28,7 @@
  *
  * It is extremely stripped down.
  */
-?>
-<!-- <?php print __FILE__ ?> -->
-<?php if ($rows): ?>
-  <?php print $rows; ?>
-<?php endif; ?>
+
+if ($rows):
+  print $rows;
+endif;

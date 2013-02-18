@@ -27,9 +27,7 @@
  * It is quite stripped down.
  */
 ?>
-<!-- <?php print __FILE__ ?> -->
 <?php foreach ($fields as $id => $field): ?>
-  <!-- Field -->
   <?php if (!empty($field->separator)): ?>
     <?php print $field->separator; ?>
   <?php endif; ?>

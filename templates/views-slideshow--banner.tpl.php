@@ -18,9 +18,7 @@
  * @see: views-slideshow-pager-fields.tpl.php
  */
 ?>
-<!-- <?php print __FILE__ ?> -->
 <div class="slider col-6 first">
-  <!-- Slideshow -->
   <?php print $slideshow; ?>
 </div>
 
