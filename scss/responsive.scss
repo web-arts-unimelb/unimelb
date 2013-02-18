@@ -1,0 +1,126 @@
+/**
+ * Media queries.
+ */
+
+@import "variables.scss";
+
+/**
+ * Responsive markup for smaller-screen devices such as tablets and phones.
+ */
+@media screen and (max-width: 640px) {
+  // Hide backstretch.
+  #backstretch,
+  #backstretch-wrapper {
+    display: none;
+  }
+
+  // Re-colour the header menu and make it stick to the left.
+  #header-menu {
+    float: left;
+    clear: both;
+
+    ul {
+      padding: 0px;
+
+      li {
+        text-align: left;
+        color: $uni-blue;
+        text-shadow: .5px .5px 2px #99c;
+        -webkit-text-shadow: .5px .5px 2px #99c;
+        -moz-text-shadow: .5px .5px 2px #99c;
+        -o-text-shadow: .5px .5px 2px #99c;
+
+        border-top: 1px solid #99c;
+
+        a, a:link, a:active {
+          color: $uni-blue;
+
+          &:hover {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+
+  // Float search box to the left.
+  body #site-search,
+  body.backstretch #site-search {
+    float: left;
+    clear: both;
+  }
+
+  // Hide the slider image.
+  #slider .slider {
+    display: none;
+  }
+
+}
+
+/* Smartphones (portrait and landscape) */
+@media screen and (max-width: 480px) {
+  /* Hide images on front page for mobile devices. */
+  .front .views-field-field-landingpage-image-uploader {
+    display: none;
+  }
+  .front .views-field-field-shared-images {
+    display: none;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+  // Stick header menu hard to the left.
+  #header-menu {
+    float: left;
+    clear: both;
+    margin-left: -145px;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}

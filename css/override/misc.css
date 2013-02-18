@@ -20,16 +20,13 @@ h2#block-views-zones-home-promo
 	font-size: 24px;
 }
 
-.header .hgroup h1 
-{
-    font-size: 30px;
-	padding: 40px 0 12px;
+.header .hgroup h1 {
+  float: left;
+  font-size: 30px;
+  padding: 40px 0 12px;
 }
 
-
-
-.front .main 
-{
+.front .main {
     padding: 20px 0 0 0;
     background: none;
 }
