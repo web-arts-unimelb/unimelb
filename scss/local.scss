@@ -516,6 +516,19 @@ body.html {
 		margin-right: 11em;
 	}
 	
+	
+	/* Advanced search */
+	#search-form label
+	{
+		display: inline;
+	}
+	
+	fieldset.search-advanced
+	{
+		background:transparent; 
+		border:0;
+	}
+	
 }
 
 /* Why do fieldset legends need to live off-screen? */
