@@ -472,6 +472,10 @@ body.html {
   min-width: 70px;
 }
 
+div.status {
+  @include rounded($radius: 0.5em);
+}
+
 #backstretch-wrapper {
   position: absolute;
   z-index: -999;
