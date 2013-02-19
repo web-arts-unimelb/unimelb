@@ -4,7 +4,7 @@
 @import "mixins";
 
 /* Styling for output produces by various modules. */
-@import "displaysuite", "quicktabs", "staff", "views", "slider", "responsive";
+@import "displaysuite", "quicktabs", "staff", "views", "slider";
 
 /* Override header margin if the first element on the page or if in a block. */
 div.field-item,
@@ -485,7 +485,6 @@ body.html {
   float: left;
   background-image: url('../images/bg_white_90.png');
   @include rounded($radius: 0.5em);
-
 }
 
 /* Award search results. */
@@ -579,6 +578,10 @@ form {
 /* Links. */
 ul.inline,
 ul.links.inline {
- li {
-  float: none;
+  li {
+    float: none;
+  }
 }
+
+/* Add in some responsible sprinkles. */
+@import "responsive";

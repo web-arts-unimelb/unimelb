@@ -51,8 +51,14 @@
   }
 
   // Hide the slider image.
-  #slider .slider {
-    display: none;
+  #slider {
+    .slider {
+      display: none;
+    }
+
+    div.views-slideshow-pager-field-item {
+      border-left-width: 1px;
+    }
   }
 
 }
