@@ -113,7 +113,7 @@ table {
 
 /* Add some spacing to the feature region. */
 .wrapper .feature {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 /* Feature menu */
@@ -176,6 +176,10 @@ body.backstretch #site-search {
   }
 }
 
+/* Footer with backstretch enabled. */
+body.backstretch .footer {
+  margin-top: 40px;
+}
 
 /* jQuery menu */
 body ul.jquerymenu {
@@ -476,16 +480,15 @@ div.status {
   @include rounded($radius: 0.5em);
 }
 
-#backstretch-wrapper {
+#backstretch-wrapper.col-8 {
   position: absolute;
   z-index: -999;
-  top: 150px;
-  bottom: 430px;
-  margin-left: 10px;
+  top: 155px;
+  bottom: 435px;
+  margin-left: 0px;
 
-  padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  width: 980px;
+
   float: left;
   background-image: url('../images/bg_white_90.png');
   @include rounded($radius: 0.5em);
