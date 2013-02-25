@@ -27,13 +27,11 @@ h2#block-views-zones-home-promo
 }
 
 .front .main {
-    padding: 20px 0 0 0;
     background: none;
 }
 
 .not-front .main 
 {
-    padding: 0 0 0 0;
     background: none;
 }
 
