@@ -113,7 +113,7 @@ table {
 
 /* Add some spacing to the feature region. */
 .wrapper .feature {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 /* Feature menu */
@@ -132,7 +132,7 @@ table {
   }
 }
 
-body.backstretch #site-search {
+body #site-search {
   margin: 10px 0 10px 0;
   float: right;
 
@@ -175,6 +175,8 @@ body.backstretch #site-search {
     }   
   }
 }
+
+/* the search page form. */
 
 
 /* jQuery menu */
