@@ -113,7 +113,7 @@ table {
 
 /* Hmm... */
 .wrapper .feature {
-  margin-bottom: 20px;
+  margin-bottom: -10px;
 }
 
 /* Feature menu */
@@ -176,15 +176,10 @@ body #site-search {
   }
 }
 
-<<<<<<< HEAD
-/* the search page form. */
-
-=======
 /* Footer with backstretch enabled. */
 body.backstretch .footer {
   margin-top: 40px;
 }
->>>>>>> 264cd6d515528b4e3d686ffffe2a2fb673037ccd
 
 /* jQuery menu */
 body ul.jquerymenu {
