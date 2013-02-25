@@ -111,9 +111,9 @@ table {
   }
 }
 
-/* Add some spacing to the feature region. */
+/* Hmm... */
 .wrapper .feature {
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 
 /* Feature menu */
@@ -176,8 +176,15 @@ body #site-search {
   }
 }
 
+<<<<<<< HEAD
 /* the search page form. */
 
+=======
+/* Footer with backstretch enabled. */
+body.backstretch .footer {
+  margin-top: 40px;
+}
+>>>>>>> 264cd6d515528b4e3d686ffffe2a2fb673037ccd
 
 /* jQuery menu */
 body ul.jquerymenu {
@@ -478,16 +485,15 @@ div.status {
   @include rounded($radius: 0.5em);
 }
 
-#backstretch-wrapper {
+#backstretch-wrapper.col-8 {
   position: absolute;
   z-index: -999;
-  top: 150px;
-  bottom: 430px;
-  margin-left: 10px;
+  top: 155px;
+  bottom: 435px;
+  margin-left: 0px;
 
-  padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  width: 980px;
+
   float: left;
   background-image: url('../images/bg_white_90.png');
   @include rounded($radius: 0.5em);
