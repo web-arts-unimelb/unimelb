@@ -1,0 +1,70 @@
+/**
+ * Areas of study in views accordion.
+ */
+
+.view-id-areas_of_study {
+  // Why you mess with the font, jquery.ui.theme.css?
+  .ui-widget .ui-accordion-content {
+    font-size: 13px;
+    font-family: sans-serif;
+  }
+
+  .views-field-block {
+    h2 {
+      font-style: normal;
+      font-size: 16px;
+      font-weight: normal;
+      color: #4c5e71;
+      font-family: 'Droid Sans','Helvetica Neue',Arial,sans-serif;
+    }
+  }
+
+  .ui-accordion .ui-accordion-header,
+  .ui-corner-bottom,
+  .ui-corner-all, .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default,
+  .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    border: none;
+    background: none;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+  }
+
+  h3.ui-accordion-header,
+  h3.ui-state-default,
+  h3.ui-state-focus,
+  h3.ui-state-active {
+    a {
+      font-style: normal;
+      font-size: 18px;
+      font-weight: bold;
+      color: #4c5e71;
+      font-family: 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
+    }
+  }
+
+  .view-content {
+    table {
+      caption {
+        position: absolute;
+        left: -9999px;
+        height: 0px;
+      }
+
+      thead {
+        tr, th {
+          border-bottom: 0px;
+        }
+      }
+    }
+  }
+
+  .ui-accordion .ui-accordion-content {
+    padding: 0px;
+    border: none;
+    background: none;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+  }
+}

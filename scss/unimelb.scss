@@ -4,7 +4,7 @@
 @import "mixins";
 
 /* Styling for output produces by various modules. */
-@import "displaysuite", "quicktabs", "staff", "views", "slider";
+@import "displaysuite", "quicktabs", "staff", "aos", "views", "slider";
 
 /* Override header margin if the first element on the page or if in a block. */
 div.field-item,
