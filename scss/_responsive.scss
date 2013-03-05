@@ -8,11 +8,6 @@
  * Responsive markup for smaller-screen devices such as tablets and phones.
  */
 @media screen and (max-width: 640px) {
-  // Hide backstretch.
-  #backstretch,
-  #backstretch-wrapper {
-    display: none;
-  }
 
   // Re-colour the header menu and make it stick to the left.
   #header-menu {
@@ -61,6 +56,10 @@
     }
   }
 
+  #backstretch,
+  #backstretch-wrapper {
+    display: none;
+  }
 }
 
 /* Smartphones (portrait and landscape) */

@@ -103,6 +103,21 @@ function unimelb_preprocess_html(&$variables) {
       drupal_add_js(array('unimelb' => array('background' => file_create_url($background))), 'setting');
     }
   }
+
+  // Allow remote debuggery.
+  $debug = theme_get_setting('debug');
+  if (!empty($debug)) {
+    $debug_host = check_plain(theme_get_setting('debug_host'));
+    $debug_port = check_plain(theme_get_setting('debug_port'));
+
+    if (empty($debug_host) || empty($debug_port)) {
+      drupal_set_message(t('Remote debug is enabled but there is no debug host or port.'), 'warning');
+    }
+    else {
+      drupal_add_js("http://${debug_host}:${debug_port}/target/target-script-min.js#anonymous", 'external');
+    }
+  }
+
 }
 
 /**

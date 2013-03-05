@@ -214,9 +214,34 @@
   .award-status {
     color: #cc6600;
   }
+
+  .award-status-Open {
+    color: #009900;
+  }
+
+  .award-status-Closed {
+    color: #cc0000;
+  }
 }
 
 /* StudentCentre blog */
 .ds-1col.node-teaser {
   margin-bottom: 1.5em;
+}
+
+/* BA profiles. */
+.view-id-profiles {
+  .profile-image {
+    width: 100px;
+    float: left;
+  }
+  .profile-summary {
+    margin-left: 120px;
+    margin-bottom: 2em;
+
+    h1, h2, h3, .pullquote {
+      padding-top: 0px;
+      clear: none;
+    }
+  }
 }

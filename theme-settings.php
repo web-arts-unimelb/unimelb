@@ -311,6 +311,37 @@ function unimelb_form_system_theme_settings_alter(&$form, $form_state) {
     '#required' => FALSE,
   );
 
+  $form['unimelb']['debug'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Debug'),
+    '#description' => t('Set options for remote debugging. This is mainly useful for iOS and Android browser problems. You need to be running a <a href="http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html">weinre</a> debug server.')
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['unimelb']['debug']['debug'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable remote debug'),
+    '#description' => t('Enable or disable remote debugging via <em>weinre</em>.'),
+    '#default_value' => theme_get_setting('debug'),
+  );
+
+  $form['unimelb']['debug']['debug_host'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Debug host'),
+    '#description' => t('Debug host name or IP address.'),
+    '#default_value' => theme_get_setting('debug_host'),
+  );
+
+  $form['unimelb']['debug']['debug_port'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Debug port'),
+    '#size' => 6,
+    '#maxlength' => 6,
+    '#description' => t('Debug port.'),
+    '#default_value' => theme_get_setting('debug_port'),
+  );
+
   return $form;
 }
 

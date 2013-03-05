@@ -168,8 +168,8 @@ body #site-search {
 
     input.form-submit {
   float:right;
-  margin-top:-1px;   
-    }   
+  margin-top:-1px;
+    }
   }
 }
 
@@ -477,9 +477,9 @@ div.status {
   @include rounded($radius: 0.5em);
 }
 
-#backstretch-wrapper.col-8 {
+#backstretch-wrapper {
   position: absolute;
-  z-index: -999;
+  z-index: -1;
   top: 155px;
   bottom: 435px;
   margin-left: 0px;
@@ -489,6 +489,13 @@ div.status {
   float: left;
   background-image: url('../images/bg_white_90.png');
   @include rounded($radius: 0.5em);
+}
+
+#backstretch,
+#backstretch-wrapper {
+  -webkit-transform: translateZ(0);
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
 }
 
 /* Award search results. */

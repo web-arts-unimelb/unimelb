@@ -23,7 +23,7 @@
         if (useBackStretch) {
           var bgPath = Drupal.settings.unimelb.background;
           $.backstretch(bgPath, {
-            speed: 800
+            speed: 0
           });
         }
         else {
