@@ -104,6 +104,13 @@ function unimelb_preprocess_html(&$variables) {
     }
   }
 
+  // Check if we're running a view.
+  $menu_item = menu_get_item();
+  if ($menu_item['page_callback'] == 'views_page') {
+    $variables['classes_array'][] = 'views-view-' . $menu_item['page_arguments'][0];
+    $variables['classes_array'][] = 'views-view-' . implode('-', $menu_item['page_arguments']);
+  }
+
   // Allow remote debuggery.
   $debug = theme_get_setting('debug');
   if (!empty($debug)) {

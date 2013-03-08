@@ -234,8 +234,8 @@ body ul.jquerymenu {
   padding: 0 20px 0 0;
 }
 
-/* No border on any links, ever! */
-.main {
+/* No border on any links, except in the main content on non-landing pages. */
+body {
   a, a.tabledrag-handle {
     &, &:link, &:active, &:visited {
       @include no-decoration;
@@ -245,18 +245,36 @@ body ul.jquerymenu {
 
 /* Underline links in the main content */
 #main-content {
-  .field-type-text-with-summary,
-  .field-name-field-page-detail,
-  .field-name-field-event-detail {
-    a {
+  a {
+    &:link, &:active, &:visited {
+      @include decoration;
+    }
+    &.tabledrag-handle,
+    &.button {
       &:link, &:active, &:visited {
-        @include decoration;
+        @include no-decoration;
       }
-      &.tabledrag-handle,
-      &.button {
+    }
+  }
+}
+
+/* Never underline links on the home page and in landing page views. */
+.home.front #main-content,
+.views-view-landing_pages #main-content {
+  a {
+    &:link, &:active, &:visited {
+      @include no-decoration;
+    }
+  }
+}
+
+/* Never underline tab and quicktab links. */
+#main-content {
+  ul.tabs,
+  ul.quicktabs-tabs {
+      a {
         &:link, &:active, &:visited {
-          @include no-decoration;
-        }
+        @include no-decoration;
       }
     }
   }
@@ -267,11 +285,6 @@ body ul.jquerymenu {
   a, a:link, a:active, a:visited {
     @include decoration;
   }
-}
-
-/* No underline on the home page. */
-body.home.front div.view-content a {
-  @include no-decoration;
 }
 
 /* Content-bottom (related content) links */
