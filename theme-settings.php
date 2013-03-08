@@ -314,7 +314,7 @@ function unimelb_form_system_theme_settings_alter(&$form, $form_state) {
   $form['unimelb']['debug'] = array(
     '#type' => 'fieldset',
     '#title' => t('Debug'),
-    '#description' => t('Set options for remote debugging. This is mainly useful for iOS and Android browser problems. You need to be running a <a href="http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html">weinre</a> debug server.')
+    '#description' => t('Set options for remote debugging. This is mainly useful for iOS and Android browser problems. You need to be running a <a href="http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html">weinre</a> debug server.'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
