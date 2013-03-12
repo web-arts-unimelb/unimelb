@@ -1,13 +1,12 @@
 /**
  * SCSS rules for displaysuite classes.
  */
-div.group-left {
+.ds-2col > div.group-left {
   float: left;
   width: 120px;
 }
-
-div.group-right {
-  margin-left: 120px;
+.ds-2col > div.group-right {
+  width: auto;
 }
 
 .group-left,
