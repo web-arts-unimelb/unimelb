@@ -158,19 +158,19 @@ body #site-search {
     }
 
     input.form-text {
-  float: left;
+      float: left;
     }
 
     input.form-submit {
-  float:right;
-  margin-top:-1px;
+      float:right;
+      margin-top:-1px;
     }
   }
 }
 
 /* Footer with backstretch enabled. */
 body.backstretch .footer {
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 /* jQuery menu */
@@ -489,7 +489,7 @@ div.status {
   position: absolute;
   z-index: -1;
   top: 155px;
-  bottom: 435px;
+  bottom: 480px;
   margin-left: 0px;
 
   width: 980px;
