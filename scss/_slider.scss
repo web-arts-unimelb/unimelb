@@ -94,9 +94,14 @@
   }
 }
 
-.not-logged-in 
+.not-logged-in {
   .header + #slider,
   .header + #main-content {
     padding-top: 76px;
   }
+}
+
+/* When the feature menu is present above the slider... */
+.feature + #slider {
+  padding-top: 12px;
 }
