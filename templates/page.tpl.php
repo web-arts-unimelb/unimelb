@@ -164,7 +164,7 @@
       <?php endif; ?>
     </div>
 
-    <div class="col-2">
+    <div class="col-2 rightside">
       <div class="the_nav first" role="navigation">
         <?php if($page["navigation"]): ?>
           <?php print render($page["navigation"]); ?>
@@ -199,7 +199,7 @@
       <?php endif; ?>
     </div>
 
-    <div class="col-2">
+    <div class="col-2 rightside">
       <div class="the_nav first" role="navigation">
         <?php if($page["navigation"]): ?>
           <?php print render($page["navigation"]); ?>
