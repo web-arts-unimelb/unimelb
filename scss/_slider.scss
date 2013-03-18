@@ -89,14 +89,16 @@
 
 .logged-in {
   .header + #slider,
-  .header + #main-content {
+  .header + #main-content,
+  .header + #main-content + .col-2.rightside {
     padding-top: 56px;
   }
 }
 
 .not-logged-in {
   .header + #slider,
-  .header + #main-content {
+  .header + #main-content,
+  .header + #main-content + .col-2.rightside {
     padding-top: 76px;
   }
 }
