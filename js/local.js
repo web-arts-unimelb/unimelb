@@ -33,6 +33,37 @@
           }
         }
       }
+
+	// Control backstretch-wrapper with / without slider
+        var slider = document.getElementById('slider');
+        
+        var current_url = document.URL;
+        current_url = current_url.replace(/\/+$/, "");
+        current_url = current_url.replace(/^http:\/\//, "");
+	
+	var art_site = "arts.unimelb.edu.au";
+	var art_dev_site = "www.dev.arts.unimelb.edu.au";       
+ 
+        var slashes = current_url.match(/\//g); 
+
+        if(slider != null && slashes == null) {
+        	$('#backstretch-wrapper').css('top', '155px');
+        }
+        else if(slider == null && slashes == null) {
+        	$('#backstretch-wrapper').css('top', '190px');
+        }
+	else if(slider == null && 
+		slashes != null && 
+		(window.location.hostname == art_site ||
+		 window.location.hostname == art_dev_site
+		) 
+	)
+	{
+		$('#backstretch-wrapper').css('top', '155px');	
+	}
+        else {
+        	$('#backstretch-wrapper').css('top', '180px');
+        }
     }
   }
 })(jQuery);
