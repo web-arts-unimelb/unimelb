@@ -73,7 +73,7 @@
  */
 ?>
 
-<div class="wrapper">
+<div id="content-wrapper" class="wrapper<?php print $wrapper_classes; ?>">
 
   <?php if ($backstretch): ?><div id="backstretch-wrapper" class="col-8"> </div><?php endif; ?>
 

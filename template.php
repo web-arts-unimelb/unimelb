@@ -124,7 +124,6 @@ function unimelb_preprocess_html(&$variables) {
       drupal_add_js("http://${debug_host}:${debug_port}/target/target-script-min.js#anonymous", 'external');
     }
   }
-
 }
 
 /**
@@ -201,6 +200,21 @@ function unimelb_preprocess_page(&$variables) {
 
   // Force a re-sort of the page contents.
   $variables['page']['content']['#sorted'] = FALSE;
+
+  // Add some classes on various items to help us space stuff out.
+  if (!empty($variables['page']['header_menu'])) {
+    $variables['classes_array'][] = 'uom-header';
+  }
+  if (!empty($variables['page']['slider'])) {
+    $variables['classes_array'][] = 'uom-slider';
+  }
+  if (!empty($variables['page']['feature_menu']) || !empty($variables['site_search_box'])) {
+    $variables['classes_array'][] = 'uom-feature';
+  }
+  if (!empty($variables['backstretch'])) {
+    $variables['classes_array'][] = 'uom-backstretch';
+  }
+  $variables['wrapper_classes'] = ' ' . implode(' ', $variables['classes_array']);
 }
 
 
