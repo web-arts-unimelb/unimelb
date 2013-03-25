@@ -33,6 +33,9 @@
           }
         }
       }
+      
+      // Hide webform_table_element's 1st columns (all 1st columns)
+			$("table.webform-component-table-element td:nth-child(1), table.webform-component-table-element th:nth-child(1)").hide();
     }
   }
 })(jQuery);
