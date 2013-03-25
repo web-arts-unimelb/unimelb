@@ -1,0 +1,109 @@
+/**
+ * Header element spacing.
+ *
+ * The content-wrapper element has classes that indicate which header
+ * elements are present on the page, so it can be used to determine
+ * required spacing:
+ *
+ * - uom-header     : Header menu.
+ * - uom-slider     : Banner slideshow.
+ * - uom-feature    : Feature menu and/or search.
+ * - uom-backstretch: Semi-transparent underlay for background image.
+ *
+ * And the elements are:
+ *
+ * - #header-menu
+ * - #feature-menu
+ * - #slider
+ *     .col-2.rightside
+ * - #backstretch-wrapper
+ * - #main-content
+ *     .col-2.rightside
+ */
+
+#content-wrapper {
+  // Default for slider.
+  #slider {
+    margin-top: 46px;
+    .col-2.rightside {
+      margin-top: 0px;
+    }
+  }
+
+  // Default for page content.
+  #main-content,
+  .col-2.rightside {
+    margin-top: 30px;
+  }
+
+  &.uom-header {
+    // Don't worry about the header menu spacing.
+  }
+
+  // Value for page content if a slider is present.
+  &.uom-slider {
+    #main-content,
+    .col-2.rightside {
+      margin-top: 0px;
+    }
+  }
+
+  // Values for slider and page content if a header or feature menu
+  // are present.
+  &.uom-header,       // Header and slider.
+  &.uom-feature {     // feature and slider.
+    #slider {
+      margin-top: 16px;
+    }
+    #main-content,
+    .col-2.rightside {
+      margin-top: 0px;
+    }
+  }
+
+  // Values for page content and slider if a semi-transparent
+  // background is present.
+  &.uom-backstretch {
+    #main-content,
+    .col-2.rightside {
+      margin-top: 20px;
+    }
+    #slider {
+      margin-top: 56px;
+      .col-2.rightside {
+        margin-top: 0px;
+      }
+    }
+    #backstretch-wrapper {
+      top: 125px;
+    }
+  }
+
+  // Values for page content if a semi-transparent background and
+  // a slider are present.
+  &.uom-backstretch.uom-slider { {
+    #main-content,
+    .col-2.rightside {
+      margin-top: 0px;
+    }
+  }
+
+  // Values for slider and background wrapper if a semi-transparent
+  // background and feature menu are present.
+  &.uom-feature.uom-backstretch {
+    #slider {
+      margin-top: 36px;
+    }
+    #backstretch-wrapper {
+      top: 155px;
+    }
+  }
+
+  // Values for background wrapper if a feature menu and slider
+  // are present.
+  &.uom-feature.uom-slider.uom-backstretch {
+    #backstretch-wrapper {
+      top: 145px;
+    }
+  }
+}
