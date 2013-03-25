@@ -3,6 +3,9 @@
 /* Settings! */
 @import "mixins";
 
+/* Site header. */
+@import "header";
+
 /* Styling for output produces by various modules. */
 @import "displaysuite", "quicktabs", "staff", "aos", "views", "slider";
 
@@ -73,6 +76,7 @@ table {
 /* Header menu */
 #header-menu {
   float: right;
+  min-height: 85px; // Helps if there is a teeny tiny (eg search) block in there only.
   width: auto;
   bottom: 0px;
   right: 0px;
@@ -488,7 +492,6 @@ div.status {
 #backstretch-wrapper {
   position: absolute;
   z-index: -1;
-  top: 155px;
   bottom: 480px;
   margin-left: 0px;
 
