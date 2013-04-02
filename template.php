@@ -214,7 +214,11 @@ function unimelb_preprocess_page(&$variables) {
   if (!empty($variables['backstretch'])) {
     $variables['classes_array'][] = 'uom-backstretch';
   }
-  $variables['wrapper_classes'] = ' ' . implode(' ', $variables['classes_array']);
+  //$variables['wrapper_classes'] = ' ' . implode(' ', $variables['classes_array']);
+  
+  // Remove extra stuff
+	$tmp_array = array_diff($variables['classes_array'], array('page', 'contextual-links-region'));
+	$variables['wrapper_classes'] = ' ' . implode(' ', $tmp_array);
 }
 
 

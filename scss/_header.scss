@@ -81,7 +81,7 @@
 
   // Values for page content if a semi-transparent background and
   // a slider are present.
-  &.uom-backstretch.uom-slider { {
+  &.uom-backstretch.uom-slider {
     #main-content,
     .col-2.rightside {
       margin-top: 0px;
@@ -106,4 +106,62 @@
       top: 145px;
     }
   }
+}
+
+// May be a better way to do it
+.logged-in {
+	#content-wrapper {
+		// Values for page content if a 
+		// semi-transparent background is present.
+		&.uom-backstretch {
+			#backstretch-wrapper {
+      	top: 175px;
+    	}
+		}
+				
+		// Values for background wrapper if a semi-transparent
+		// background and feature menu are present.
+		&.uom-feature.uom-backstretch {
+		  #backstretch-wrapper {
+		    top: 155px;
+		  }
+  	}
+		
+		// Values for background wrapper if a feature menu and slider
+  	// are present.
+  	&.uom-feature.uom-slider.uom-backstretch {
+    	#backstretch-wrapper {
+      	top: 170px;
+    	}
+  	}
+	}
+}
+
+// May be a better way to do it
+.not-logged-in {
+	#content-wrapper {
+		// Values for page content if a 
+		// semi-transparent background is present.
+		&.uom-backstretch {
+			#backstretch-wrapper {
+      	top: 190px;
+    	}
+		}
+		
+		// Values for background wrapper if a semi-transparent
+		// background and feature menu are present.
+		&.uom-feature.uom-backstretch {
+		  #backstretch-wrapper {
+		    top: 170px;
+		  }
+  	}
+		
+		// Values for background wrapper if a feature menu and slider
+  	// are present.
+  	&.uom-feature.uom-slider.uom-backstretch {
+    	#backstretch-wrapper {
+      	top: 170px;
+    	}
+  	}
+	}
 }
