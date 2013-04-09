@@ -15,13 +15,13 @@ ul.quicktabs-tabs li {
 }
 
 ul.quicktabs-tabs.quicktabs-style-nostyle {
-  border-bottom: 1px solid #758CAA;
+  border-bottom: 1px solid #758caa;
   li {
+    border: 1px solid #aaa;
+    border-bottom: 1px solid #758caa;
     margin: 0 8px -1px 0;
-    padding: 5px 10px 2px 10px;
-    border: 1px solid #AAA;
-    border-bottom: 1px solid #758CAA;
-    @include gradient(#EEEEEE, #E0EAF4);
+    padding: 5px 10px 2px;
+    @include gradient(#eeeeee, #e0eaf4);
 
     a {
       color: #666;
@@ -36,8 +36,8 @@ ul.quicktabs-tabs.quicktabs-style-nostyle {
       color: white;
 
       a {
-        color: white;
         background: none;
+        color: white;
 
         &:hover {
           color: $uni-blue;

@@ -11,7 +11,7 @@
  */
 .view-id-landing_pages {
   table {
-    margin-top: 0px;
+    margin-top: 0;
 
     tbody {
       tr,
@@ -19,21 +19,21 @@
       td {
         background: none;
         border: none;
-        padding: 0px;
+        padding: 0;
       }
 
       tr.row-1 td.page-preview {
-        margin-top: 0px;
+        margin-top: 0;
       }
 
       td {
+        border: 0;
         display: inline;
-        border: 0px;
-        margin:0 0 0 12px;
-        padding:0px;
+        margin: 0 0 0 12px;
+        padding: 0;
 
         &.view-col-1 {
-          margin-left: 0px;
+          margin-left: 0;
         }
       }
 
@@ -68,11 +68,11 @@
 
   .event-date,
   .soll-event-date {
-    width: 36px;
-    float: left;
-    text-align: center;
     background-color: #ddd;
+    float: left;
     margin-right: 5px;
+    text-align: center;
+    width: 36px;
     @include rounded(3px);
 
     .event-date-day,
@@ -83,10 +83,10 @@
 
     .event-date-my,
     .soll-event-date-my {
-      font-size: 0.7em;
-      display: block;
       background-color: $uni-blue;
       color: #fff;
+      display: block;
+      font-size: 0.7em;
       @include rounded_bottom(3px);
     }
   }
@@ -97,10 +97,10 @@
 .page-events .view-id-events {
   .event-date,
   .soll-event-date {
-    width: 60px;
+    background-color: #ddd;
     float: left;
     text-align: center;
-    background-color: #ddd;
+    width: 60px;
     @include rounded(3px);
 
     .event-date-day,
@@ -111,30 +111,33 @@
 
     .event-date-my,
     .soll-event-date-my {
-      display: block;
       background-color: $uni-blue;
       color: #fff;
+      display: block;
       @include rounded_bottom(3px);
     }
   }
 
   .event-details,
   .soll-event-details {
-    vertical-align: baseline;
     margin-left: 70px;
+    vertical-align: baseline;
 
-    h2, h3, h4, .pullquote {
-      padding: 0 0 3px;
+    h2,
+    h3,
+    h4,
+    .pullquote {
       clear: none;
+      padding: 0 0 3px;
     }
   }
 
   .views-row {
     border-bottom: 1px dotted #999;
-    padding: 10px 0;
-    float: left;
-    width: 100%;
     clear: both;
+    float: left;
+    padding: 10px 0;
+    width: 100%;
   }
 }
 
@@ -144,7 +147,7 @@
     float: right;
     margin-left: 2em;
     img {
-      margin-top: 0px;
+      margin-top: 0;
     }
   }
 } 
@@ -154,7 +157,7 @@
  */
 .view-id-calendar {
   .date-nav {
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 
   table tbody {
@@ -166,7 +169,8 @@
       td.has-events {
         background-color: #234c77;
 
-        a, a:link {
+        a,
+        a:link {
           color: white;
         }
       }
@@ -182,7 +186,8 @@
       display: none;
     }
 
-    .mini-day-on, .mini-day-off {
+    .mini-day-on,
+    .mini-day-off {
       padding-right: 2px;
     }
 
@@ -192,35 +197,35 @@
 /* Award details block. */
 .view-id-awards {
   &.view-display-id-block_1 {
-    padding: 1em;
     background-color: $block-background;
+    padding: 1em;
     @include rounded();
   }
   .views-field.inline-list {
     ul,
     & li {
       display: inline;
-      margin: 0px;
-      padding: 0px;
       list-style-type: none;
+      margin: 0;
+      padding: 0;
     }
   }
   .award-value-caveat,
   .award-value-caveat strong {
-    font-weight: normal;
     font-size: smaller;
+    font-weight: normal;
   }
 
   .award-status {
-    color: #cc6600;
+    color: #c60;
   }
 
   .award-status-Open {
-    color: #009900;
+    color: #090;
   }
 
   .award-status-Closed {
-    color: #cc0000;
+    color: #c00;
   }
 }
 
@@ -232,16 +237,19 @@
 /* BA profiles. */
 .view-id-profiles {
   .profile-image {
-    width: 100px;
     float: left;
+    width: 100px;
   }
   .profile-summary {
-    margin-left: 120px;
     margin-bottom: 2em;
+    margin-left: 120px;
 
-    h1, h2, h3, .pullquote {
-      padding-top: 0px;
+    h1,
+    h2,
+    h3,
+    .pullquote {
       clear: none;
+      padding-top: 0;
     }
   }
 }
