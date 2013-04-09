@@ -1,15 +1,13 @@
 /* FoA Slider CSS. */
 
 #slider {
-  padding-top: 36px;
-
   .col-2 {
+    margin-left: 0;
     width: 240px;
-    margin-left: 0px;
   }
 
   .rightside {
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   // Pager wrapping div.
@@ -24,30 +22,33 @@
 
   // Normal (inactive) pager item.
   div.views-slideshow-pager-field-item {
-    position: relative;
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+    color: #4f4f4f;
+    cursor: pointer;
     display: block;
     float: left;
-    cursor: pointer;
-    width: 100%;
-    height: 43px;
-    @include gradient(#FFFFFF, #EEEEEE);
-    border-color: #CCC;
-    border-style: solid;
-    border-width: 1px 1px 0px 0px;
-    overflow: hidden;
-    padding: 4px 0px 0px 6px;
     font-size: 13px;
     font-weight: bold;
-    color: #4f4f4f;
+    height: 43px;
+    overflow: hidden;
+    padding: 4px 0 0 6px;
+    position: relative;
+    width: 100%;
+    @include gradient(#ffffff, #eeeeee);
 
-    a, a:link, a:active, a:visited {
+    a,
+    a:link,
+    a:active,
+    a:visited {
       color: #4f4f4f;
     }
   }
 
   // Active pager item.
   div.views-slideshow-pager-field-item.active {
-    @include gradient(#EEEEEE, #E0EAF4);
+    @include gradient(#eeeeee, #e0eaf4);
     color: #036;
   }
 
@@ -59,51 +60,44 @@
   }
 
   .slider-item {
-    width: auto;
-    position: relative;
     overflow: hidden;
+    position: relative;
+    width: auto;
 
     .caption {
-      position: absolute;
-      bottom: 5px;
-      width: 100%;
       background: rgb(0, 51, 102);
       background: rgba(0, 51, 102, 0.6);
+      bottom: 5px;
       color: #fff;
+      position: absolute;
+      width: 100%;
 
-      a, a:link, a:hover, a:visited {
+      a,
+      a:link,
+      a:hover,
+      a:visited {
         color: #fff;
       }
 
-      h1, h2, h3, h4, h5, h6, p {
-        margin: 5px 10px 5px 10px;
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        margin: 5px 10px;
       }
     }
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: white;
     margin-top: none;
   }
-}
-
-.logged-in {
-  .header + #slider,
-  .header + #main-content,
-  .header + #main-content + .col-2.rightside {
-    padding-top: 56px;
-  }
-}
-
-.not-logged-in {
-  .header + #slider,
-  .header + #main-content,
-  .header + #main-content + .col-2.rightside {
-    padding-top: 76px;
-  }
-}
-
-/* When the feature menu is present above the slider... */
-.feature + #slider {
-  padding-top: 12px;
 }

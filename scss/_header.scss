@@ -26,7 +26,7 @@
   #slider {
     margin-top: 46px;
     .col-2.rightside {
-      margin-top: 0px;
+      margin-top: 0;
     }
   }
 
@@ -44,20 +44,21 @@
   &.uom-slider {
     #main-content,
     .col-2.rightside {
-      margin-top: 0px;
+      margin-top: 0;
     }
   }
 
   // Values for slider and page content if a header or feature menu
   // are present.
-  &.uom-header,       // Header and slider.
-  &.uom-feature {     // feature and slider.
+  // Header + slider and feature + slider.
+  &.uom-header,
+  &.uom-feature {
     #slider {
       margin-top: 16px;
     }
     #main-content,
     .col-2.rightside {
-      margin-top: 0px;
+      margin-top: 0;
     }
   }
 
@@ -71,7 +72,7 @@
     #slider {
       margin-top: 56px;
       .col-2.rightside {
-        margin-top: 0px;
+        margin-top: 0;
       }
     }
     #backstretch-wrapper {
@@ -84,7 +85,7 @@
   &.uom-backstretch.uom-slider {
     #main-content,
     .col-2.rightside {
-      margin-top: 0px;
+      margin-top: 0;
     }
   }
 

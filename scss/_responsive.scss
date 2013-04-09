@@ -11,23 +11,24 @@
 
   // Re-colour the header menu and make it stick to the left.
   #header-menu {
-    float: left;
     clear: both;
+    float: left;
 
     ul {
-      padding: 0px;
+      padding: 0;
 
       li {
-        text-align: left;
-        color: $uni-blue;
-        text-shadow: .5px .5px 2px #99c;
-        -webkit-text-shadow: .5px .5px 2px #99c;
         -moz-text-shadow: .5px .5px 2px #99c;
         -o-text-shadow: .5px .5px 2px #99c;
-
+        -webkit-text-shadow: .5px .5px 2px #99c;
         border-top: 1px solid #99c;
+        color: $uni-blue;
+        text-align: left;
+        text-shadow: .5px .5px 2px #99c;
 
-        a, a:link, a:active {
+        a,
+        a:link,
+        a:active {
           color: $uni-blue;
 
           &:hover {
@@ -41,8 +42,8 @@
   // Float search box to the left.
   body #site-search,
   body.backstretch #site-search {
-    float: left;
     clear: both;
+    float: left;
   }
 
   // Hide the slider image.
@@ -82,8 +83,8 @@
 @media only screen and (max-width : 320px) {
   // Stick header menu hard to the left.
   #header-menu {
-    float: left;
     clear: both;
+    float: left;
     margin-left: -145px;
   }
 }

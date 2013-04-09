@@ -72,9 +72,9 @@ $link-visited: #4d476b;
 /* Drop shadow. */
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
   @if $inset {
-    -webkit-box-shadow:inset $top $left $blur $color;
-    -moz-box-shadow:inset $top $left $blur $color;
-    box-shadow:inset $top $left $blur $color;
+    -webkit-box-shadow: inset $top $left $blur $color;
+    -moz-box-shadow: inset $top $left $blur $color;
+    box-shadow: inset $top $left $blur $color;
   } @else {
     -webkit-box-shadow: $top $left $blur $color;
     -moz-box-shadow: $top $left $blur $color;
@@ -88,7 +88,7 @@ $link-visited: #4d476b;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  padding: .3em 1em .3em;
+  padding: .3em 1em;
   text-shadow: 0 1px 1px rgba(0,0,0,.3);
   @include rounded();
   @include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.2));
@@ -104,15 +104,15 @@ $link-visited: #4d476b;
   @include gradient(saturate($color, 15%), darken($color, 15%));
 
   &:hover {
-    text-decoration: none;
     background: saturate($color, 10%);
+    text-decoration: none;
     @include gradient(saturate($color, 5%), darken($color, 5%));
   }
 
   &:active {
+    color: saturate($color, 15%);
     position: relative;
     top: 1px;
-    color: saturate($color, 15%);
     @include gradient(saturate($color, 15%), lighten($color, 15%));
   }
 }
@@ -120,32 +120,32 @@ $link-visited: #4d476b;
 @mixin feature_menu_button($color_top: $red, $color_bottom: $blue, $active_top: $green, $active_bottom: $black, $color_text: $white) {
   @include button_base();
 
+  background: $color_top;
+  border: solid 1px darken($color_bottom, 18%);
   color: $color_text !important;
   font-weight: bold;
-  border: solid 1px darken($color_bottom, 18%);
-  background: $color_top;
   @include gradient($color_top, $color_bottom);
 
   &:hover {
-    text-decoration: none;
     background: saturate($color_top, 10%);
+    text-decoration: none;
     @include gradient(saturate($color_top, 5%), darken($color_bottom, 5%));
   }
 
   &:active {
+    color: $color_text;
     position: relative;
     top: 1px;
-    color: $color_text;
     @include gradient($active_top, $active_bottom);
   }
 }
 
 @mixin text-field {
   display: inline-block;
-  outline: none;
-  text-decoration: none;
   font: 14px/100% Arial, Helvetica, sans-serif;
+  outline: none;
   padding: .5em;
+  text-decoration: none;
   text-shadow: 0 1px 1px rgba(0,0,0,.3);
   @include rounded();
   @include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.2));

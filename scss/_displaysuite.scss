@@ -13,8 +13,11 @@
 .group-right {
   .clearfix,
   .clearfix:after,
-  h2, h3, .pullquote,
-  h2.no-clear, h3.no-clear {
+  h2,
+  h3,
+  .pullquote,
+  h2.no-clear,
+  h3.no-clear {
     clear: none;
   }
 }

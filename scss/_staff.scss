@@ -6,21 +6,26 @@
 .main {
   #quickset-staff_lists {
     .ui-corner-bottom,
-    .ui-corner-all, .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default,
-    .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
-      border: none;
+    .ui-corner-all,
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default,
+    .ui-state-active,
+    .ui-widget-content .ui-state-active,
+    .ui-widget-header .ui-state-active {
+      -moz-border-radius: 0;
+      -webkit-border-radius: 0;
       background: none;
-      -moz-border-radius: 0px;
-      -webkit-border-radius: 0px;
-      border-radius: 0px;
+      border: none;
+      border-radius: 0;
     }
     h3 {
       a {
-        font-style: normal;
-        font-size: 18px;
-        font-weight: bold;
         color: #4c5e71;
         font-family: 'Droid Sans','Helvetica Neue',Arial,sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: bold;
       }
     }
   }
@@ -28,14 +33,15 @@
   .view-content {
     table {
       caption {
-        position: absolute;
+        height: 0;
         left: -9999px;
-        height: 0px;
+        position: absolute;
       }
 
       thead {
-        tr, th {
-          border-bottom: 0px;
+        tr,
+        th {
+          border-bottom: 0;
         }
       }
     }
@@ -45,20 +51,20 @@
     .view-content {
       table {
         caption {
-          position: relative;
-          left: auto;
           height: auto;
+          left: auto;
+          position: relative;
         }
       }
     }
   }
 
   .ui-accordion .ui-accordion-content {
-    padding: 0px;
-    border: none;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
     background: none;
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
+    border: none;
+    border-radius: 0;
+    padding: 0;
   }
 }

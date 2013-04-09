@@ -12,22 +12,27 @@
 /* Override header margin if the first element on the page or if in a block. */
 div.field-item,
 div.col-2 {
-  & + h2, & + h3, & + h4, & + h5, & + h6 {
-    margin-top: 0em;
-    padding-top: 0em;
+  & + h2,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + h6 {
+    margin-top: 0;
+    padding-top: 0;
   }
 }
 
 /* Override header if the top block and not the block title. */
 .sidebar-right > h3,
 .sidebar-right > .view > .view-header > h3.block-title {
-  margin-top: 0em;
+  margin-top: 0;
 }
 
 /* Sensiblise list item spacing. */
-ul, ol {
+ul,
+ol {
   li {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     &:last-child {
       margin-bottom: 0.8em;
     }
@@ -38,7 +43,7 @@ ul, ol {
 .rightside {
   .aside h2,
   h2.block-title {
-    color: $link-visited
+    color: $link-visited;
   }
 }
 
@@ -57,16 +62,19 @@ table {
     font-style: italic;
   }
   td {
-    border-left: #B9CFE7 solid 1px;
+    border-left: #b9cfe7 solid 1px;
   }
 
   // Borderless table style.
   .borderless {
-    tr, th, td {
+    tr,
+    th,
+    td {
       border: none;
     }
     tbody {
-      tr:nth-child(2n), tr:nth-child(2n+1) {
+      tr:nth-child(2n),
+      tr:nth-child(2n+1) {
         background: transparent;
       }
     }
@@ -75,25 +83,26 @@ table {
 
 /* Header menu */
 #header-menu {
+  bottom: 0;
   float: right;
   min-height: 85px; // Helps if there is a teeny tiny (eg search) block in there only.
+  right: 0;
   width: auto;
-  bottom: 0px;
-  right: 0px;
 
   ul {
     li {
-      border-top: 1px solid white;
-      text-align: right;
-
-      color: white;
-      text-shadow: .5px .5px 2px #024;
-      -webkit-text-shadow: .5px .5px 2px #024;
       -moz-text-shadow: .5px .5px 2px #024;
       -o-text-shadow: .5px .5px 2px #024;
+      -webkit-text-shadow: .5px .5px 2px #024;
 
-      &, &.leaf {
-        padding-right: 0px;
+      border-top: 1px solid white;
+      color: white;
+      text-align: right;
+      text-shadow: .5px .5px 2px #024;
+
+      &,
+      &.leaf {
+        padding-right: 0;
       }
 
       &.first,
@@ -101,7 +110,9 @@ table {
         border-top: none;
       }
 
-      a, a:link, a:active {
+      a,
+      a:link,
+      a:active {
         color: white;
 
         &:hover {
@@ -114,11 +125,11 @@ table {
 
 /* Feature menu */
 #feature-menu {
-  margin-left: 0px;
-  padding-left: 0px;
+  margin-left: 0;
+  padding-left: 0;
   ul {
-    margin-left: 0px;
-    padding-left: 0px;
+    margin-left: 0;
+    padding-left: 0;
   }
   ul > li {
     float: left;
@@ -129,36 +140,38 @@ table {
 }
 
 body #site-search {
-  margin: 10px 0 10px 0;
-  float: right;
-
-  display: inline-block;
-  outline: none;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  padding: 0.3em 1em 0.3em;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
-  border-radius: 0.5em;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 0.5em;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+
+  border: solid 1px #a7c6e5;
+  border-radius: 0.5em;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   color: #345b8c !important;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
   font-weight: bold;
-  border: solid 1px #a7c6e5;
-  @include gradient(white, #eef4fa);
-
+  margin: 10px 0;
+  outline: none;
+  padding: 0.3em 1em;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   width: 180px;
 
-  form {
-    margin-top: 0px;
-    margin-bottom: 0px;
+  @include gradient(white, #eef4fa);
 
-    input, textarea, select {
-      margin: 0px;
+  form {
+    margin-bottom: 0;
+    margin-top: 0;
+
+    input,
+    textarea,
+    select {
       border: 1px solid #ccc;
+      margin: 0;
     }
 
     input.form-text {
@@ -166,8 +179,8 @@ body #site-search {
     }
 
     input.form-submit {
-      float:right;
-      margin-top:-1px;
+      float: right;
+      margin-top: -1px;
     }
   }
 }
@@ -182,24 +195,24 @@ body ul.jquerymenu {
   li.parent {
     position: relative;
     span {
-      position: absolute;
-      left: -15px;
       border: none;
+      left: -15px;
       overflow: hidden;
+      position: absolute;
 
       &.parent {
-        margin-left: 0px;
+        margin-left: 0;
       }
 
       &.open {
+        background-color: transparent;
         background-image: url('../images/collapse-arrow.png');
         background-position: 50% 0.4em;
-        background-color: transparent;
       }
       &.closed {
+        background-color: transparent;
         background-image: url('../images/expand-arrow.png');
         background-position: 50% 0.4em;
-        background-color: transparent;
       }
     }
   }
@@ -209,7 +222,7 @@ body ul.jquerymenu {
 .ie {
   ul.jquerymenu {
     li {
-      padding-bottom: 0em;
+      padding-bottom: 0;
       ul {
         margin-top: 0.3m;
       }
@@ -218,10 +231,11 @@ body ul.jquerymenu {
       margin-top: -0.2em;
       position: relative;
       span {
-       .open, .closed {
+       .open,
+       .closed {
+         left: 0;
          position: absolute;
          top: 1.3em;
-         left: 0px;
         }
       }
     }
@@ -235,8 +249,12 @@ body ul.jquerymenu {
 
 /* No border on any links, except in the main content on non-landing pages. */
 body {
-  a, a.tabledrag-handle {
-    &, &:link, &:active, &:visited {
+  a,
+  a.tabledrag-handle {
+    &,
+    &:link,
+    &:active,
+    &:visited {
       @include no-decoration;
     }
   }
@@ -245,12 +263,16 @@ body {
 /* Underline links in the main content */
 #main-content {
   a {
-    &:link, &:active, &:visited {
+    &:link,
+    &:active,
+    &:visited {
       @include decoration;
     }
     &.tabledrag-handle,
     &.button {
-      &:link, &:active, &:visited {
+      &:link,
+      &:active,
+      &:visited {
         @include no-decoration;
       }
     }
@@ -261,7 +283,9 @@ body {
 .home.front #main-content,
 .views-view-landing_pages #main-content {
   a {
-    &:link, &:active, &:visited {
+    &:link,
+    &:active,
+    &:visited {
       @include no-decoration;
     }
   }
@@ -271,8 +295,10 @@ body {
 #main-content {
   ul.tabs,
   ul.quicktabs-tabs {
-      a {
-        &:link, &:active, &:visited {
+    a {
+      &:link,
+      &:active,
+      &:visited {
         @include no-decoration;
       }
     }
@@ -281,16 +307,19 @@ body {
 
 /* Underline links in the highlight block. */
 .view-highlight {
-  a, a:link, a:active, a:visited {
+  a,
+  a:link,
+  a:active,
+  a:visited {
     @include decoration;
   }
 }
 
 /* Content-bottom (related content) links */
 #main-content-bottom {
-  background: none repeat scroll 0 0 #DFE9F4;
-  border-radius: 3px 3px 3px 3px;
-  color: #3E658E;
+  background: none repeat scroll 0 0 #dfe9f4;
+  border-radius: 3px;
+  color: #3e658e;
   font-size: 0.9em;
   margin: 8px 30px 20px 0;
   padding: 10px;
@@ -298,27 +327,30 @@ body {
 
 /* Notice style */
 #main-content {
-  .notice, .importantnotice {
+  .notice,
+  .importantnotice {
+    background-color: #eee;
     border: 1px dotted #999;
-    background-color: #EEE;
-    padding: 0.6em;
     margin: 1em;
-    .notice, .importantnotice {
+    padding: 0.6em;
+    .notice,
+    .importantnotice {
       // Thou shalt not nest thy notices, or if thou dost, they shan't show up as such.
       border: none;
-      padding: 0em;
-      margin: 0em;
+      margin: 0;
+      padding: 0;
     }
   }
   .importantnotice {
-    color: #900;
+    background-color: #fee;
     border: 1px dotted #f99;
-    background-color: #FEE;
-    .notice, .importantnotice {
+    color: #900;
+    .notice,
+    .importantnotice {
       // Thou shalt not nest thy notices, or if thou dost, they shan't show up as such.
       border: none;
-      padding: 0em;
-      margin: 0em;
+      margin: 0;
+      padding: 0;
     }
   }
 }
@@ -357,60 +389,55 @@ body {
 .page-node-add,
 .page-node-edit {
   form legend {
-    text-indent: 0em;
+    text-indent: 0;
   }
   form fieldset {
-    padding: 0px;
-    border: none;
     background: transparent;
+    border: none;
+    padding: 0;
   }
   span.cke_skin_kama {
     border: none;
-    padding: 0px;
+    padding: 0;
   }
   table {
-    tr, th, td {
+    tr,
+    th,
+    td {
       border: none;
     }
-    tr.odd, tr.even {
-      border: none;
+    tr.odd,
+    tr.even {
       background: transparent;
+      border: none;
     }
     tbody {
-      tr:nth-child(2n), tr:nth-child(2n) {
+      tr:nth-child(2n),
+      tr:nth-child(2n) {
         background: transparent;
       }
     }
   }
 
-  /* 
-  If profile is edited by academic, we disable the 
-  weight option and use drag and drop only 
-  */
+  /* If profile is edited by academic, we disable the weight option and use drag and drop only */
   .tabledrag-toggle-weight-wrapper {
-  display: none;
+    display: none;
   }
 
-  /* 
-  Increase the weight of toggle links
-  */
+  /* Increase the weight of toggle links */
   .fieldset-legend .fieldset-title {
-  font-weight: bold;
-  color: #353535;
+    color: #353535;
+    font-weight: bold;
   }
 
-  /* 
-  Increase the weight of toggle links
-  */  
+  /* Increase the weight of toggle links */
   fieldset .form-type-managed-file label {
     display: none;
   }
 
-  /*
-  Make more space between text field and field-group
-  */
+  /* Make more space between text field and field-group */
   .text-format-wrapper {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
   }
 }
 
@@ -439,17 +466,17 @@ body {
 table {
   tbody {
     tr.odd {
-      background: #EEF7FF;
+      background: #eef7ff;
     }
     tr.even {
-      background: #EEE;
+      background: #eee;
     }
   }
 }
 
 body.html {
-  background-position: 50% -60px;
   background-color: white;
+  background-position: 50% -60px;
   &.home.front {
     background-image: url('../images/homepage-blue-header.jpg');
   }
@@ -461,7 +488,7 @@ body.html {
 /* Float account-images right. */
 .account-images {
   float: right;
-  margin: 20px 10px 0px 20px;
+  margin: 20px 10px 0 20px;
 }
 
 /* Start align profile image */
@@ -490,23 +517,21 @@ div.status {
 }
 
 #backstretch-wrapper {
-  position: absolute;
-  z-index: -1;
-  bottom: 480px;
-  margin-left: 0px;
-
-  width: 980px;
-
-  float: left;
   background-image: url('../images/bg_white_90.png');
+  bottom: 480px;
+  float: left;
+  margin-left: 0;
+  position: absolute;
+  width: 980px;
+  z-index: -1;
   @include rounded($radius: 0.5em);
 }
 
 #backstretch,
 #backstretch-wrapper {
-  -webkit-transform: translateZ(0);
-  -webkit-perspective: 1000;
   -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translateZ(0);
 }
 
 /* Award search results. */
@@ -531,8 +556,8 @@ div.status {
     .views-exposed-form {
       .views-exposed-widget {
         .form-submit {
-          margin-top: 2.15em;
           -webkit-margin-before: 1.95em;
+          margin-top: 2.15em;
         }
       }
     }
@@ -553,22 +578,22 @@ div.status {
   }
 
   fieldset.search-advanced {
-    background:transparent;
-    border:0;
+    background: transparent;
+    border: 0;
   }
 }
 
 /* Why do fieldset legends need to live off-screen? */
 form legend {
-  text-indent: 0px;
+  text-indent: 0;
 }
 
 /* Right side block hilights (manual). */
 .sidebar-right {
   .front-hilight {
     background-color: $button-menu-active-bottom;
-    padding: 0.5em;
     margin-left: -1px;
+    padding: 0.5em;
     @include rounded($radius: 0.5em);
   }
 }
@@ -576,14 +601,17 @@ form legend {
 
 /* Start - form */
 form {
-  h1, h2, h3, h4, h5 {
-    text-align:left;
-    margin-left: 0px;
-    border-bottom: 0px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    border-bottom: 0;
     font-weight: bold;
-
-    margin:0px;
-    padding:0px;
+    margin: 0;
+    margin-left: 0;
+    padding: 0;
+    text-align: left;
   }
 
   h3 {
