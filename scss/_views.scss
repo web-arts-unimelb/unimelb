@@ -92,6 +92,11 @@
   }
 }
 
+/* At front page, margin between events and news */
+.sidebar-right .block-views {
+	padding-bottom: 20px;
+}
+
 /* Events listing pages. */
 .page-news .view-id-events,
 .page-events .view-id-events {
