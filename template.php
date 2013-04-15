@@ -303,7 +303,6 @@ function unimelb_preprocess_views_view_grid(&$vars) {
   }
 }
 
-
 /**
  * Helper to populate template vars from theme settings.
  *
