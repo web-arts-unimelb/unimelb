@@ -456,6 +456,17 @@ function unimelb_form_search_block_form_alter(&$form, &$form_state) {
 }
 
 /**
+ * Theme the link on the bottom of the block pointing to the shout page
+ *
+ * @param $page_path
+ *     Path to the shout page
+ */
+function unimelb_shoutbox_block_page_link($variables) {
+  return '';
+}
+
+
+/**
  * Helper to replace tags in page title with spaces.
  *
  * This is the last function in this file because the ?> tag in the regex

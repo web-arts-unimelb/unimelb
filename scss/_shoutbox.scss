@@ -1,0 +1,25 @@
+/* No border on the shoutbox form. */
+#shoutbox-add-form {
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#shoutbox-body {
+  table {
+    tbody {
+      td {
+        padding: 0;
+      }
+
+      tr.even,
+      tr:nth-child(2n),
+      tr:nth-child(2n+1),
+      tr.odd {
+        background: transparent;
+      }
+    }
+  }
+}
