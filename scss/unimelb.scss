@@ -621,7 +621,14 @@ form {
   p {
     font-weight: normal;
   }
+
+  fieldset.webform-component-fieldset.form-wrapper {
+		border: none;
+		background: none;
+  }
 }
+
+
 
 /* End - form */
 
