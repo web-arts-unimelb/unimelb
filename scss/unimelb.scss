@@ -627,10 +627,20 @@ form {
 		background: none;
   }
 }
-
-
-
 /* End - form */
+
+
+/* Start fix quicktab in arts */
+.ui-widget .ui-accordion-content {
+	font-family: inherit;
+}
+
+.ui-widget-content {
+	color: inherit;
+}
+
+/* End fix quicktab in arts */
+
 
 /* Links. */
 ul.inline,
