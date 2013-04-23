@@ -89,7 +89,11 @@
         <p><a href="<?php echo $home_page_url ?>"><?php echo $unimelb_meta_parent_org ?></a></p>
       <?php endif; ?>
 
-      <h1><a href="<?php print $front_page; ?>" title="Home" rel="home"><?php print $site_name; ?></a></h1>
+      <?php if (!empty($title_image)): ?>
+        <a href="<?php print $front_page; ?>" title="Home" rel="home"><img id="unimelb-title-image" src="<?php print $title_image; ?>" "<?php print $site_name; ?>" /></a>
+      <?php else: ?>
+        <h1><a href="<?php print $front_page; ?>" title="Home" rel="home"><?php print $site_name; ?></a></h1>
+      <?php endif; ?>
     <?php endif; ?>
 
     <?php if (!empty($page['header_menu'])): ?>
