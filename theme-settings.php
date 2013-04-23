@@ -22,9 +22,21 @@ function unimelb_form_system_theme_settings_alter(&$form, $form_state) {
   $form['unimelb']['img'] = array(
     '#type' => 'fieldset',
     '#title' => t('Images'),
-    '#description' => t("Upload background and page header images."),
+    '#description' => t("Upload title, background and page header images. Note that if a title image is set, the site name is not displayed in text."),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
+  );
+
+  // Images.
+  $form['unimelb']['img']['title_image_path'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Path to title image'),
+    '#default_value' => theme_get_setting('title_image_path'),
+  );
+  // Upload a front page background image.
+  $form['unimelb']['img']['title_image_upload'] = array(
+    '#type' => 'file',
+    '#title' => t('Upload title image'),
   );
 
   // Front page background.
@@ -349,6 +361,18 @@ function unimelb_form_system_theme_settings_alter(&$form, $form_state) {
  * Validate handler to process uploaded background images.
  */
 function _unimelb_settings_img_validate($form, &$form_state) {
+  $file = file_save_upload('title_image_upload');
+  if (isset($file)) {
+    if ($file) {
+      // Put the temporary file in form_values so we can save it on submit.
+      $form_state['values']['title_image_upload'] = $file;
+    }
+    else {
+      // File upload failed.
+      form_set_error('title_image_upload', t('The title image could not be uploaded.'));
+    }
+  }
+
   $file = file_save_upload('background_front_upload');
   if (isset($file)) {
     if ($file) {
@@ -375,6 +399,14 @@ function _unimelb_settings_img_validate($form, &$form_state) {
   }
 
   $values = $form_state['values'];
+
+  // Check for a new uploaded title_image, and use that if available.
+  if ($file = $values['title_image_upload']) {
+    unset($values['title_image_upload']);
+    $filename = file_unmanaged_copy($file->uri);
+    $values['title_image_path'] = $filename;
+    form_set_value($form['unimelb']['img']['title_image_path'], $values['title_image_path'], $form_state);
+  }
 
   // Check for a new uploaded header_image_front, and use that if available.
   if ($file = $values['background_front_upload']) {
