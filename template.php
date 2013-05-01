@@ -229,6 +229,15 @@ function unimelb_preprocess_page(&$variables) {
   // Remove extra stuff
   $tmp_array = array_diff($variables['classes_array'], array('page', 'contextual-links-region'));
   $variables['wrapper_classes'] = ' ' . implode(' ', $tmp_array);
+
+  // Optionally replace site name with an image.
+  $title_image = theme_get_setting('title_image_path');
+  if (!empty($title_image)) {
+    $variables['title_image'] = file_create_url($title_image);
+  }
+  else {
+    $variables['title_image'] = FALSE;
+  }
 }
 
 
