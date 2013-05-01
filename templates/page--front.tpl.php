@@ -37,6 +37,7 @@
  * - $hide_site_slogan: TRUE if the site slogan has been toggled off on the
  *   theme settings page. If hidden, the "element-invisible" class is added to
  *   make the site slogan visually hidden, but still accessible.
+ * - $title_image: An image that should be displayed instead of the site name.
  *
  * Navigation:
  * - $main_menu (array): An array containing the Main menu links for the
@@ -90,7 +91,9 @@
       <?php endif; ?>
 
       <?php if (!empty($title_image)): ?>
-        <a href="<?php print $front_page; ?>" title="Home" rel="home"><img id="unimelb-title-image" src="<?php print $title_image; ?>" "<?php print $site_name; ?>" /></a>
+        <div id="unimelb-title-image-wrapper">
+          <a href="<?php print $front_page; ?>" title="Home" rel="home"><img id="unimelb-title-image" src="<?php print $title_image; ?>" "<?php print $site_name; ?>" /></a>
+        </div>
       <?php else: ?>
         <h1><a href="<?php print $front_page; ?>" title="Home" rel="home"><?php print $site_name; ?></a></h1>
       <?php endif; ?>
