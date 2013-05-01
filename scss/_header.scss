@@ -21,11 +21,6 @@
  *     .col-2.rightside
  */
 
-.header .hgroup {
-  min-height: 92px;
-  clear: both;
-}
-
 #content-wrapper {
   // Default for slider.
   #slider {
@@ -174,4 +169,5 @@
 
 #unimelb-title-image-wrapper {
   min-height: 85px;
+  margin: 8px 0 0;
 }
