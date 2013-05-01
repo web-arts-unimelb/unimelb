@@ -61,6 +61,11 @@
   #backstretch-wrapper {
     display: none;
   }
+
+  // Ensure some extra spacing in case of a title image.
+  #unimelb-title-image-wrapper {
+    min-height: 125px;
+  }
 }
 
 /* Smartphones (portrait and landscape) */
