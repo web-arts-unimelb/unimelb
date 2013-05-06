@@ -182,7 +182,7 @@ function unimelb_preprocess_page(&$variables) {
    * Making Unimelb Settings variables available to js
    */
   $vars = array();
-  if ($value = theme_get_setting('unimelb_settings_site-name-short')){
+  if ($value = theme_get_setting('unimelb_settings_site-name-short')) {
     $vars['sitename'] = $variables['unimelb_site_name_short'] = $value;
   }
 
@@ -258,7 +258,7 @@ function unimelb_date_display_range($variables) {
   // Wrap the result with the attributes.
   return t('!start-date–!end-date', array(
     '!start-date' => '<span class="date-display-start"' . drupal_attributes($attributes_start) . '>' . $date1 . '</span>',
-    '!end-date' => '<span class="date-display-end"' . drupal_attributes($attributes_end) . '>' . $date2 . $timezone .'</span>',
+    '!end-date' => '<span class="date-display-end"' . drupal_attributes($attributes_end) . '>' . $date2 . $timezone . '</span>',
   ));
 }
 
@@ -279,7 +279,7 @@ function unimelb_colorbox_imagefield($variables) {
     $image = '';
     $class[] = 'js-hide';
   }
-  else if (!empty($variables['image']['style_name'])) {
+  elseif (!empty($variables['image']['style_name'])) {
     $image = theme('image_style', $variables['image']);
   }
   else {
@@ -310,8 +310,8 @@ function unimelb_preprocess_views_view_grid(&$vars) {
   $columns = isset($vars['options']['columns']) ? $vars['options']['columns'] : $vars['view']->style_options['columns'];
   $replace = array();
   for ($i = 1; $i <= $columns; $i++) {
-    $replace['col-'. $i .' '] = 'view-col-' . $i . ' ';
-    $replace['col-'. $i] = 'view-col-' . $i;
+    $replace['col-' . $i . ' '] = 'view-col-' . $i . ' ';
+    $replace['col-' . $i] = 'view-col-' . $i;
   }
 
   foreach ($vars['column_classes'] as &$row) {

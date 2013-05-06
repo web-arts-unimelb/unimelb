@@ -38,6 +38,7 @@ ul.jquerymenu li.parent span
 
 ul.jquerymenu li.parent span.closed 
 {
+  background-color: transparent;
 	background-image: url(plus.png);
 	width: 17px;
 	height: 15px;
@@ -46,6 +47,7 @@ ul.jquerymenu li.parent span.closed
 
 ul.jquerymenu li.parent span.open 
 {
+  background-color: transparent;
     background-image: url(minus.png);
     width: 17px;
 	height: 15px;
