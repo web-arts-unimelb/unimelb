@@ -22,9 +22,12 @@
  */
 
 #content-wrapper {
+  // ------------------------------------------------------------------------------------
+  /* Element spacing. */
+
   // Default for slider.
   #slider {
-    margin-top: 46px;
+    margin-top: 65px;
     .col-2.rightside {
       margin-top: 0;
     }
@@ -33,7 +36,7 @@
   // Default for page content.
   #main-content,
   .col-2.rightside {
-    margin-top: 30px;
+    margin-top: 40px;
   }
 
   &.uom-header {
@@ -75,9 +78,6 @@
         margin-top: 0;
       }
     }
-    #backstretch-wrapper {
-      top: 175px;
-    }
   }
 
   // Values for page content if a semi-transparent background and
@@ -89,85 +89,104 @@
     }
   }
 
-  // Values for slider and background wrapper if a semi-transparent
+  // Values for slider wrapper if a semi-transparent
   // background and feature menu are present.
   &.uom-feature.uom-backstretch {
     #slider {
       margin-top: 36px;
     }
-    #backstretch-wrapper {
+  }
+
+  // ------------------------------------------------------------------------------------
+  /* Backstretch positioning. */
+
+  // Default.
+  &.uom-backstretch #backstretch-wrapper {
+    top: 140px;
+  }
+
+  // If a header menu is present.
+  &.uom-backstretch.uom-header #backstretch-wrapper {
+    top: 120px;
+  }
+
+  // If a feature menu is present.
+  &.uom-backstretch.uom-feature #backstretch-wrapper {
+    top: 160px;
+  }
+
+  // If a slider is present.
+  &.uom-backstretch.uom-slider #backstretch-wrapper {
+    top: 125px;
+  }
+
+  // If a header menu and feature menu are present.
+  &.uom-backstretch.uom-header.uom-feature #backstretch-wrapper {
+    top: 165px;
+  }
+
+  // If a header menu and slider are present.
+  &.uom-backstretch.uom-header.uom-slider #backstretch-wrapper {
+    top: 135px;
+  }
+
+  // If a feature menu and a slider are present.
+  &.uom-backstretch.uom-feature.uom-slider #backstretch-wrapper {
+    top: 150px;
+  }
+
+  // If a header menu and feature menu are present.
+  &.uom-backstretch.uom-header.uom-feature.uom-slider #backstretch-wrapper {
+    top: 155px;
+  }
+}
+
+// Optionally tweak the backstretch spacing if  auser is logged in and sees an admin menu.
+.admin-menu {
+  #content-wrapper {
+    // Default.
+    &.uom-backstretch #backstretch-wrapper {
+      top: 115px;
+    }
+
+    // If a header menu is present.
+    &.uom-backstretch.uom-header #backstretch-wrapper {
+      top: 120px;
+    }
+
+    // If a feature menu is present.
+    &.uom-backstretch.uom-feature #backstretch-wrapper {
+      top: 160px;
+    }
+
+    // If a slider is present.
+    &.uom-backstretch.uom-slider #backstretch-wrapper {
+      top: 125px;
+    }
+
+    // If a header menu and feature menu are present.
+    &.uom-backstretch.uom-header.uom-feature #backstretch-wrapper {
+      top: 165px;
+    }
+
+    // If a header menu and slider are present.
+    &.uom-backstretch.uom-header.uom-slider #backstretch-wrapper {
+      top: 135px;
+    }
+
+    // If a feature menu and a slider are present.
+    &.uom-backstretch.uom-feature.uom-slider #backstretch-wrapper {
+      top: 150px;
+    }
+
+    // If a header menu and feature menu are present.
+    &.uom-backstretch.uom-header.uom-feature.uom-slider #backstretch-wrapper {
       top: 155px;
-    }
-  }
-
-  // Values for background wrapper if a feature menu and slider
-  // are present.
-  &.uom-feature.uom-slider.uom-backstretch {
-    #backstretch-wrapper {
-      top: 145px;
-    }
-  }
-}
-
-// May be a better way to do it
-.logged-in {
-  #content-wrapper {
-    // Values for page content if a 
-    // semi-transparent background is present.
-    &.uom-backstretch {
-      #backstretch-wrapper {
-        top: 150px;
-      }
-    }
-
-    // Values for background wrapper if a semi-transparent
-    // background and feature menu are present.
-    &.uom-feature.uom-backstretch {
-      #backstretch-wrapper {
-        top: 155px;
-      }
-    }
-
-    // Values for background wrapper if a feature menu and slider
-    // are present.
-    &.uom-feature.uom-slider.uom-backstretch {
-      #backstretch-wrapper {
-        top: 170px;
-      }
-    }
-  }
-}
-
-// May be a better way to do it
-.not-logged-in {
-  #content-wrapper {
-    // Values for page content if a 
-    // semi-transparent background is present.
-    &.uom-backstretch {
-      #backstretch-wrapper {
-        top: 150px;
-      }
-    }
-
-    // Values for background wrapper if a semi-transparent
-    // background and feature menu are present.
-    &.uom-feature.uom-backstretch {
-      #backstretch-wrapper {
-        top: 170px;
-      }
-    }
-
-    // Values for background wrapper if a feature menu and slider
-    // are present.
-    &.uom-feature.uom-slider.uom-backstretch {
-      #backstretch-wrapper {
-        top: 170px;
-      }
     }
   }
 }
 
 #unimelb-title-image-wrapper {
-  min-height: 85px;
   margin: 8px 0 0;
+  min-height: 85px;
 }

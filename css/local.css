@@ -87,28 +87,30 @@ table {
  * jQuery menu
  */
 body ul.jquerymenu li.parent span.open {
+  background-color: transparent;
   background-image: url('../images/collapse-arrow.png');
   background-position: 50% 0.4em; }
 
 body ul.jquerymenu li.parent span.closed {
+  background-color: transparent;
   background-image: url('../images/expand-arrow.png');
   background-position: 50% 0.4em; }
 
 /*
  * Ouch! Ugly!
  */
-    .ie ul.jquerymenu li {
-      padding-bottom: 0em; }
-      .ie ul.jquerymenu li ul {
-        margin-top: 0.3em; }
-    .ie ul.jquerymenu li.parent {
-      margin-top: -1em;
-      position: relative; }
-        .ie ul.jquerymenu li.parent span .closed,
-        .ie ul.jquerymenu li.parent span .open {
-          position: absolute;
-          top: 1.3em;
-          left: 0px; }
+.ie ul.jquerymenu li {
+  padding-bottom: 0em; }
+.ie ul.jquerymenu li ul {
+  margin-top: 0.3em; }
+.ie ul.jquerymenu li.parent {
+  margin-top: -1em;
+  position: relative; }
+.ie ul.jquerymenu li.parent span .closed,
+.ie ul.jquerymenu li.parent span .open {
+  position: absolute;
+  top: 1.3em;
+  left: 0px; }
 
 /*
  * Content editing
