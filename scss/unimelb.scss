@@ -623,8 +623,8 @@ form {
   }
 
   fieldset.webform-component-fieldset.form-wrapper {
-		border: none;
-		background: none;
+    background: none;
+    border: none;
   }
 }
 /* End - form */
@@ -632,16 +632,15 @@ form {
 
 /* Start fix quicktab in arts */
 .ui-widget .ui-accordion-content {
-	font-family: sans-serif;
-	line-height: 1.5em;
+  font-family: sans-serif;
+  line-height: 1.5em;
 }
 
 .ui-widget-content {
-	color: inherit;
-}
-
-.ui-widget-content a{
-	color: #4C5E71;
+  color: inherit;
+  a {
+    color: #4c5e71;
+  }
 }
 /* End fix quicktab in arts */
 
