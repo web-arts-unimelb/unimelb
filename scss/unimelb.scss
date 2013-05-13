@@ -653,5 +653,10 @@ ul.links.inline {
   }
 }
 
+/* Remove clear */
+h2, h3, h4, .pullquote {
+	clear: none;
+}
+
 /* Add in some responsible sprinkles. */
 @import "responsive";
