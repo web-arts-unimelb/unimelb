@@ -653,9 +653,9 @@ ul.links.inline {
   }
 }
 
-/* Remove clear */
+/* Need to remove clear */
 h2, h3, h4, .pullquote {
-	clear: none;
+	clear: both;
 }
 
 /* Add in some responsible sprinkles. */
