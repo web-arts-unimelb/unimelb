@@ -666,5 +666,38 @@ ul.links.inline {
 	clear: both;
 }
 
+/* Custom color */
+.color_year {
+	background-color: #bae0cd;
+}
+
+.color_semester {
+	background-color: #d1d3d4;
+}
+
+.color_arts_foundation_subject {
+	background-color: #e0c5c9;
+}
+
+.color_major_1 {
+	background-color: #c7d9f0;
+}
+
+.color_major_2 {
+  background-color: #dbedfa; 
+}
+
+.color_elective {
+  background-color: #fbeed1;
+}
+
+.color_breadth {
+	background-color: #d6cde6;
+}
+
+.color_diploma_in_languages {
+	background-color: #bae0cd;
+}
+
 /* Add in some responsible sprinkles. */
 @import "responsive";
