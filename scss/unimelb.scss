@@ -653,5 +653,18 @@ ul.links.inline {
   }
 }
 
+/* Use this class to clear left or right, allow wysiwgy float left or right */
+.clear-left {
+	clear: left;
+}
+
+.clear-right {
+	clear: right;
+}
+
+.clear-both {
+	clear: both;
+}
+
 /* Add in some responsible sprinkles. */
 @import "responsive";
