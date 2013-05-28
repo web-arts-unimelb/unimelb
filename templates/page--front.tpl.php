@@ -125,15 +125,15 @@
 
 	<?php if($dropdown_and_search == TRUE): ?>
 		<div class="arts-dropdown">
-      <div id="arts-dropdown-menu" class="">
+      <div id="arts-dropdown-menu">
         <?php print render($page['feature_menu']); ?>
       </div>
 
       <?php if(!empty($site_search_box)): ?>
-        <div id="site-search" class="col-2 rightside">
+        <div id="arts-dropdown-site-search">
           <?php print render($site_search_box); ?>
         </div>
-      <?php endif;?>
+      <?php endif; ?>
     </div>
   <?php elseif (!empty($page['feature_menu']) || !empty($site_search_box)): ?>
     <div class="feature col-8">
