@@ -201,7 +201,9 @@ div.arts-dropdown {
 	border-radius: 0.5em;
 	display: inline-block;
 	margin-top: 10px;	
-	
+
+	@include gradient(white, #d4e5f7);
+
 	div#arts-dropdown-menu {
 		ul {
 			li.arts-dropdown-item {
@@ -209,6 +211,8 @@ div.arts-dropdown {
 				margin-right: 1.1em;
 				color: #22517d;
 				font-weight: bold;
+				
+				@include gradient(white, #d4e5f7);
 				
 				a {
 					border: 0;
