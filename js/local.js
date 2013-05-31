@@ -47,11 +47,12 @@
 function _backstretch_fix()
 {
 	// Quick fix: backstretch missing
+	var default_adjust = 30;
   var slider_height = $('#slider').height();
   var main_content_height = $('#main-content').height();
   
   var sidebar_height = $('.sidebar-right').height();
-  var the_nav_height = ('.the_nav').height();
+  var the_nav_height = $('.the_nav').height();
   
   if(slider_height > 0)
   {
@@ -60,7 +61,7 @@ function _backstretch_fix()
   	{
   		if(main_content_height >= sidebar_height)
 			{
-				back_height = slider_height + main_content_height + 30;
+				back_height = slider_height + main_content_height + default_adjust;
 			}
 			else
 			{
@@ -69,7 +70,7 @@ function _backstretch_fix()
   	}
   	else
   	{
-  		back_height = slider_height + main_content_height + 30;
+  		back_height = slider_height + main_content_height + default_adjust;
   	}
   }
   else
@@ -79,7 +80,7 @@ function _backstretch_fix()
   	{
   		if(main_content_height >= sidebar_height)
 			{
-				back_height = main_content_height + 30;
+				back_height = main_content_height + default_adjust;
 			}
 			else
 			{
@@ -88,14 +89,21 @@ function _backstretch_fix()
   	}
   	else
   	{
+  		// Doesn't have sidebar, but navigation menu
   		if(the_nav_height > 0)
   		{
-  			// Doesn't have sidebar, but navigation menu
-  			back_height = the_nav_height + 30;
+  			if(main_content_height >= the_nav_height)
+  			{
+  				back_height = main_content_height + default_adjust;
+  			}
+  			else
+  			{
+  				back_height = the_nav_height + default_adjust;
+  			}
   		}
   		else
   		{
-  			back_height = main_content_height + 30;
+  			back_height = main_content_height + default_adjust;
   		}
   	}
   }
