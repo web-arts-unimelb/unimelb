@@ -26,7 +26,7 @@
             speed: 0
           });
           
-          _backstretch_fix();
+          //_backstretch_fix();
           //_backstretch_fix_1();
         }
         else {
