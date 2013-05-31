@@ -25,6 +25,8 @@
           $.backstretch(bgPath, {
             speed: 0
           });
+          
+          _backstretch_fix();
         }
         else {
           var bgPath = Drupal.settings.unimelb.background;
@@ -42,3 +44,62 @@
 })(jQuery);
 
 
+function _backstretch_fix()
+{
+	// Quick fix: backstretch missing
+  var slider_height = $('#slider').height();
+  var main_content_height = $('#main-content').height();
+  
+  var sidebar_height = $('.sidebar-right').height();
+  var the_nav_height = ('.the_nav').height();
+  
+  if(slider_height > 0)
+  {
+  	// On home page
+  	if(sidebar_height > 0)
+  	{
+  		if(main_content_height >= sidebar_height)
+			{
+				back_height = slider_height + main_content_height + 30;
+			}
+			else
+			{
+				back_height = slider_height + sidebar_height + 60;
+			}
+  	}
+  	else
+  	{
+  		back_height = slider_height + main_content_height + 30;
+  	}
+  }
+  else
+  {
+  	// Not on home page
+  	if(sidebar_height > 0)
+  	{
+  		if(main_content_height >= sidebar_height)
+			{
+				back_height = main_content_height + 30;
+			}
+			else
+			{
+				back_height = sidebar_height + 40;
+			}
+  	}
+  	else
+  	{
+  		if(the_nav_height > 0)
+  		{
+  			// Doesn't have sidebar, but navigation menu
+  			back_height = the_nav_height + 30;
+  		}
+  		else
+  		{
+  			back_height = main_content_height + 30;
+  		}
+  	}
+  }
+  
+  var back_height_px = back_height + 'px';
+  $('#backstretch-wrapper').css('height', back_height_px);
+}
