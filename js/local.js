@@ -27,6 +27,7 @@
           });
           
           _backstretch_fix();
+          //_backstretch_fix_1();
         }
         else {
           var bgPath = Drupal.settings.unimelb.background;
@@ -109,5 +110,19 @@ function _backstretch_fix()
   }
   
   var back_height_px = back_height + 'px';
+  $('#backstretch-wrapper').css('height', back_height_px);
+}
+
+function _backstretch_fix_1()
+{
+	var g_header_height = $('#g-header').height();
+	var header_height = $('.header').height();
+	var footer_height = $('.footer').height();
+	var footernav_height = $('#footernav').height();
+	var document_height = $(document).height();
+	
+	var adjust = 180;
+	var back_height = document_height - g_header_height - header_height - footer_height - footernav_height - adjust;
+	var back_height_px = back_height + 'px';
   $('#backstretch-wrapper').css('height', back_height_px);
 }
