@@ -35,6 +35,9 @@ regions[home_column_12]  = home_column_12
 regions[home_event]      = home_event
 regions[home_promo]      = home_promo
 
+regions[home_left] = home_left
+regions[home_right] = home_right
+
 ; Settings.
 settings[unimelb_settings_custom_logo]    = 0
 settings[unimelb_settings_parent-org]     = "Faculty of Arts"

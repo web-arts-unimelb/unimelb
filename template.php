@@ -249,6 +249,9 @@ function unimelb_preprocess_page(&$variables) {
   else {
     $variables['title_image'] = FALSE;
   }
+  
+	// Remove "No front page content has been created yet. Add new content" on front page.
+	unset($variables['page']['content']['system_main']['default_message']);
 }
 
 
