@@ -517,7 +517,12 @@ div.status {
 }
 
 #backstretch-wrapper {
-  background-image: url('../images/bg_white_90.png');
+  background-image: url('../images/bg_white_90.gif');
+  
+  opacity:0.9;
+  filter:alpha(opacity=90); /* ie8 or lower */
+  background-color: #ffffff;
+  
   bottom: 480px;
   float: left;
   margin-left: 0;
