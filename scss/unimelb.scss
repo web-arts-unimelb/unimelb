@@ -517,11 +517,7 @@ div.status {
 }
 
 #backstretch-wrapper {
-  background-image: url('../images/bg_white_90_1.gif');
-  
-  opacity:0.9;
-  filter:alpha(opacity=90); /* ie8 or lower */
-  background-color: #ffffff;
+  background-image: url('../images/bg_white_90.gif');
   
   bottom: 480px;
   float: left;
@@ -530,6 +526,8 @@ div.status {
   width: 980px;
   z-index: -1;
   @include rounded($radius: 0.5em);
+
+	background-color: #ffffff;
 }
 
 #backstretch,
