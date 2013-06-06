@@ -149,7 +149,6 @@
   <!-- whatever is in $page['content'].       <?php print $variables['layout']; ?>  -->
   <?php include($variables['layout']); ?>
 
-
 </div><!-- end wrapper -->
 
 <hr /><div class="footer"><div id="local" class="wrapper">
