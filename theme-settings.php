@@ -123,6 +123,14 @@ function unimelb_form_system_theme_settings_alter(&$form, $form_state) {
     '#required' => false,
   );
 
+	$form['unimelb']['unimelb_settings_dropdown_menu_and_search_box'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Dropdown menu and search box'),
+    '#description' => t('Display dropdown menu and search box'),
+    '#default_value' => theme_get_setting('unimelb_settings_dropdown_menu_and_search_box'),
+    '#required' => false,
+  );
+
   $form['unimelb']['unimelb_settings_parent-org'] = array(
     '#type' => 'textfield',
     '#title' => t('Parent organisational unit (optional)'),
