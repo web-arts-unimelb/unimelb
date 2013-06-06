@@ -233,8 +233,6 @@
     </div>
   <?php endif; ?>
 
-  </div>
-
 </div><!-- end wrapper -->
 
 <hr /><div class="footer"><div id="local" class="wrapper">
