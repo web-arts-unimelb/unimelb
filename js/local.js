@@ -25,6 +25,9 @@
           $.backstretch(bgPath, {
             speed: 0
           });
+         
+					// Fix transparent background issue
+					$('#backstretch-wrapper').css('opacity','.9'); 
         }
         else {
           var bgPath = Drupal.settings.unimelb.background;
