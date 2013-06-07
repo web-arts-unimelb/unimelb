@@ -178,9 +178,13 @@ function unimelb_preprocess_page(&$variables) {
   if(!empty($dropdown_and_search)) {
 		 // Force to use the search box
 		 if(module_exists('search')) {
-		 $variables['site_search_box'] = drupal_get_form('search_block_form');
-		 $variables['dropdown_and_search'] = TRUE;
+		 	$variables['site_search_box'] = drupal_get_form('search_block_form');
+		 	$variables['dropdown_and_search'] = TRUE;
 		 }
+  }
+  else
+  {
+  	$variables['dropdown_and_search'] = false;
   }
   
   $variables['unimelb_ht_right'] = theme_get_setting('unimelb_settings_ht-right', '');
