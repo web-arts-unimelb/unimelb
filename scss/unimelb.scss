@@ -702,7 +702,6 @@ ul.links.inline {
 	background-color: #bae0cd;
 }
 
-
 /* Start dropdown menu */
 div.arts-dropdown {
 	-moz-border-radius: 0.5em;
@@ -785,6 +784,19 @@ div.arts-dropdown {
 	}
 }
 /* End dropdown menu */
+
+
+/* Start rupc */
+.rupc-item-listing .mysection {
+	margin-bottom: 20px;
+}
+
+.rupc-item-listing .mysection img {
+	float:left;
+	margin-right: 10px;
+	margin-top: 3px;
+}
+/* End rupc */
 
 /* Add in some responsible sprinkles. */
 @import "responsive";
