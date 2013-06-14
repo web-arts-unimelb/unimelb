@@ -227,6 +227,7 @@ padding:5px 6px;
 }
 
 div a.button {
+color: #ffffff; /* There is no color here originally */
 clear:both;
 float:none;
 margin:8px 0;

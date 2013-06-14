@@ -1141,6 +1141,10 @@ ul.links.inline li {
 .color_minors {
   background-color: #fedbba; }
 
+a.color_white {
+	color:#ffffff;	
+}
+
 table.color {
   border: 1px solid #444444;
 }
