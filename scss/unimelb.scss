@@ -707,7 +707,11 @@ ul.links.inline {
 }
 
 table.color {
-	background-color: #444444;
+  border: 1px solid #444444;
+}
+
+table.color td {
+  border: 1px solid #444444;
 }
 
 
