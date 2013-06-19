@@ -1152,7 +1152,10 @@ table.color td {
 
 /* Start rupc */
 .rupc-item-listing .mysection {
-  margin-bottom: 20px; }
+  margin-bottom: 20px; 
+	clear:both;
+	min-height: 9em;
+}
 
 .rupc-item-listing .mysection img {
   float: left;
