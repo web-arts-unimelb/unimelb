@@ -1173,19 +1173,15 @@ div.arts-dropdown {
   border-radius: 0.5em;
   display: inline-block;
   margin-top: 10px;
-  background: white;
-  background: -moz-linear-gradient(top, white, #d4e5f7);
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#d4e5f7));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#d4e5f7'); }
+  /*@include gradient(white, #d4e5f7);*/
+  background-image: url("../images/arts-dropdown-bg.png"); }
   div.arts-dropdown div#arts-dropdown-menu ul li.arts-dropdown-item {
     background-color: #d4e5f7;
     margin-right: 1.1em;
     color: #22517d;
     font-weight: bold;
-    background: white;
-    background: -moz-linear-gradient(top, white, #d4e5f7);
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#d4e5f7));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#d4e5f7'); }
+    /*@include gradient(white, #d4e5f7);*/
+    background-image: url("../images/arts-dropdown-bg.png"); }
     div.arts-dropdown div#arts-dropdown-menu ul li.arts-dropdown-item a {
       border: 0; }
   div.arts-dropdown div#arts-dropdown-menu ul ul {
