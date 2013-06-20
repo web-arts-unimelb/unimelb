@@ -124,13 +124,13 @@
   <?php endif; ?>
 
 	<?php if($dropdown_and_search == TRUE): ?>
-		<div class="arts-dropdown">
-			<div id="arts-dropdown-menu">
+		<div class="arts-dropdown col-8">
+			<div id="arts-dropdown-menu col-6 first">
 				<?php print render($page['feature_menu']); ?>
 			</div>
 
 			<?php if(!empty($site_search_box)): ?>
-				<div id="arts-dropdown-site-search">
+				<div id="arts-dropdown-site-search" class="col-2 rightside">
 					<?php print render($site_search_box); ?>
 				</div>
 			<?php endif; ?>
