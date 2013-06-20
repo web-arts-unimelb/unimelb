@@ -749,7 +749,8 @@ div.arts-dropdown {
   display: inline-block;
   margin-top: 10px;
 
-  @include gradient(white, #d4e5f7);
+  /*@include gradient(white, #d4e5f7);*/
+	background-image: url('../images/arts-dropdown-bg.png');
 
   div#arts-dropdown-menu {
     ul {
@@ -759,7 +760,8 @@ div.arts-dropdown {
         color: #22517d;
         font-weight: bold;
 
-        @include gradient(white, #d4e5f7);
+        /*@include gradient(white, #d4e5f7);*/
+				background-image: url('../images/arts-dropdown-bg.png');
 
         a {
           border: 0;
