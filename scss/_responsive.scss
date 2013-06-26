@@ -66,6 +66,23 @@
   #unimelb-title-image-wrapper {
     min-height: 125px;
   }
+
+	// Start dropdown menu
+	div.arts-dropdown {
+		width: 100%; 
+		background-image: none;
+		//background-color: transparent; 
+		border-radius: none; 
+    box-shadow: none;
+		padding-right: 0;
+	}
+
+	.wrapper {
+		padding-right: 0;
+		width: auto;
+	}
+
+	// End dropdown menu
 }
 
 /* Smartphones (portrait and landscape) */
