@@ -7,7 +7,7 @@
 /**
  * Responsive markup for smaller-screen devices such as tablets and phones.
  */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 630px) {
 
   // Re-colour the header menu and make it stick to the left.
   #header-menu {
@@ -48,6 +48,8 @@
 
   // Hide the slider image.
   #slider {
+		/*width: auto;*/
+
     .slider {
       display: none;
     }
@@ -71,19 +73,34 @@
 	div.arts-dropdown {
 		width: 100%; 
 		background-image: none;
-		//background-color: transparent; 
+		background-color: transparent; 
 		border-radius: none; 
     box-shadow: none;
 		padding-right: 0;
 	}
 
+	/*
 	.wrapper {
+
+		padding-left: 10px;
 		padding-right: 0;
 		width: auto;
+		
 	}
 
+	
+	.col-6:not(#arts-dropdown-menu) {
+		width: auto;
+	}	
+
+	#slider #widget_pager_top_slider-block,
+	#slider #widget_pager_bottom_slider-block {	
+		width: 100%;
+	}
+	*/
 	// End dropdown menu
 }
+
 
 /* Smartphones (portrait and landscape) */
 @media screen and (max-width: 480px) {
@@ -94,6 +111,10 @@
   .front .views-field-field-shared-images {
     display: none;
   }
+
+	div.arts-dropdown {
+		margin-top: 50px;
+	}
 }
 
 /* Smartphones (portrait) ----------- */
