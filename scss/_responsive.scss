@@ -7,6 +7,16 @@
 /**
  * Responsive markup for smaller-screen devices such as tablets and phones.
  */
+@media screen and (min-width: 631px) {
+	// Make sure banner reappear
+	#slider {
+    .slider {
+      display: inline;
+    }
+  }
+}
+
+
 @media screen and (max-width: 630px) {
 
   // Re-colour the header menu and make it stick to the left.
@@ -48,8 +58,6 @@
 
   // Hide the slider image.
   #slider {
-		/*width: auto;*/
-
     .slider {
       display: none;
     }
@@ -79,25 +87,6 @@
 		padding-right: 0;
 	}
 
-	/*
-	.wrapper {
-
-		padding-left: 10px;
-		padding-right: 0;
-		width: auto;
-		
-	}
-
-	
-	.col-6:not(#arts-dropdown-menu) {
-		width: auto;
-	}	
-
-	#slider #widget_pager_top_slider-block,
-	#slider #widget_pager_bottom_slider-block {	
-		width: 100%;
-	}
-	*/
 	// End dropdown menu
 }
 

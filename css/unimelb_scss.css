@@ -1234,6 +1234,9 @@ div.arts-dropdown {
 /**
  * Responsive markup for smaller-screen devices such as tablets and phones.
  */
+@media screen and (min-width: 631px) {
+  #slider .slider {
+    display: inline; } }
 @media screen and (max-width: 630px) {
   #header-menu {
     clear: both;
@@ -1262,12 +1265,10 @@ div.arts-dropdown {
     clear: both;
     float: left; }
 
-  #slider {
-    /*width: auto;*/ }
-    #slider .slider {
-      display: none; }
-    #slider div.views-slideshow-pager-field-item {
-      border-left-width: 1px; }
+  #slider .slider {
+    display: none; }
+  #slider div.views-slideshow-pager-field-item {
+    border-left-width: 1px; }
 
   #backstretch,
   #backstretch-wrapper {
@@ -1282,27 +1283,7 @@ div.arts-dropdown {
     background-color: transparent;
     border-radius: none;
     box-shadow: none;
-    padding-right: 0; }
-
-  	/*
-  	.wrapper {
-  
-  		padding-left: 10px;
-  		padding-right: 0;
-  		width: auto;
-  		
-  	}
-  
-  	
-  	.col-6:not(#arts-dropdown-menu) {
-  		width: auto;
-  	}	
-  
-  	#slider #widget_pager_top_slider-block,
-  	#slider #widget_pager_bottom_slider-block {	
-  		width: 100%;
-  	}
-  	*/ }
+    padding-right: 0; } }
 /* Smartphones (portrait and landscape) */
 @media screen and (max-width: 480px) {
   /* Hide images on front page for mobile devices. */
