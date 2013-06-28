@@ -186,7 +186,16 @@ function unimelb_preprocess_page(&$variables) {
   {
   	$variables['dropdown_and_search'] = false;
   }
-  
+ 
+	// Viewport
+	$viewport_initial_scale = theme_get_setting('viewport_initial_scale');
+	if(empty($viewport_initial_scale)) {
+		$variables['viewport_initial_scale'] = '0.67';
+	}
+	else {
+		$variables['viewport_initial_scale'] = $viewport_initial_scale;
+	}	
+
   $variables['unimelb_ht_right'] = theme_get_setting('unimelb_settings_ht-right', '');
   $variables['unimelb_ht_left'] = theme_get_setting('unimelb_settings_ht-left', '');
 
