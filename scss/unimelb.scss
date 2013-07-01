@@ -745,15 +745,16 @@ div.arts-dropdown {
   background-color: #d4e5f7;
   margin-left: 0px;
 	padding-right: 40px;
-	/*width: 980px;*/
   height: 33px;
   border-radius: 0.5em;
   display: inline-block;
-  margin-top: 10px;
+	margin-top: 10px;
 
 	background-image: url('../images/arts-dropdown-bg.png');
 
   div#arts-dropdown-menu {
+		margin-left: 0;
+
     ul {
       li.arts-dropdown-item {
         background-color: #d4e5f7;
@@ -770,8 +771,6 @@ div.arts-dropdown {
     }
 
     ul ul {
-      margin-left: -7px;
-
       li.arts-dropdown-item:not(:last-of-type) {
         a {
           border-bottom: solid 1px #264e82;
@@ -806,7 +805,6 @@ div.arts-dropdown {
       input.form-text {
         padding-top: 0.2em;
         float: left;
-        /*width: 140px;*/
       }
       input.form-submit {
         float: right;
