@@ -7,16 +7,6 @@
 /**
  * Responsive markup for smaller-screen devices such as tablets and phones.
  */
-@media screen and (min-width: 631px) {
-	// Make sure banner reappear
-	#slider {
-    .slider {
-      display: inline;
-    }
-  }
-}
-
-
 @media screen and (max-width: 630px) {
   // Re-colour the header menu and make it stick to the left.
   #header-menu {
