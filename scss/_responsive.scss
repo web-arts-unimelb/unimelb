@@ -78,6 +78,12 @@
 
 	div#arts-dropdown-menu {
 		float: left;
+		
+		li {
+		 	a {
+				border-width: 0 !important; 
+			}
+		}
 	}
 
 	div#arts-dropdown-site-search {

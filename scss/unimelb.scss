@@ -770,22 +770,13 @@ div.arts-dropdown {
           border-bottom: solid 1px #264e82;
         }
 			}
-     
-			/* 
-			li.last
-			{
-				a {
-					border-bottom: 0;
-				}
-			}
-			*/
     }
 
 		/* The very first item */
 		li.sf-item-1.sf-depth-1 {
-        -webkit-border-radius: 0.5em;
-        -moz-border-radius: 0.5em;
-        border-radius: 0.5em;
+    	-webkit-border-radius: 0.5em;
+      -moz-border-radius: 0.5em;
+      border-radius: 0.5em;
     }
 
 		/* Depth-1 */
@@ -828,7 +819,6 @@ div.arts-dropdown {
 
     li:not(.sf-depth-1) {
     	height: auto;
-			width: 13.75em; /* 220px */
 
 			/* Start word break */	
 			-ms-word-break: break-all;
