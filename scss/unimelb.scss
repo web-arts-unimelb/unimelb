@@ -527,7 +527,7 @@ div.status {
   z-index: -1;
   @include rounded($radius: 0.5em);
 
-	background-color: #ffffff;
+	//background-color: #ffffff;
 }
 
 #backstretch,
@@ -774,9 +774,14 @@ div.arts-dropdown {
 
 		/* The very first item */
 		li.sf-item-1.sf-depth-1 {
-    	-webkit-border-radius: 0.5em;
-      -moz-border-radius: 0.5em;
-      border-radius: 0.5em;
+			-moz-border-radius-topleft: 0.5em;
+			-moz-border-radius-bottomleft: 0.5em;
+
+			-webkit-border-top-left-radius: 0.5em;
+			-webkit-border-bottom-left-radius: 0.5em;
+
+    	border-top-left-radius: 0.5em;
+			border-bottom-left-radius: 0.5em; 
     }
 
 		/* Depth-1 */

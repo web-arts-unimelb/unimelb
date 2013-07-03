@@ -7,6 +7,19 @@
 /**
  * Responsive markup for smaller-screen devices such as tablets and phones.
  */
+
+/* 
+ * Hack 
+ * Chrome kicks in a bit earlier than firefox
+ */
+@media screen and (max-width: 655px) {
+	div#arts-dropdown-menu {
+		select {
+  		margin-top: 4px; 
+		}
+  }
+}
+
 @media screen and (max-width: 630px) {
   // Re-colour the header menu and make it stick to the left.
   #header-menu {
@@ -139,6 +152,14 @@
 	}
 }
 
+/* Hack */
+@media screen and (max-width: 375px) {
+	// Need to turn this off
+  #g-audience-links {
+    display:none;
+  }
+}
+
 /* Smartphones (portrait) ----------- */
 @media screen and (max-width : 320px) {
   // Stick header menu hard to the left.
@@ -147,9 +168,4 @@
     float: left;
     margin-left: -145px;
   }
-
-	// Need to turn this off
-	#g-audience-links {
-		display:none;
-	}
 }

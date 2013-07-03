@@ -1018,8 +1018,7 @@ div.status {
   z-index: -1;
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
-  border-radius: 0.5em;
-  background-color: #ffffff; }
+  border-radius: 0.5em; }
 
 #backstretch,
 #backstretch-wrapper {
@@ -1195,9 +1194,12 @@ div.arts-dropdown {
         border-top: 0;
         border-bottom: solid 1px #264e82; }
     div.arts-dropdown div#arts-dropdown-menu li.sf-item-1.sf-depth-1 {
-      -webkit-border-radius: 0.5em;
-      -moz-border-radius: 0.5em;
-      border-radius: 0.5em; }
+      -moz-border-radius-topleft: 0.5em;
+      -moz-border-radius-bottomleft: 0.5em;
+      -webkit-border-top-left-radius: 0.5em;
+      -webkit-border-bottom-left-radius: 0.5em;
+      border-top-left-radius: 0.5em;
+      border-bottom-left-radius: 0.5em; }
     div.arts-dropdown div#arts-dropdown-menu li a.sf-depth-1 {
       border-bottom: 0; }
     div.arts-dropdown div#arts-dropdown-menu li.firstandlast > a.sf-depth-2 {
@@ -1263,6 +1265,13 @@ div.arts-dropdown {
 /**
  * Responsive markup for smaller-screen devices such as tablets and phones.
  */
+/* 
+ * Hack 
+ * Chrome kicks in a bit earlier than firefox
+ */
+@media screen and (max-width: 655px) {
+  div#arts-dropdown-menu select {
+    margin-top: 4px; } }
 @media screen and (max-width: 630px) {
   #header-menu {
     clear: both;
@@ -1350,12 +1359,13 @@ div.arts-dropdown {
 
   div.arts-dropdown {
     margin-top: 50px; } }
+/* Hack */
+@media screen and (max-width: 375px) {
+  #g-audience-links {
+    display: none; } }
 /* Smartphones (portrait) ----------- */
 @media screen and (max-width: 320px) {
   #header-menu {
     clear: both;
     float: left;
-    margin-left: -145px; }
-
-  #g-audience-links {
-    display: none; } }
+    margin-left: -145px; } }

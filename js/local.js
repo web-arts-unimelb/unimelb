@@ -27,7 +27,7 @@
           });
          
 					// Fix transparent background issue
-					$('#backstretch-wrapper').css('opacity','.9'); 
+					//$('#backstretch-wrapper').css('opacity','.9'); 
         }
         else {
           var bgPath = Drupal.settings.unimelb.background;
