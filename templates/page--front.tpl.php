@@ -128,7 +128,7 @@
 			<div id="arts-dropdown-menu" class="col-6 float_left">
         <?php print render($page['feature_menu']); ?>
       </div>
-
+			
 			<?php if(!empty($site_search_box)): ?>
         <div id="arts-dropdown-site-search" class="col-2 rightside float_right">
           <?php print render($site_search_box); ?>

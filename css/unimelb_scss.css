@@ -1309,10 +1309,13 @@ div.arts-dropdown {
     background-color: transparent;
     border-radius: none;
     box-shadow: none;
-    height: 52px; }
+    height: 52px;
+    padding-right: 0; }
 
   div#arts-dropdown-menu {
     float: left; }
+    div#arts-dropdown-menu select {
+      width: 150px; }
     div#arts-dropdown-menu li a {
       border-width: 0 !important; }
 
@@ -1326,7 +1329,16 @@ div.arts-dropdown {
     border-radius: 0.5em;
     background-image: url("../images/arts-dropdown-bg.png");
     float: left;
-    clear: left; } }
+    clear: left;
+    margin-top: -9px !important; }
+
+  div#local {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto; } }
 /* Smartphones (portrait and landscape) */
 @media screen and (max-width: 480px) {
   /* Hide images on front page for mobile devices. */
@@ -1343,4 +1355,7 @@ div.arts-dropdown {
   #header-menu {
     clear: both;
     float: left;
-    margin-left: -145px; } }
+    margin-left: -145px; }
+
+  #g-audience-links {
+    display: none; } }

@@ -74,11 +74,16 @@
 		border-radius: none; 
     box-shadow: none;
 		height: 52px;
+		padding-right: 0;
 	}
 
 	div#arts-dropdown-menu {
 		float: left;
-		
+	
+		select {
+			width: 150px;
+		}
+	
 		li {
 		 	a {
 				border-width: 0 !important; 
@@ -99,8 +104,23 @@
 
 		float: left;
 		clear: left;
+		margin-top: -9px !important;
 	}
 	// End dropdown menu
+
+	// Start footer
+	div#local {
+		-ms-word-break: break-all;
+    word-break: break-all;
+
+    // Non standard for webkit
+    word-break: break-word;
+
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+    hyphens: auto;
+	}
+	// End footer
 }
 
 
@@ -127,4 +147,9 @@
     float: left;
     margin-left: -145px;
   }
+
+	// Need to turn this off
+	#g-audience-links {
+		display:none;
+	}
 }
