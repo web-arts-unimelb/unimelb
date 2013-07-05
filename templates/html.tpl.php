@@ -95,7 +95,7 @@
      $initial_scale = $viewport_initial_scale;
   	}
 	?>
-	<meta content="width=device-width, initial-scale=<?php print $initial_scale ?>;" name="viewport" />
+	<meta content="width=device-width, initial-scale=<?php print $initial_scale ?>" name="viewport" />
 
 
   <!-- BASE STYLES -->

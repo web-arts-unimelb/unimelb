@@ -40,16 +40,41 @@
       // Hide webform_table_element's 1st columns (all 1st columns)
       $("table.webform-component-table-element td:nth-child(1), table.webform-component-table-element th:nth-child(1)").hide();
      
-     // Track donate button on foa site
-     $("#intouch_arts_donate").click(function(){
-     	_gaq.push(['_trackEvent', 'make_a_gift', 'donate', 'donation_button_click']);
-     	setTimeout(function(){
-     		location.href = $("#intouch_arts_donate").attr("href");
-     	}, 400);
-     	return false;
-     });
+     	// Track donate button on foa site
+     	$("#intouch_arts_donate").click(function(){
+     		_gaq.push(['_trackEvent', 'make_a_gift', 'donate', 'donation_button_click']);
+     		setTimeout(function(){
+     			location.href = $("#intouch_arts_donate").attr("href");
+     		}, 400);
+     		return false;
+     	});
+
+			// Control width for uni global header and footer
+			_control_width(); 			
     }
   }
 })(jQuery);
 
 
+function _control_width() {
+	// Initial
+  var document_width = $(document).width();
+	$('body').width(document_width);
+
+	$(window).resize(function() {
+		if(!$.browser.msie)
+		{
+			var threshold_window_width = 617;
+			var window_width = $(window).width();
+			if(window_width <= threshold_window_width)
+			{
+				$('body').width(window_width);
+			}
+			else
+			{
+				var document_width = $(document).width();
+  			$('body').width(document_width);
+			}
+		}
+	});
+}
