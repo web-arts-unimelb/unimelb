@@ -64,6 +64,12 @@ function unimelb_preprocess_html(&$variables) {
     $variables['unimelb_meta_date'] = format_date(time(), 'custom', 'Y-m-d');
   }
 
+	// Viewport
+	$variables['viewport_initial_scale'] = theme_get_setting('viewport_initial_scale');
+  if(empty($variables['viewport_initial_scale'])) {
+		$variables['viewport_initial_scale'] = '0.67';
+  }
+
   // Add in common theme specific meta info.
   $variables += _unimelb_meta_info();
 

@@ -85,18 +85,7 @@
 	<meta name="DC.Date.Modified" content="<?php print $unimelb_meta_date; ?>" />
 <!-- End meta data to be autofilled -->
 
-	<?php
-		// Viewport
-  	$viewport_initial_scale = theme_get_setting('viewport_initial_scale');
-  	if(empty($viewport_initial_scale)) {
-    	$initial_scale = '0.67';
-  	}
-  	else {
-     $initial_scale = $viewport_initial_scale;
-  	}
-	?>
-	<meta content="width=device-width, initial-scale=<?php print $initial_scale ?>" name="viewport" />
-
+	<meta content="width=device-width, initial-scale=<?php print $viewport_initial_scale ?>" name="viewport" />
 
   <!-- BASE STYLES -->
   <?php print $styles_system; ?>
