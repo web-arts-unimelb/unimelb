@@ -85,7 +85,7 @@
 	<meta name="DC.Date.Modified" content="<?php print $unimelb_meta_date; ?>" />
 <!-- End meta data to be autofilled -->
 
-	<meta content="width=device-width; initial-scale=0.67;" name="viewport" />
+	<meta content="width=device-width, initial-scale=<?php print $viewport_initial_scale ?>" name="viewport" />
 
   <!-- BASE STYLES -->
   <?php print $styles_system; ?>

@@ -1018,8 +1018,7 @@ div.status {
   z-index: -1;
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
-  border-radius: 0.5em;
-  background-color: #ffffff; }
+  border-radius: 0.5em; }
 
 #backstretch,
 #backstretch-wrapper {
@@ -1176,6 +1175,110 @@ table.color td {
     padding: 10px 0 3px;
     text-indent: 12px; }
 
+/* Start dropdown menu */
+div.arts-dropdown {
+  -moz-border-radius: 0.5em;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 0.5em;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  background-color: #d4e5f7;
+  margin-left: 0px;
+  width: 980px;
+  height: 37px;
+  border-radius: 0.5em;
+  display: inline-block;
+  margin-top: 10px; }
+  div.arts-dropdown div#arts-dropdown-menu {
+    margin-left: 0px;
+    padding-left: 10px;
+    /* The very first item */
+    /* Depth-1 */
+    /* Depth-2 */
+    /* Depth-3 */
+    /* Depth-4 */
+    /* Depth-5 */ }
+    div.arts-dropdown div#arts-dropdown-menu ul li {
+      background-color: #d2e3f5;
+      color: #22517d;
+      font-weight: 600; }
+      div.arts-dropdown div#arts-dropdown-menu ul li a {
+        font-family: "Droid Sans";
+        font-size: 11pt;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        border-bottom: solid 1px #264e82; }
+      div.arts-dropdown div#arts-dropdown-menu ul li a:hover {
+        color: #cc0000; }
+    div.arts-dropdown div#arts-dropdown-menu ul li li {
+      font-weight: normal; }
+    div.arts-dropdown div#arts-dropdown-menu ul li.sf-depth-2 {
+      margin-top: 4px; }
+    div.arts-dropdown div#arts-dropdown-menu li.sf-item-1.sf-depth-1 {
+      -moz-border-radius-topleft: 0.5em;
+      -moz-border-radius-bottomleft: 0.5em;
+      -webkit-border-top-left-radius: 0.5em;
+      -webkit-border-bottom-left-radius: 0.5em;
+      border-top-left-radius: 0.5em;
+      border-bottom-left-radius: 0.5em; }
+    div.arts-dropdown div#arts-dropdown-menu li a.sf-depth-1 {
+      border-bottom: 0; }
+    div.arts-dropdown div#arts-dropdown-menu li.firstandlast > a.sf-depth-2 {
+      border-bottom: 0; }
+    div.arts-dropdown div#arts-dropdown-menu li.firstandlast > a.sf-depth-3 {
+      border-bottom: 0; }
+    div.arts-dropdown div#arts-dropdown-menu li.firstandlast > a.sf-depth-4 {
+      border-bottom: 0; }
+    div.arts-dropdown div#arts-dropdown-menu li.firstandlast > a.sf-depth-5 {
+      border-bottom: 0; }
+    div.arts-dropdown div#arts-dropdown-menu li.last a {
+      border-bottom: 0; }
+    div.arts-dropdown div#arts-dropdown-menu li {
+      height: auto;
+      /* Start word break */
+      -ms-word-break: break-all;
+      word-break: break-all;
+      /* Non standard for webkit */
+      word-break: break-word;
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      hyphens: auto;
+      /* End word break */ }
+  div.arts-dropdown div#arts-dropdown-site-search {
+    color: #345b8c !important;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    outline: none;
+    padding: 0.4em 1em 0.3em 1em;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    width: 160px; }
+    div.arts-dropdown div#arts-dropdown-site-search form {
+      margin-bottom: 0;
+      margin-top: 0; }
+      div.arts-dropdown div#arts-dropdown-site-search form input,
+      div.arts-dropdown div#arts-dropdown-site-search form textarea,
+      div.arts-dropdown div#arts-dropdown-site-search form select {
+        border: 1px solid #1B4A83;
+        margin: 0; }
+      div.arts-dropdown div#arts-dropdown-site-search form input.form-text {
+        padding-top: 0.2em;
+        float: left; }
+      div.arts-dropdown div#arts-dropdown-site-search form input.form-submit {
+        float: right; }
+      div.arts-dropdown div#arts-dropdown-site-search form input[name=search_block_form] {
+        width: 115px; }
+
+.float_right {
+  float: right; }
+
+.float_left {
+  float: left; }
+
+/* End dropdown menu */
 /* Add in some responsible sprinkles. */
 /**
  * Media queries.
@@ -1186,7 +1289,14 @@ table.color td {
 /**
  * Responsive markup for smaller-screen devices such as tablets and phones.
  */
-@media screen and (max-width: 640px) {
+/* 
+ * Hack 
+ * Chrome kicks in a bit earlier than firefox
+ */
+@media screen and (max-width: 655px) {
+  div#arts-dropdown-menu select {
+    margin-top: 4px; } }
+@media screen and (max-width: 630px) {
   #header-menu {
     clear: both;
     float: left; }
@@ -1224,7 +1334,45 @@ table.color td {
     display: none; }
 
   #unimelb-title-image-wrapper {
-    min-height: 125px; } }
+    min-height: 125px; }
+
+  div.arts-dropdown {
+    width: 100%;
+    background-image: none;
+    background-color: transparent;
+    border-radius: none;
+    box-shadow: none;
+    height: 52px;
+    padding-right: 0; }
+
+  div#arts-dropdown-menu {
+    float: left;
+    padding-left: 0 !important; }
+    div#arts-dropdown-menu select {
+      width: 150px; }
+    div#arts-dropdown-menu li a {
+      border-width: 0 !important; }
+
+  div#arts-dropdown-site-search {
+    -moz-border-radius: 0.5em;
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 0.5em;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    background-color: #d4e5f7;
+    border-radius: 0.5em;
+    background-image: url("../images/arts-dropdown-bg.png");
+    float: left;
+    clear: left;
+    margin-top: -9px !important; }
+
+  div#local {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto; } }
 /* Smartphones (portrait and landscape) */
 @media screen and (max-width: 480px) {
   /* Hide images on front page for mobile devices. */
@@ -1232,6 +1380,13 @@ table.color td {
     display: none; }
 
   .front .views-field-field-shared-images {
+    display: none; }
+
+  div.arts-dropdown {
+    margin-top: 50px; } }
+/* Hack */
+@media screen and (max-width: 375px) {
+  #g-audience-links {
     display: none; } }
 /* Smartphones (portrait) ----------- */
 @media screen and (max-width: 320px) {

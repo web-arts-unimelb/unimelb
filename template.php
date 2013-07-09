@@ -64,6 +64,12 @@ function unimelb_preprocess_html(&$variables) {
     $variables['unimelb_meta_date'] = format_date(time(), 'custom', 'Y-m-d');
   }
 
+	// Viewport
+	$variables['viewport_initial_scale'] = theme_get_setting('viewport_initial_scale');
+  if(empty($variables['viewport_initial_scale'])) {
+		$variables['viewport_initial_scale'] = '0.67';
+  }
+
   // Add in common theme specific meta info.
   $variables += _unimelb_meta_info();
 
@@ -178,6 +184,30 @@ function unimelb_preprocess_page(&$variables) {
   else {
     $variables['site_search_box'] = FALSE;
   }
+  
+  // Dropdown menu and search box
+  $dropdown_and_search = theme_get_setting('unimelb_settings_dropdown_menu_and_search_box');
+  if(!empty($dropdown_and_search)) {
+		 // Force to use the search box
+		 if(module_exists('search')) {
+		 	$variables['site_search_box'] = drupal_get_form('search_block_form');
+		 	$variables['dropdown_and_search'] = TRUE;
+		 }
+  }
+  else
+  {
+  	$variables['dropdown_and_search'] = false;
+  }
+ 
+	// Viewport
+	$viewport_initial_scale = theme_get_setting('viewport_initial_scale');
+	if(empty($viewport_initial_scale)) {
+		$variables['viewport_initial_scale'] = '0.67';
+	}
+	else {
+		$variables['viewport_initial_scale'] = $viewport_initial_scale;
+	}	
+
   $variables['unimelb_ht_right'] = theme_get_setting('unimelb_settings_ht-right', '');
   $variables['unimelb_ht_left'] = theme_get_setting('unimelb_settings_ht-left', '');
 
@@ -244,6 +274,9 @@ function unimelb_preprocess_page(&$variables) {
   else {
     $variables['title_image'] = FALSE;
   }
+  
+  // Remove "No front page content has been created yet. Add new content" on front page.
+	unset($variables['page']['content']['system_main']['default_message']);
 }
 
 /**

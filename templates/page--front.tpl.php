@@ -123,7 +123,19 @@
     </div>
   <?php endif; ?>
 
-  <?php if (!empty($page['feature_menu']) || !empty($site_search_box)): ?>
+	<?php if($dropdown_and_search == TRUE): ?>
+		<div class="arts-dropdown col-8">
+			<div id="arts-dropdown-menu" class="col-6 float_left">
+        <?php print render($page['feature_menu']); ?>
+      </div>
+			
+			<?php if(!empty($site_search_box)): ?>
+        <div id="arts-dropdown-site-search" class="col-2 rightside float_right">
+          <?php print render($site_search_box); ?>
+        </div>
+      <?php endif; ?>
+		</div>
+  <?php elseif (!empty($page['feature_menu']) || !empty($site_search_box)): ?>
     <div class="feature col-8">
       <div id="feature-menu" class="col-6 first">
         <?php print render($page['feature_menu']); ?>
@@ -148,6 +160,17 @@
   <!-- The layout prints the front page blocks fist, followed by  -->
   <!-- whatever is in $page['content'].       <?php print $variables['layout']; ?>  -->
   <?php include($variables['layout']); ?>
+
+	<?php if(!empty($page['home_left']) && !empty($page['home_right'])): ?>
+		<div class="col-8">
+			<div class="col-4 first">
+				<?php print render($page['home_left']); ?>
+			</div>
+			<div class="col-4">
+				<?php print render($page['home_right']); ?>
+			</div>
+		</div>
+	<?php endif; ?>
 
 </div><!-- end wrapper -->
 

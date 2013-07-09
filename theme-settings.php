@@ -123,6 +123,25 @@ function unimelb_form_system_theme_settings_alter(&$form, $form_state) {
     '#required' => false,
   );
 
+	$form['unimelb']['unimelb_settings_dropdown_menu_and_search_box'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Dropdown menu and search box'),
+    '#description' => t('Display dropdown menu and search box'),
+    '#default_value' => theme_get_setting('unimelb_settings_dropdown_menu_and_search_box'),
+    '#required' => false,
+  );
+
+	$form['unimelb']['viewport_initial_scale'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Viewport initial scale'),
+    '#description' => t('Viewport initial scale'),
+    '#size' => 20,
+    '#maxlength' => 10,
+		'#default_value' => theme_get_setting('viewport_initial_scale'),
+    '#required' => FALSE,
+  );
+
+
   $form['unimelb']['unimelb_settings_parent-org'] = array(
     '#type' => 'textfield',
     '#title' => t('Parent organisational unit (optional)'),

@@ -7,8 +7,20 @@
 /**
  * Responsive markup for smaller-screen devices such as tablets and phones.
  */
-@media screen and (max-width: 640px) {
 
+/* 
+ * Hack 
+ * Chrome kicks in a bit earlier than firefox
+ */
+@media screen and (max-width: 655px) {
+	div#arts-dropdown-menu {
+		select {
+  		margin-top: 4px; 
+		}
+  }
+}
+
+@media screen and (max-width: 630px) {
   // Re-colour the header menu and make it stick to the left.
   #header-menu {
     clear: both;
@@ -66,7 +78,65 @@
   #unimelb-title-image-wrapper {
     min-height: 125px;
   }
+
+	// Start dropdown menu
+	div.arts-dropdown {
+		width: 100%; 
+		background-image: none;
+		background-color: transparent; 
+		border-radius: none; 
+    box-shadow: none;
+		height: 52px;
+		padding-right: 0;
+	}
+
+	div#arts-dropdown-menu {
+		float: left;
+		padding-left: 0 !important;
+	
+		select {
+			width: 150px;
+		}
+	
+		li {
+		 	a {
+				border-width: 0 !important; 
+			}
+		}
+	}
+
+	div#arts-dropdown-site-search {
+		-moz-border-radius: 0.5em;
+  	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  	-webkit-border-radius: 0.5em;
+  	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+
+  	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  	background-color: #d4e5f7;
+		border-radius: 0.5em;
+		background-image: url('../images/arts-dropdown-bg.png');
+
+		float: left;
+		clear: left;
+		margin-top: -9px !important;
+	}
+	// End dropdown menu
+
+	// Start footer
+	div#local {
+		-ms-word-break: break-all;
+    word-break: break-all;
+
+    // Non standard for webkit
+    word-break: break-word;
+
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+    hyphens: auto;
+	}
+	// End footer
 }
+
 
 /* Smartphones (portrait and landscape) */
 @media screen and (max-width: 480px) {
@@ -76,6 +146,18 @@
   }
   .front .views-field-field-shared-images {
     display: none;
+  }
+
+	div.arts-dropdown {
+		margin-top: 50px;
+	}
+}
+
+/* Hack */
+@media screen and (max-width: 375px) {
+	// Need to turn this off
+  #g-audience-links {
+    display:none;
   }
 }
 
