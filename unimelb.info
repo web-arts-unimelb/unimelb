@@ -35,6 +35,8 @@ regions[home_column_12]  = home_column_12
 regions[home_event]      = home_event
 regions[home_promo]      = home_promo
 
+regions[node_right]     = Sidebar in node template
+
 ; Settings.
 settings[unimelb_settings_custom_logo]    = 0
 settings[unimelb_settings_parent-org]     = "Faculty of Arts"

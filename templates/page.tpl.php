@@ -196,7 +196,8 @@
         </div>
       <?php endif; ?>
     </div>
-  <?php else: // No hilight. ?>
+
+  <?php elseif (!empty($page["navigation"]) || !empty($page["sidebar_right"])): // Have something in right sidebar. ?>
     <div class="main col-6" role="main" id="main-content">
       <?php if ($tabs = render($tabs)): ?>
         <div class="tabs"><?php print $tabs; ?></div>
@@ -231,6 +232,29 @@
         </div>
       <?php endif; ?>
     </div>
+
+  <?php else: // No hilight, no right sidebar, no navigation, we can go full width. ?>
+    <div class="main col-8" role="main" id="main-content">
+      <?php if ($tabs = render($tabs)): ?>
+        <div class="tabs"><?php print $tabs; ?></div>
+      <?php endif; ?>
+      <?php print render($page['help']); ?>
+      <?php if ($action_links): ?>
+        <ul class="action-links"><?php print render($action_links); ?></ul>
+      <?php endif; ?>
+      <?php if ($title): ?>
+        <?php print render($title_prefix); ?>
+        <?php print '<h2 ' . $title_attributes . '>' . $title . '</h2>'; ?>
+        <?php print render($title_suffix); ?>
+      <?php endif; ?>
+      <?php print render($page['content']); ?>
+      <?php if ($page['content_bottom']): ?>
+        <div id="main-content-bottom">
+          <?php print render($page['content_bottom']); ?>
+        </div>
+      <?php endif; ?>
+    </div>
+
   <?php endif; ?>
 
 </div><!-- end wrapper -->

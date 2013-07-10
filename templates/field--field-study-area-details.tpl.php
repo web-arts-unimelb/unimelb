@@ -56,7 +56,7 @@ if (!$label_hidden) {
   }
 }
 
-print '<div class="field-items"' . $content_attributes . '>';
+print '<div class="field-items front-hilight"' . $content_attributes . '>';
 
 foreach ($items as $delta => $item) {
 	print '<div class="field-item"' . $item_attributes[$delta] . '>' . render($item) . '</div>';

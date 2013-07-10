@@ -154,6 +154,12 @@ function unimelb_preprocess_page(&$variables) {
   // Responsive layout using a per-layout template include.
   // This only actually does something in templates/page-front.tpl.php
   $variables['layout'] = 'layout/' . theme_get_setting('unimelb_settings_columns') . '.tpl.inc';
+
+  // Allow us to override the layout on a node-type basis!
+  if ($variables['node']->type == 'study_area') {
+    $variables['layout'] =  'layout/node.tpl.inc';
+  }
+
   if (!file_exists(path_to_theme() . '/templates/' . $variables['layout'])) {
     // If there is no defined template or if the file is missing, default to 3+1.
     $variables['layout'] = 'layout/3-1.tpl.inc';
@@ -273,6 +279,20 @@ function unimelb_preprocess_page(&$variables) {
 	unset($variables['page']['content']['system_main']['default_message']);
 }
 
+/**
+ * Implements hook_preprocess_node().
+ */
+function unimelb_preprocess_node(&$variables) {
+  if ($variables['node']->type == 'study_area') {
+    // Do a naughty thing, resize the video from whatevs to 460px wide.
+    $height = round($variables['content']['field_shared_video'][0]['file']['#options']['height'] * (460 / $variables['content']['field_shared_video'][0]['file']['#options']['width']));
+    $variables['content']['field_shared_video'][0]['file']['#options']['width'] = 460;
+    $variables['content']['field_shared_video'][0]['file']['#options']['height'] = $height;
+
+    // Pull in the node sidebar.
+    $variables['sidebar'] = block_get_blocks_by_region('node_right');
+  }
+}
 
 /**
  * Implements theme_date_display_range()

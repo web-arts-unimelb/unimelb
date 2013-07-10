@@ -1162,6 +1162,19 @@ table.color td {
   margin-top: 3px; }
 
 /* End rupc */
+/* Quotes for the Study Area. */
+.quote blockquote {
+  background: url("http://brand.unimelb.edu.au/web-templates/1-1-0/images/quote_marks.png") no-repeat 0px 12px;
+  padding: 0 10px 0 32px; }
+  .quote blockquote p {
+    clear: both;
+    color: #036;
+    font-family: 'Droid Sans','Helvetica Neue',Arial,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 10px 0 3px;
+    text-indent: 12px; }
+
 /* Start dropdown menu */
 div.arts-dropdown {
   -moz-border-radius: 0.5em;
