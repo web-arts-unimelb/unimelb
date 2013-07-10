@@ -3,6 +3,7 @@
  * @file
  * Layout-specific regions!
  *
+ * 2	 - Two responsive in the main content, no navigation.
  * 4   - Four responsive in the main content, no navigation.
  * 3-1 - Three responsive in the main content, one fixed in navigation.
  * 2-1 - Two responsive in the main content, one fixed in navigation.

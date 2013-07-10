@@ -96,6 +96,7 @@ function unimelb_form_system_theme_settings_alter(&$form, $form_state) {
     '#title' => t('Column Grid'),
     '#description' => t('Choose the column layout for the front page.'),
     '#options' => array(
+      '2' => t('2 - Two responsive in the main content, no navigation.'),
       '2-1' => t('2-2-2-2+1 - Two responsive in the main content, one fixed in navigation.'),
       '3-1' => t('3-3-3-3+1 - Three responsive in the main content, one fixed in navigation.'),
       '6-1' => t('6-3-3+1 - Six plus three responsive in the main content, one fixed in navigation.'),
