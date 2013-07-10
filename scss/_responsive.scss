@@ -21,6 +21,10 @@
 }
 
 @media screen and (max-width: 630px) {
+	.wrapper .main {
+		padding-top: 10px;
+	}
+
   // Re-colour the header menu and make it stick to the left.
   #header-menu {
     clear: both;

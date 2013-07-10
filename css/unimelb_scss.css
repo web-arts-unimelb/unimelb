@@ -1266,6 +1266,15 @@ div.arts-dropdown {
   float: left; }
 
 /* End dropdown menu */
+/* Start uom event */
+.uom-event {
+  min-height: 4.5em; }
+
+/* Mozilla only */
+.uom-event, x:-moz-any-link, x:default {
+  margin-bottom: 10px; }
+
+/* End uom event */
 /* Add in some responsible sprinkles. */
 /**
  * Media queries.
@@ -1284,6 +1293,9 @@ div.arts-dropdown {
   div#arts-dropdown-menu select {
     margin-top: 4px; } }
 @media screen and (max-width: 630px) {
+  .wrapper .main {
+    padding-top: 10px; }
+
   #header-menu {
     clear: both;
     float: left; }
