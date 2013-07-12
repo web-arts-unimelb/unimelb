@@ -1213,7 +1213,7 @@ div.arts-dropdown {
         color: #cc0000; }
     div.arts-dropdown div#arts-dropdown-menu ul li li {
       font-weight: normal; }
-    div.arts-dropdown div#arts-dropdown-menu ul li.sf-depth-2 {
+    div.arts-dropdown div#arts-dropdown-menu ul li.sf-item-1.sf-depth-2 {
       margin-top: 4px; }
     div.arts-dropdown div#arts-dropdown-menu li.sf-item-1.sf-depth-1 {
       -moz-border-radius-topleft: 0.5em;
