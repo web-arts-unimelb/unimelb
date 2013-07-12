@@ -271,7 +271,8 @@ h3.ui-state-active a {
  * Emulate the sizing and spacing of front page blocks on a grid view..
  */
 .view-id-landing_pages table {
-  margin-top: 0; }
+  margin-top: 0;
+  width: 100%; }
   .view-id-landing_pages table tbody tr,
   .view-id-landing_pages table tbody tr:nth-child(2n+1),
   .view-id-landing_pages table tbody td {
@@ -296,6 +297,9 @@ h3.ui-state-active a {
     width: 220px; }
   .view-id-landing_pages table.cols-4 tbody td {
     width: 100px; }
+  .view-id-landing_pages table.cols-4 tbody td.cols-percentage {
+    /* Full expanded and no navigation */
+    width: 24%; }
 
 /*
  * Event date as calendar icon on front page.
