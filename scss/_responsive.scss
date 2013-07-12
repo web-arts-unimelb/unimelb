@@ -126,6 +126,15 @@
 	}
 	// End dropdown menu
 
+
+	/* Handle full 4 columns capture the entire content body */
+  .view-id-landing_pages table.cols-4 tbody td.cols-percentage {
+    clear: left;
+    margin-left: 0;
+    width: 100%;
+  }
+
+
 	// Start footer
 	div#local {
 		-ms-word-break: break-all;
