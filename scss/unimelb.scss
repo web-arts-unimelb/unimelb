@@ -854,16 +854,18 @@ div.arts-dropdown {
     li {
     	height: auto;
 
-			/* Start word break */	
+			/* Start word break */
+			/*
 			-ms-word-break: break-all;
 			word-break: break-all;
 
-			/* Non standard for webkit */
+			// Non standard for webkit 
 			word-break: break-word;    	
 
 			-webkit-hyphens: auto;
 			-moz-hyphens: auto;
 			hyphens: auto;
+			*/
 			/* End word break */
 		}
   }
@@ -883,7 +885,7 @@ div.arts-dropdown {
 
     form {
       margin-bottom: 0;
-      margin-top: 0;
+      margin-top: 3px;
 
       input,
       textarea,

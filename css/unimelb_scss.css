@@ -1242,13 +1242,17 @@ div.arts-dropdown {
     div.arts-dropdown div#arts-dropdown-menu li {
       height: auto;
       /* Start word break */
-      -ms-word-break: break-all;
-      word-break: break-all;
-      /* Non standard for webkit */
-      word-break: break-word;
-      -webkit-hyphens: auto;
-      -moz-hyphens: auto;
-      hyphens: auto;
+      			/*
+      			-ms-word-break: break-all;
+      			word-break: break-all;
+      
+      			// Non standard for webkit 
+      			word-break: break-word;    	
+      
+      			-webkit-hyphens: auto;
+      			-moz-hyphens: auto;
+      			hyphens: auto;
+      			*/
       /* End word break */ }
   div.arts-dropdown div#arts-dropdown-site-search {
     color: #345b8c !important;
@@ -1263,7 +1267,7 @@ div.arts-dropdown {
     width: 160px; }
     div.arts-dropdown div#arts-dropdown-site-search form {
       margin-bottom: 0;
-      margin-top: 0; }
+      margin-top: 3px; }
       div.arts-dropdown div#arts-dropdown-site-search form input,
       div.arts-dropdown div#arts-dropdown-site-search form textarea,
       div.arts-dropdown div#arts-dropdown-site-search form select {
@@ -1382,6 +1386,8 @@ div.arts-dropdown {
     float: left;
     clear: left;
     margin-top: -9px !important; }
+    div#arts-dropdown-site-search form {
+      margin-top: 0 !important; }
 
   /* Handle full 4 columns capture the entire content body */
   .view-id-landing_pages table.cols-4 tbody td.cols-percentage {
