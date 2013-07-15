@@ -284,9 +284,17 @@ function unimelb_preprocess_page(&$variables) {
  */
 function unimelb_preprocess_node(&$variables) {
   if ($variables['node']->type == 'study_area') {
+		$default_width = 460;
+		if(empty($variables['content']['field_shared_video'][0]['file']['#options']['width'])) {
+			$width = $default_width; 
+		}
+		else {
+			$width = $variables['content']['field_shared_video'][0]['file']['#options']['width']; 
+		}
+
     // Do a naughty thing, resize the video from whatevs to 460px wide.
-    $height = round($variables['content']['field_shared_video'][0]['file']['#options']['height'] * (460 / $variables['content']['field_shared_video'][0]['file']['#options']['width']));
-    $variables['content']['field_shared_video'][0]['file']['#options']['width'] = 460;
+    $height = round($variables['content']['field_shared_video'][0]['file']['#options']['height'] * (460 / $width));
+    $variables['content']['field_shared_video'][0]['file']['#options']['width'] = $default_width;
     $variables['content']['field_shared_video'][0]['file']['#options']['height'] = $height;
 
     // Pull in the node sidebar.
