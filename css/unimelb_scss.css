@@ -796,6 +796,21 @@ body ul.jquerymenu li.parent {
     position: absolute;
     top: 1.3em; }
 
+/* Start secondary menu */
+div.secondary_menu_block ul.menu {
+  background-color: #D8E8FB;
+  margin-top: 0; }
+  div.secondary_menu_block ul.menu:first-child {
+    padding-bottom: 3px;
+    padding-top: 5px;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em; }
+  div.secondary_menu_block ul.menu li.active > a {
+    color: #658FBA;
+    font-style: italic; }
+
+/* End secondary menu */
 /* Content editing */
 .filter-help a {
   padding: 0 20px 0 0; }
@@ -1227,17 +1242,23 @@ div.arts-dropdown {
       -webkit-border-bottom-left-radius: 0.5em;
       border-top-left-radius: 0.5em;
       border-bottom-left-radius: 0.5em; }
-    div.arts-dropdown div#arts-dropdown-menu li a.sf-depth-1 {
+    div.arts-dropdown div#arts-dropdown-menu li > a.sf-depth-1 {
       border-bottom: 0; }
     div.arts-dropdown div#arts-dropdown-menu li.firstandlast > a.sf-depth-2 {
       border-bottom: 0; }
+    div.arts-dropdown div#arts-dropdown-menu li.last > a.sf-depth-2 {
+      border-bottom: 0; }
     div.arts-dropdown div#arts-dropdown-menu li.firstandlast > a.sf-depth-3 {
+      border-bottom: 0; }
+    div.arts-dropdown div#arts-dropdown-menu li.last > a.sf-depth-3 {
       border-bottom: 0; }
     div.arts-dropdown div#arts-dropdown-menu li.firstandlast > a.sf-depth-4 {
       border-bottom: 0; }
+    div.arts-dropdown div#arts-dropdown-menu li.last > a.sf-depth-4 {
+      border-bottom: 0; }
     div.arts-dropdown div#arts-dropdown-menu li.firstandlast > a.sf-depth-5 {
       border-bottom: 0; }
-    div.arts-dropdown div#arts-dropdown-menu li.last a {
+    div.arts-dropdown div#arts-dropdown-menu li.last > a.sf-depth-5 {
       border-bottom: 0; }
     div.arts-dropdown div#arts-dropdown-menu li {
       height: auto;
@@ -1389,6 +1410,11 @@ div.arts-dropdown {
     div#arts-dropdown-site-search form {
       margin-top: 0 !important; }
 
+  /* Start secondary menu */
+  div.secondary_menu_block ul.menu {
+    display: none; }
+
+  /* End secondary menu */
   /* Handle full 4 columns capture the entire content body */
   .view-id-landing_pages table.cols-4 tbody td.cols-percentage {
     clear: left;

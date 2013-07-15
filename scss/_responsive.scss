@@ -130,6 +130,12 @@
 	}
 	// End dropdown menu
 
+	/* Start secondary menu */
+	div.secondary_menu_block ul.menu {
+		display: none;
+	}
+	/* End secondary menu */
+
 
 	/* Handle full 4 columns capture the entire content body */
   .view-id-landing_pages table.cols-4 tbody td.cols-percentage {
