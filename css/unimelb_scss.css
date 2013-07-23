@@ -1218,6 +1218,8 @@ div.arts-dropdown {
     /* Depth-3 */
     /* Depth-4 */
     /* Depth-5 */ }
+    div.arts-dropdown div#arts-dropdown-menu.col-6 {
+      width: 720px; }
     div.arts-dropdown div#arts-dropdown-menu ul li {
       background-color: #d2e3f5;
       color: #22517d;

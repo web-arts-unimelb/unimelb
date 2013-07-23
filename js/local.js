@@ -75,7 +75,7 @@ function _control_width() {
 }
 
 function _theme_intranet_search_box_and_button() {
-	$('form#searchapi-form input#edit-search-api-views-fulltext').attr('size', '12');
-	$('form#searchapi-form input#edit-submit').attr('value', 'Go');	
+	$('form#searchapi-form input[name="search_api_views_fulltext"]').attr('size', '12');
+	$('form#searchapi-form input[name="op"]').attr('value', 'Go');	
 
 }

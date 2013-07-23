@@ -791,6 +791,11 @@ div.arts-dropdown {
 		margin-left: 0px;
 		padding-left: 10px;
 
+		&.col-6 {
+			// Need to increase the width, 700px is not enought
+			width: 720px;
+		}
+
     ul {
       li {
 				background-color: #d2e3f5;
@@ -838,7 +843,6 @@ div.arts-dropdown {
 			border-bottom: 0;
 		}
 		
-
 		/* Depth-2 */
 		li.firstandlast > a.sf-depth-2 { 
 			border-bottom: 0;	
