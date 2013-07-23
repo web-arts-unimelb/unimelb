@@ -7,7 +7,7 @@
 @import "header";
 
 /* Styling for output produces by various modules. */
-@import "displaysuite", "quicktabs", "staff", "aos", "views", "slider", "shoutbox";
+@import "displaysuite", "quicktabs", "staff", "aos", "views", "slider_above", "slider", "shoutbox";
 
 /* Override header margin if the first element on the page or if in a block. */
 div.field-item,
@@ -957,6 +957,36 @@ div.arts-dropdown {
 }
 
 /* End uom event */
+
+
+/* Start study area content type */
+div.quote {
+	h1, h2, h3, h4 {
+		padding-top:0;
+	}	
+}
+
+div.view-study-area {
+	background-color: #e0eaf4;
+	padding: 15px;
+	-moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+	border-radius: 0.5em;
+
+	h5 {
+		color: #002c60;
+	}
+
+	a:link,
+	a:active,
+	a:visited {
+		text-decoration: none !important;
+	}
+
+}
+
+/* End study area content type */
+
 
 /* Add in some responsible sprinkles. */
 @import "responsive";

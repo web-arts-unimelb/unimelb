@@ -506,6 +506,10 @@ h3.ui-state-active a {
     clear: none;
     padding-top: 0; }
 
+div.slider_above a {
+  font-size: 1.7em;
+  font-weight: bold; }
+
 /* FoA Slider CSS. */
 #slider .col-2 {
   margin-left: 0;
@@ -1318,6 +1322,24 @@ div.arts-dropdown {
   margin-bottom: 10px; }
 
 /* End uom event */
+/* Start study area content type */
+div.quote h1, div.quote h2, div.quote h3, div.quote h4 {
+  padding-top: 0; }
+
+div.view-study-area {
+  background-color: #e0eaf4;
+  padding: 15px;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  border-radius: 0.5em; }
+  div.view-study-area h5 {
+    color: #002c60; }
+  div.view-study-area a:link,
+  div.view-study-area a:active,
+  div.view-study-area a:visited {
+    text-decoration: none !important; }
+
+/* End study area content type */
 /* Add in some responsible sprinkles. */
 /**
  * Media queries.
@@ -1415,6 +1437,11 @@ div.arts-dropdown {
     display: none; }
 
   /* End secondary menu */
+  /* Start slider above */
+  div.slider_above {
+    margin-top: 10px; }
+
+  /* End slider above */
   /* Handle full 4 columns capture the entire content body */
   .view-id-landing_pages table.cols-4 tbody td.cols-percentage {
     clear: left;

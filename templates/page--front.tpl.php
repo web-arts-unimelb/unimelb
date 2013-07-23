@@ -150,6 +150,12 @@
     </div>
   <?php endif; ?>
 
+	<?php if (!empty($page['slider_above'])): ?>
+    <div class="col-8" role="complementary" id="slider_above">
+      <?php print render($page['slider_above']); ?>
+    </div> 
+  <?php endif; ?>
+
   <?php if (!empty($page['slider'])): ?>
     <div class="col-8" role="complementary" id="slider">
       <?php print render($page['slider']); ?>
