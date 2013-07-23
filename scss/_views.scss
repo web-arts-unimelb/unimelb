@@ -267,18 +267,24 @@
   }
 }
 
-.view.foa-team {
+.main .view.foa-team .view-content {
   table {
     caption {
+      bottom: 25px;
       color: #036;
       clear: both;
       font-family: 'Droid Sans','Helvetica Neue',Arial,sans-serif;
       font-size: 16px;
       font-style: normal;
       font-weight: normal;
-      height: none;
-      left: none;
+      height: 0;
+      left: 0;
       padding: 10px 0 3px;
+      position: relative;
+    }
+
+    th {
+      display: none;
     }
 
     .views-field-field-profile-display-name {
