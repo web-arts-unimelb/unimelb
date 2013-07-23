@@ -506,6 +506,19 @@ h3.ui-state-active a {
     clear: none;
     padding-top: 0; }
 
+.view.foa-team table caption {
+  color: #036;
+  clear: both;
+  font-family: 'Droid Sans','Helvetica Neue',Arial,sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  height: none;
+  left: none;
+  padding: 10px 0 3px; }
+.view.foa-team table .views-field-field-profile-display-name {
+  width: 30%; }
+
 /* FoA Slider CSS. */
 #slider .col-2 {
   margin-left: 0;
