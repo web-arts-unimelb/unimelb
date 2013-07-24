@@ -270,3 +270,34 @@
     }
   }
 }
+
+.main .view.foa-team .view-content {
+  table {
+    caption {
+      bottom: 20px;
+      color: #036;
+      clear: both;
+      font-family: 'Droid Sans','Helvetica Neue',Arial,sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: normal;
+      height: 0;
+      left: 0;
+      margin-top: 5px;
+      padding: 10px 0 3px;
+      position: relative;
+    }
+
+    th {
+      display: none;
+    }
+
+    .views-field-field-profile-display-name {
+      width: 30%;
+    }
+  }
+}
+
+.main .quicktabs_main .quicktabs-tabpage .field-type-taxonomy-term-reference {
+  display: none;
+}

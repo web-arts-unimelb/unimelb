@@ -509,6 +509,27 @@ h3.ui-state-active a {
     clear: none;
     padding-top: 0; }
 
+.main .view.foa-team .view-content table caption {
+  bottom: 20px;
+  color: #036;
+  clear: both;
+  font-family: 'Droid Sans','Helvetica Neue',Arial,sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  height: 0;
+  left: 0;
+  margin-top: 5px;
+  padding: 10px 0 3px;
+  position: relative; }
+.main .view.foa-team .view-content table th {
+  display: none; }
+.main .view.foa-team .view-content table .views-field-field-profile-display-name {
+  width: 30%; }
+
+.main .quicktabs_main .quicktabs-tabpage .field-type-taxonomy-term-reference {
+  display: none; }
+
 div.slider_above a {
   font-size: 1.7em;
   font-weight: bold; }
@@ -1056,6 +1077,18 @@ div.status {
 /* Award search results. */
 .page-node-317 .view-id-awards {
   /* Input button in view filter */
+  /*
+  .view-filters {
+    .views-exposed-form {
+      .views-exposed-widget {
+        .form-submit {
+          -webkit-margin-before: 1.95em;
+          margin-top: 2.15em;
+        }
+      }
+    }
+  }
+  */
   /* Control the view exposed filter position */
   /* Advanced search */ }
   .page-node-317 .view-id-awards td.the_column_1,
@@ -1067,18 +1100,22 @@ div.status {
   .page-node-317 .view-id-awards td.the_column_3,
   .page-node-317 .view-id-awards td.views-field-nothing {
     width: 25%; }
-  .page-node-317 .view-id-awards .view-filters .views-exposed-form .views-exposed-widget .form-submit {
-    -webkit-margin-before: 1.95em;
-    margin-top: 2.15em; }
   .page-node-317 .view-id-awards div.views-widget-filter-field_award_study_level_value {
-    margin-right: 10em; }
+    width: 200px; }
   .page-node-317 .view-id-awards div.views-widget-filter-field_award_travel_support_value {
-    margin-right: 11em; }
+    width: 200px; }
   .page-node-317 .view-id-awards #search-form label {
     display: inline; }
   .page-node-317 .view-id-awards fieldset.search-advanced {
     background: transparent;
     border: 0; }
+
+/* Control the search button */
+.award-search {
+  /* Input button in view filter */ }
+  .award-search .view-filters .views-exposed-form .views-exposed-widget .form-submit {
+    -webkit-margin-before: 1.95em;
+    margin-top: 2.15em; }
 
 /* Why do fieldset legends need to live off-screen? */
 form legend {
@@ -1225,6 +1262,8 @@ div.arts-dropdown {
     /* Depth-3 */
     /* Depth-4 */
     /* Depth-5 */ }
+    div.arts-dropdown div#arts-dropdown-menu.col-6 {
+      width: 720px; }
     div.arts-dropdown div#arts-dropdown-menu ul li {
       background-color: #d2e3f5;
       color: #22517d;

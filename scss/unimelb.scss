@@ -575,6 +575,7 @@ div.status {
   }
 
   /* Input button in view filter */
+  /*
   .view-filters {
     .views-exposed-form {
       .views-exposed-widget {
@@ -585,14 +586,15 @@ div.status {
       }
     }
   }
+  */
 
   /* Control the view exposed filter position */
   div.views-widget-filter-field_award_study_level_value {
-    margin-right: 10em;
+    width: 200px;
   }
 
   div.views-widget-filter-field_award_travel_support_value {
-    margin-right: 11em;
+    width: 200px;
   }
 
   /* Advanced search */
@@ -605,6 +607,22 @@ div.status {
     border: 0;
   }
 }
+
+/* Control the search button */
+.award-search {
+	/* Input button in view filter */
+  .view-filters {
+    .views-exposed-form {
+      .views-exposed-widget {
+        .form-submit {
+          -webkit-margin-before: 1.95em;
+          margin-top: 2.15em;
+        }
+      }
+    }
+  }
+}
+
 
 /* Why do fieldset legends need to live off-screen? */
 form legend {
@@ -791,6 +809,11 @@ div.arts-dropdown {
 		margin-left: 0px;
 		padding-left: 10px;
 
+		&.col-6 {
+			// Need to increase the width, 700px is not enought
+			width: 720px;
+		}
+
     ul {
       li {
 				background-color: #d2e3f5;
@@ -838,7 +861,6 @@ div.arts-dropdown {
 			border-bottom: 0;
 		}
 		
-
 		/* Depth-2 */
 		li.firstandlast > a.sf-depth-2 { 
 			border-bottom: 0;	
