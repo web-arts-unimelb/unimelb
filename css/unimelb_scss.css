@@ -295,6 +295,9 @@ h3.ui-state-active a {
     width: 340px; }
   .view-id-landing_pages table.cols-3 tbody td {
     width: 220px; }
+  .view-id-landing_pages table.cols-3 tbody td.cols-percentage {
+    /* Full expanded and no navigation */
+    width: 32%; }
   .view-id-landing_pages table.cols-4 tbody td {
     width: 100px; }
   .view-id-landing_pages table.cols-4 tbody td.cols-percentage {
@@ -1443,7 +1446,8 @@ div.view-study-area {
 
   /* End slider above */
   /* Handle full 4 columns capture the entire content body */
-  .view-id-landing_pages table.cols-4 tbody td.cols-percentage {
+  .view-id-landing_pages table.cols-4 tbody td.cols-percentage,
+  .view-id-landing_pages table.cols-3 tbody td.cols-percentage {
     clear: left;
     margin-left: 0;
     width: 100%; }

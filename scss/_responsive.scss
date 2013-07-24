@@ -143,7 +143,8 @@
 	/* End slider above */
 
 	/* Handle full 4 columns capture the entire content body */
-  .view-id-landing_pages table.cols-4 tbody td.cols-percentage {
+  .view-id-landing_pages table.cols-4 tbody td.cols-percentage,
+	.view-id-landing_pages table.cols-3 tbody td.cols-percentage {
     clear: left;
     margin-left: 0;
     width: 100%;
