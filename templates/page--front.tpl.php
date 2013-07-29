@@ -130,7 +130,7 @@
       </div>
 			
 			<?php if(!empty($site_search_box)): ?>
-        <div id="arts-dropdown-site-search" class="col-2 rightside float_right">
+        <div id="arts-dropdown-site-search" class="col-2 rightside float_right" style="margin-top: 0">
           <?php print render($site_search_box); ?>
         </div>
       <?php endif; ?>
@@ -160,18 +160,6 @@
   <!-- The layout prints the front page blocks fist, followed by  -->
   <!-- whatever is in $page['content'].       <?php print $variables['layout']; ?>  -->
   <?php include($variables['layout']); ?>
-
-	<?php if(!empty($page['home_left']) && !empty($page['home_right'])): ?>
-		<div class="col-8">
-			<div class="col-4 first">
-				<?php print render($page['home_left']); ?>
-			</div>
-			<div class="col-4">
-				<?php print render($page['home_right']); ?>
-			</div>
-		</div>
-	<?php endif; ?>
-
 </div><!-- end wrapper -->
 
 <hr /><div class="footer"><div id="local" class="wrapper">

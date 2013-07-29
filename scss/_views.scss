@@ -12,6 +12,7 @@
 .view-id-landing_pages {
   table {
     margin-top: 0;
+		width: 100%;
 
     tbody {
       tr,
@@ -55,6 +56,11 @@
     &.cols-4 tbody td {
       width: 100px;
     }
+
+		&.cols-4 tbody td.cols-percentage {
+			/* Full expanded and no navigation */
+			width: 24%;
+		}
   }
 }
 
@@ -259,4 +265,35 @@
       padding-top: 0;
     }
   }
+}
+
+.main .view.foa-team .view-content {
+  table {
+    caption {
+      bottom: 20px;
+      color: #036;
+      clear: both;
+      font-family: 'Droid Sans','Helvetica Neue',Arial,sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: normal;
+      height: 0;
+      left: 0;
+      margin-top: 5px;
+      padding: 10px 0 3px;
+      position: relative;
+    }
+
+    th {
+      display: none;
+    }
+
+    .views-field-field-profile-display-name {
+      width: 30%;
+    }
+  }
+}
+
+.main .quicktabs_main .quicktabs-tabpage .field-type-taxonomy-term-reference {
+  display: none;
 }

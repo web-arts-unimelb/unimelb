@@ -271,7 +271,8 @@ h3.ui-state-active a {
  * Emulate the sizing and spacing of front page blocks on a grid view..
  */
 .view-id-landing_pages table {
-  margin-top: 0; }
+  margin-top: 0;
+  width: 100%; }
   .view-id-landing_pages table tbody tr,
   .view-id-landing_pages table tbody tr:nth-child(2n+1),
   .view-id-landing_pages table tbody td {
@@ -296,6 +297,9 @@ h3.ui-state-active a {
     width: 220px; }
   .view-id-landing_pages table.cols-4 tbody td {
     width: 100px; }
+  .view-id-landing_pages table.cols-4 tbody td.cols-percentage {
+    /* Full expanded and no navigation */
+    width: 24%; }
 
 /*
  * Event date as calendar icon on front page.
@@ -501,6 +505,27 @@ h3.ui-state-active a {
   .view-id-profiles .profile-summary .pullquote {
     clear: none;
     padding-top: 0; }
+
+.main .view.foa-team .view-content table caption {
+  bottom: 20px;
+  color: #036;
+  clear: both;
+  font-family: 'Droid Sans','Helvetica Neue',Arial,sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  height: 0;
+  left: 0;
+  margin-top: 5px;
+  padding: 10px 0 3px;
+  position: relative; }
+.main .view.foa-team .view-content table th {
+  display: none; }
+.main .view.foa-team .view-content table .views-field-field-profile-display-name {
+  width: 30%; }
+
+.main .quicktabs_main .quicktabs-tabpage .field-type-taxonomy-term-reference {
+  display: none; }
 
 /* FoA Slider CSS. */
 #slider .col-2 {
@@ -792,6 +817,21 @@ body ul.jquerymenu li.parent {
     position: absolute;
     top: 1.3em; }
 
+/* Start secondary menu */
+div.secondary_menu_block ul.menu {
+  background-color: #D8E8FB;
+  margin-top: 0; }
+  div.secondary_menu_block ul.menu:first-child {
+    padding-bottom: 3px;
+    padding-top: 5px;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em; }
+  div.secondary_menu_block ul.menu li.active > a {
+    color: #658FBA;
+    font-style: italic; }
+
+/* End secondary menu */
 /* Content editing */
 .filter-help a {
   padding: 0 20px 0 0; }
@@ -1018,7 +1058,8 @@ div.status {
   z-index: -1;
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
-  border-radius: 0.5em; }
+  border-radius: 0.5em;
+  background-color: #ffffff; }
 
 #backstretch,
 #backstretch-wrapper {
@@ -1029,6 +1070,18 @@ div.status {
 /* Award search results. */
 .page-node-317 .view-id-awards {
   /* Input button in view filter */
+  /*
+  .view-filters {
+    .views-exposed-form {
+      .views-exposed-widget {
+        .form-submit {
+          -webkit-margin-before: 1.95em;
+          margin-top: 2.15em;
+        }
+      }
+    }
+  }
+  */
   /* Control the view exposed filter position */
   /* Advanced search */ }
   .page-node-317 .view-id-awards td.the_column_1,
@@ -1040,18 +1093,22 @@ div.status {
   .page-node-317 .view-id-awards td.the_column_3,
   .page-node-317 .view-id-awards td.views-field-nothing {
     width: 25%; }
-  .page-node-317 .view-id-awards .view-filters .views-exposed-form .views-exposed-widget .form-submit {
-    -webkit-margin-before: 1.95em;
-    margin-top: 2.15em; }
   .page-node-317 .view-id-awards div.views-widget-filter-field_award_study_level_value {
-    margin-right: 10em; }
+    width: 200px; }
   .page-node-317 .view-id-awards div.views-widget-filter-field_award_travel_support_value {
-    margin-right: 11em; }
+    width: 200px; }
   .page-node-317 .view-id-awards #search-form label {
     display: inline; }
   .page-node-317 .view-id-awards fieldset.search-advanced {
     background: transparent;
     border: 0; }
+
+/* Control the search button */
+.award-search {
+  /* Input button in view filter */ }
+  .award-search .view-filters .views-exposed-form .views-exposed-widget .form-submit {
+    -webkit-margin-before: 1.95em;
+    margin-top: 2.15em; }
 
 /* Why do fieldset legends need to live off-screen? */
 form legend {
@@ -1198,6 +1255,8 @@ div.arts-dropdown {
     /* Depth-3 */
     /* Depth-4 */
     /* Depth-5 */ }
+    div.arts-dropdown div#arts-dropdown-menu.col-6 {
+      width: 720px; }
     div.arts-dropdown div#arts-dropdown-menu ul li {
       background-color: #d2e3f5;
       color: #22517d;
@@ -1213,7 +1272,7 @@ div.arts-dropdown {
         color: #cc0000; }
     div.arts-dropdown div#arts-dropdown-menu ul li li {
       font-weight: normal; }
-    div.arts-dropdown div#arts-dropdown-menu ul li.sf-depth-2 {
+    div.arts-dropdown div#arts-dropdown-menu ul li.sf-item-1.sf-depth-2 {
       margin-top: 4px; }
     div.arts-dropdown div#arts-dropdown-menu li.sf-item-1.sf-depth-1 {
       -moz-border-radius-topleft: 0.5em;
@@ -1222,28 +1281,38 @@ div.arts-dropdown {
       -webkit-border-bottom-left-radius: 0.5em;
       border-top-left-radius: 0.5em;
       border-bottom-left-radius: 0.5em; }
-    div.arts-dropdown div#arts-dropdown-menu li a.sf-depth-1 {
+    div.arts-dropdown div#arts-dropdown-menu li > a.sf-depth-1 {
       border-bottom: 0; }
     div.arts-dropdown div#arts-dropdown-menu li.firstandlast > a.sf-depth-2 {
       border-bottom: 0; }
+    div.arts-dropdown div#arts-dropdown-menu li.last > a.sf-depth-2 {
+      border-bottom: 0; }
     div.arts-dropdown div#arts-dropdown-menu li.firstandlast > a.sf-depth-3 {
+      border-bottom: 0; }
+    div.arts-dropdown div#arts-dropdown-menu li.last > a.sf-depth-3 {
       border-bottom: 0; }
     div.arts-dropdown div#arts-dropdown-menu li.firstandlast > a.sf-depth-4 {
       border-bottom: 0; }
+    div.arts-dropdown div#arts-dropdown-menu li.last > a.sf-depth-4 {
+      border-bottom: 0; }
     div.arts-dropdown div#arts-dropdown-menu li.firstandlast > a.sf-depth-5 {
       border-bottom: 0; }
-    div.arts-dropdown div#arts-dropdown-menu li.last a {
+    div.arts-dropdown div#arts-dropdown-menu li.last > a.sf-depth-5 {
       border-bottom: 0; }
     div.arts-dropdown div#arts-dropdown-menu li {
       height: auto;
       /* Start word break */
-      -ms-word-break: break-all;
-      word-break: break-all;
-      /* Non standard for webkit */
-      word-break: break-word;
-      -webkit-hyphens: auto;
-      -moz-hyphens: auto;
-      hyphens: auto;
+      			/*
+      			-ms-word-break: break-all;
+      			word-break: break-all;
+      
+      			// Non standard for webkit 
+      			word-break: break-word;    	
+      
+      			-webkit-hyphens: auto;
+      			-moz-hyphens: auto;
+      			hyphens: auto;
+      			*/
       /* End word break */ }
   div.arts-dropdown div#arts-dropdown-site-search {
     color: #345b8c !important;
@@ -1258,7 +1327,7 @@ div.arts-dropdown {
     width: 160px; }
     div.arts-dropdown div#arts-dropdown-site-search form {
       margin-bottom: 0;
-      margin-top: 0; }
+      margin-top: 3px; }
       div.arts-dropdown div#arts-dropdown-site-search form input,
       div.arts-dropdown div#arts-dropdown-site-search form textarea,
       div.arts-dropdown div#arts-dropdown-site-search form select {
@@ -1279,6 +1348,15 @@ div.arts-dropdown {
   float: left; }
 
 /* End dropdown menu */
+/* Start uom event */
+.uom-event {
+  min-height: 4.5em; }
+
+/* Mozilla only */
+.uom-event, x:-moz-any-link, x:default {
+  margin-bottom: 10px; }
+
+/* End uom event */
 /* Add in some responsible sprinkles. */
 /**
  * Media queries.
@@ -1297,6 +1375,9 @@ div.arts-dropdown {
   div#arts-dropdown-menu select {
     margin-top: 4px; } }
 @media screen and (max-width: 630px) {
+  .wrapper .main {
+    padding-top: 10px; }
+
   #header-menu {
     clear: both;
     float: left; }
@@ -1365,6 +1446,19 @@ div.arts-dropdown {
     float: left;
     clear: left;
     margin-top: -9px !important; }
+    div#arts-dropdown-site-search form {
+      margin-top: 0 !important; }
+
+  /* Start secondary menu */
+  div.secondary_menu_block ul.menu {
+    display: none; }
+
+  /* End secondary menu */
+  /* Handle full 4 columns capture the entire content body */
+  .view-id-landing_pages table.cols-4 tbody td.cols-percentage {
+    clear: left;
+    margin-left: 0;
+    width: 100%; }
 
   div#local {
     -ms-word-break: break-all;

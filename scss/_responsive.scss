@@ -21,6 +21,10 @@
 }
 
 @media screen and (max-width: 630px) {
+	.wrapper .main {
+		padding-top: 10px;
+	}
+
   // Re-colour the header menu and make it stick to the left.
   #header-menu {
     clear: both;
@@ -119,8 +123,27 @@
 		float: left;
 		clear: left;
 		margin-top: -9px !important;
+
+		form {
+			margin-top: 0 !important;
+		}
 	}
 	// End dropdown menu
+
+	/* Start secondary menu */
+	div.secondary_menu_block ul.menu {
+		display: none;
+	}
+	/* End secondary menu */
+
+
+	/* Handle full 4 columns capture the entire content body */
+  .view-id-landing_pages table.cols-4 tbody td.cols-percentage {
+    clear: left;
+    margin-left: 0;
+    width: 100%;
+  }
+
 
 	// Start footer
 	div#local {
