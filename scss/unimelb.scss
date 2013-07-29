@@ -917,6 +917,37 @@ div.arts-dropdown {
 }
 /* End dropdown menu */
 
+/* Video Gallery */
+.node-type-video {
+  .field-name-field-video-video { /* Emulate a col-6.first */
+    display: inline;
+    float: left;
+    margin-left: 0;
+    width: 640px;
+  }
+
+  .field-name-field-video-transcript {  /* Emulate a col-2.rightside */
+    border-left: 1px solid lightgrey;
+    display: inline;
+    float: left;
+    height: 390px;
+    margin-left: 15px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    padding: 0 0 0 4px;
+    width: 280px;
+
+    h3 {
+      padding-top: 0;
+    }
+  }
+
+  .field-name-body {  /* Stop floating. */
+    clear: both;
+    padding-top: 20px;
+  }
+}
 
 /* Add in some responsible sprinkles. */
 @import "responsive";
