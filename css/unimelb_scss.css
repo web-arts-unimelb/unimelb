@@ -1374,6 +1374,16 @@ div.arts-dropdown {
   clear: both;
   padding-top: 20px; }
 
+.view-video-gallery table td {
+  border: none;
+  text-align: center;
+  width: 220px; }
+.view-video-gallery table th,
+.view-video-gallery table tr {
+  border: none; }
+.view-video-gallery table tbody tr:nth-child(2n+1) {
+  background: none; }
+
 /* Start uom event */
 .uom-event {
   min-height: 4.5em; }

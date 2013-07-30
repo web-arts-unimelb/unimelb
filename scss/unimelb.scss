@@ -1000,6 +1000,25 @@ div.arts-dropdown {
   }
 }
 
+.view-video-gallery {
+  table {
+    td {
+      border: none;
+      text-align: center;
+      width: 220px;
+    }
+    th,
+    tr {
+      border: none;
+    }
+    tbody {
+      tr:nth-child(2n+1) {
+        background: none;
+      }
+    }
+  }
+}
+
 /* Start uom event */
 .uom-event {
 	min-height: 4.5em;
