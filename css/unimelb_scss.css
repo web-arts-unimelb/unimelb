@@ -1377,7 +1377,12 @@ div.arts-dropdown {
 .view-video-gallery table td {
   border: none;
   text-align: center;
-  width: 220px; }
+  width: 290px; }
+  .view-video-gallery table td .views-field-title span.field-content {
+    display: block;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    width: 290px; }
 .view-video-gallery table th,
 .view-video-gallery table tr {
   border: none; }
