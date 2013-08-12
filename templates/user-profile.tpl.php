@@ -32,7 +32,7 @@
  * @see template_preprocess_user_profile()
  *
  * $profile_links is set by the uom_custom module and quite likely only used
- * by * the SOLL website. If it isn't set, revert to the default profile display
+ * by the SOLL website. If it isn't set, revert to the default profile display
  * behaviour, controlled by permissions.
  */
 ?>
@@ -41,8 +41,8 @@
   // Profile_links is set by the uom_custom module.
   if (!empty($user_profile['profile_links'])):
     print render($user_profile['profile_links']);
-  else:
-    print render($user_profile);
+  // else:
+  //   print render($user_profile);
   endif;
 ?>
 </div>
