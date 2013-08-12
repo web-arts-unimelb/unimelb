@@ -156,7 +156,7 @@ function unimelb_preprocess_page(&$variables) {
   $variables['layout'] = 'layout/' . theme_get_setting('unimelb_settings_columns') . '.tpl.inc';
 
   // Allow us to override the layout on a node-type basis!
-  if ($variables['node']->type == 'study_area') {
+  if (!empty($variables['node']) && $variables['node']->type == 'study_area') {
     $variables['layout'] =  'layout/node.tpl.inc';
   }
 

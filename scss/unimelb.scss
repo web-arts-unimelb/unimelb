@@ -575,24 +575,26 @@ div.status {
   }
 
   /* Input button in view filter */
+  /*
   .view-filters {
     .views-exposed-form {
       .views-exposed-widget {
         .form-submit {
           -webkit-margin-before: 1.95em;
-          margin-top: 2.15em;
+          margin-top: 2.17em;
         }
       }
     }
   }
+  */
 
   /* Control the view exposed filter position */
   div.views-widget-filter-field_award_study_level_value {
-    margin-right: 10em;
+    width: 200px;
   }
 
   div.views-widget-filter-field_award_travel_support_value {
-    margin-right: 11em;
+    width: 200px;
   }
 
   /* Advanced search */
@@ -605,6 +607,22 @@ div.status {
     border: 0;
   }
 }
+
+/* Control the search button */
+.award-search {
+	/* Input button in view filter */
+  .view-filters {
+    .views-exposed-form {
+      .views-exposed-widget {
+        .form-submit {
+          -webkit-margin-before: 1.95em;
+          margin-top: 2.15em;
+        }
+      }
+    }
+  }
+}
+
 
 /* Why do fieldset legends need to live off-screen? */
 form legend {
@@ -791,6 +809,11 @@ div.arts-dropdown {
 		margin-left: 0px;
 		padding-left: 10px;
 
+		&.col-6 {
+			// Need to increase the width, 700px is not enought
+			width: 720px;
+		}
+
     ul {
       li {
 				background-color: #d2e3f5;
@@ -838,7 +861,6 @@ div.arts-dropdown {
 			border-bottom: 0;
 		}
 		
-
 		/* Depth-2 */
 		li.firstandlast > a.sf-depth-2 { 
 			border-bottom: 0;	
@@ -946,6 +968,64 @@ div.arts-dropdown {
 }
 /* End dropdown menu */
 
+/* Video Gallery */
+.node-type-video {
+  .field-name-field-video-video { /* Emulate a col-6.first */
+    display: inline;
+    float: left;
+    margin-left: 0;
+    width: 640px;
+  }
+
+  .field-name-field-video-transcript {  /* Emulate a col-2.rightside */
+    border-left: 1px solid lightgrey;
+    display: inline;
+    float: left;
+    height: 390px;
+    margin-left: 15px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    padding: 0 0 0 4px;
+    width: 280px;
+
+    h3 {
+      padding-top: 0;
+    }
+  }
+
+  .field-name-body {  /* Stop floating. */
+    clear: both;
+    padding-top: 20px;
+  }
+}
+
+.view-video-gallery {
+  table {
+    td {
+      border: none;
+      text-align: center;
+      width: 290px;
+
+      .views-field-title span.field-content {
+        display: block;
+        overflow: hidden;
+        overflow-wrap: break-word;
+        width: 290px;
+      }
+    }
+    th,
+    tr {
+      border: none;
+    }
+    tbody {
+      tr:nth-child(2n+1) {
+        background: none;
+      }
+    }
+  }
+}
+
 /* Start uom event */
 .uom-event {
 	min-height: 4.5em;
@@ -960,4 +1040,3 @@ div.arts-dropdown {
 
 /* Add in some responsible sprinkles. */
 @import "responsive";
-
