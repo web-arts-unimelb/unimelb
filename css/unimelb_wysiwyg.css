@@ -41,3 +41,10 @@ p.importantnotice {
   padding: 0em;
   margin: 0em;
 }
+
+/* Grid sizes in the wysiyg. */
+.col-1 { display: inline; float: left; margin-left: 20px; width: 100px; }
+.col-2 { display: inline; float: left; margin-left: 20px; width: 220px; }
+.col-3 { display: inline; float: left; margin-left: 20px; width: 340px; }
+.col-4 { display: inline; float: left; margin-left: 20px; width: 460px; }
+.first { margin-left: 0; }

@@ -1035,8 +1035,15 @@ div.arts-dropdown {
 .uom-event, x:-moz-any-link, x:default {
     margin-bottom: 10px;
 }
-
 /* End uom event */
+
+/* Start study area */
+div.study-area-style {
+	background-color: #E0EAF4;
+	padding: 12px;
+	border-radius: 0.5em;	
+}
+/* End study area */
 
 /* Add in some responsible sprinkles. */
 @import "responsive";
