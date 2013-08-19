@@ -294,6 +294,9 @@ h3.ui-state-active a {
     width: 340px; }
   .view-id-landing_pages table.cols-3 tbody td {
     width: 220px; }
+  .view-id-landing_pages table.cols-3 tbody td.cols-percentage {
+    /* Full expanded and no navigation */
+    width: 32%; }
   .view-id-landing_pages table.cols-4 tbody td {
     width: 100px; }
   .view-id-landing_pages table.cols-4 tbody td.cols-percentage {

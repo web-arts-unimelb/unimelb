@@ -50,7 +50,11 @@
 
     &.cols-3 tbody td {
       width: 220px;
+    }
 
+		&.cols-3 tbody td.cols-percentage {
+      /* Full expanded and no navigation */
+      width: 32%;
     }
 
     &.cols-4 tbody td {
