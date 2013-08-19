@@ -1005,7 +1005,14 @@ div.arts-dropdown {
     td {
       border: none;
       text-align: center;
-      width: 220px;
+      width: 290px;
+
+      .views-field-title span.field-content {
+        display: block;
+        overflow: hidden;
+        overflow-wrap: break-word;
+        width: 290px;
+      }
     }
     th,
     tr {
