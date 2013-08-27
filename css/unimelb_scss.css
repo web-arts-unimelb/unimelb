@@ -216,9 +216,35 @@ ul.quicktabs-tabs.quicktabs-style-nostyle {
  * Staff list views on the schools sites.
  */
 .view-id-staff .staff-contact {
-  width: 30%; }
+  width: 40%; }
 .view-id-staff .staff-name {
-  width: 20%; }
+  width: 25%; }
+
+/**
+ * Exposed filter on the staff page.
+ */
+#views-exposed-form-staff-page .views-exposed-form {
+  /* Position the throbber at the top right of the filter block */ }
+  #views-exposed-form-staff-page .views-exposed-form #edit-field-award-study-area-tid-wrapper,
+  #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-tid-wrapper {
+    /* Filter title label */
+    /* Checkbox labels */ }
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-award-study-area-tid-wrapper label[for="edit-field-award-study-area-tid"],
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-award-study-area-tid-wrapper label[for="edit-field-person-type-tid"],
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-tid-wrapper label[for="edit-field-award-study-area-tid"],
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-tid-wrapper label[for="edit-field-person-type-tid"] {
+      color: #036;
+      font-family: 'Droid Sans','Helvetica Neue',Arial,sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px 0 3px; }
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-award-study-area-tid-wrapper .form-checkboxes label,
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-tid-wrapper .form-checkboxes label {
+      font-weight: normal; }
+  #views-exposed-form-staff-page .views-exposed-form .views-submit-button {
+    position: absolute;
+    right: -10px;
+    top: 8px; }
 
 /**
  * Areas of study in views accordion.
