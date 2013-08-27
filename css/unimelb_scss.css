@@ -213,6 +213,14 @@ ul.quicktabs-tabs.quicktabs-style-nostyle {
   padding: 0; }
 
 /**
+ * Staff list views on the schools sites.
+ */
+.view-id-staff .staff-contact {
+  width: 30%; }
+.view-id-staff .staff-name {
+  width: 20%; }
+
+/**
  * Areas of study in views accordion.
  */
 .ui-widget .ui-accordion-content {
