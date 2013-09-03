@@ -709,7 +709,8 @@ table {
   float: right;
   min-height: 85px;
   right: 0;
-  width: auto; }
+  width: auto;
+  /* Logintoboggan block in header menu. */ }
   #header-menu ul li {
     -moz-text-shadow: .5px .5px 2px #024;
     -o-text-shadow: .5px .5px 2px #024;
@@ -730,6 +731,10 @@ table {
       #header-menu ul li a:link:hover,
       #header-menu ul li a:active:hover {
         color: #f5faff; }
+  #header-menu .block-logintoboggan a,
+  #header-menu .block-logintoboggan a:active,
+  #header-menu .block-logintoboggan a:visited {
+    color: white; }
 
 /* Feature menu */
 #feature-menu {

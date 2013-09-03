@@ -121,6 +121,15 @@ table {
       }
     }
   }
+
+  /* Logintoboggan block in header menu. */
+  .block-logintoboggan {
+    a,
+    a:active,
+    a:visited {
+      color: white;
+    }
+  }
 }
 
 /* Feature menu */
@@ -261,6 +270,8 @@ div.secondary_menu_block ul.menu {
 }
 
 /* End secondary menu */
+
+
 
 /* Content editing */
 .filter-help a {
