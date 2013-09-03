@@ -301,3 +301,22 @@
 .main .quicktabs_main .quicktabs-tabpage .field-type-taxonomy-term-reference {
   display: none;
 }
+
+/**
+ * Staff and team lists on intranet.
+ */
+.view-id-team .views-table {
+  ol,
+  ul {
+    margin: 10px 0 10px 0;
+    padding: 0 0 0 20px;
+    list-style-type: disc;
+  }
+}
+
+.view-id-team .views-table ul li {
+  margin: 0;
+  margin-bottom: 5px;
+  padding:0;
+}
+

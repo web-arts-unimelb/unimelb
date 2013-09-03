@@ -641,6 +641,7 @@ form legend {
 
 
 /* Start - form */
+/* Is this webform? It overrides headers on all forms everywhere... */
 form {
   h1,
   h2,
@@ -648,7 +649,6 @@ form {
   h4,
   h5 {
     border-bottom: 0;
-    font-weight: bold;
     margin: 0;
     margin-left: 0;
     padding: 0;
@@ -657,6 +657,10 @@ form {
 
   h3 {
     font-size: 18px;
+  }
+
+  h4 {
+    font-weight: normal;
   }
 
   p {

@@ -563,6 +563,20 @@ h3.ui-state-active a {
 .main .quicktabs_main .quicktabs-tabpage .field-type-taxonomy-term-reference {
   display: none; }
 
+/**
+ * Staff and team lists on intranet.
+ */
+.view-id-team .views-table ol,
+.view-id-team .views-table ul {
+  margin: 10px 0 10px 0;
+  padding: 0 0 0 20px;
+  list-style-type: disc; }
+
+.view-id-team .views-table ul li {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0; }
+
 /* FoA Slider CSS. */
 #slider .col-2 {
   margin-left: 0;
@@ -1160,19 +1174,21 @@ form legend {
   border-radius: 0.5em; }
 
 /* Start - form */
+/* Is this webform? It overrides headers on all forms everywhere... */
 form h1,
 form h2,
 form h3,
 form h4,
 form h5 {
   border-bottom: 0;
-  font-weight: bold;
   margin: 0;
   margin-left: 0;
   padding: 0;
   text-align: left; }
 form h3 {
   font-size: 18px; }
+form h4 {
+  font-weight: normal; }
 form p {
   font-weight: normal; }
 form fieldset.webform-component-fieldset.form-wrapper {
