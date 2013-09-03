@@ -73,7 +73,38 @@
  * Staff list views on the schools sites.
  */
 .view-id-staff {
-  .staff-contact { width: 30%; }
-  .staff-name { width: 20%; }
+  .staff-contact { width: 40%; }
+  .staff-name { width: 25%; }
 }
 
+/**
+ * Exposed filter on the staff page.
+ */
+#views-exposed-form-staff-page {
+  .views-exposed-form {
+    #edit-field-person-area-tid-wrapper,
+    #edit-field-person-type-tid-wrapper {
+      /* Filter title label */
+      label[for="edit-field-person-area-tid"],
+      label[for="edit-field-person-type-tid"] {
+        color: #036;
+        font-family: 'Droid Sans','Helvetica Neue',Arial,sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 0 3px;
+      }
+      /* Checkbox labels */
+      .form-checkboxes {
+        label {
+          font-weight: normal;
+        }
+      }
+    }
+    /* Position the throbber at the top right of the filter block */
+    .views-submit-button {
+      position: absolute;
+      right: -10px;
+      top: 8px;
+    }
+  }
+}
