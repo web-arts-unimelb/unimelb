@@ -20,7 +20,7 @@
  */
 ?>
 <?php if (!empty($title) || !empty($caption)) : ?>
-  <h3 class="title"><?php print $caption . $title; ?></h3>
+  <h4 class="title"><?php print $caption . $title; ?></h4>
 <?php endif; ?>
 <table <?php if ($classes) { print 'class="'. $classes . '" '; } ?><?php print $attributes; ?>>
   <?php if (!empty($header)) : ?>
