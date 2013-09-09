@@ -22,10 +22,11 @@
 
         if (useBackStretch) {
           var bgPath = Drupal.settings.unimelb.background;
-          $.backstretch(bgPath, {
-            speed: 0
-          });
-         
+
+					if($('div#backstretch').length <= 0) {
+						$.backstretch(bgPath, {speed: 0});
+					}
+
           // Fix transparent background issue
           $('#backstretch-wrapper').css('opacity','.9'); 
         }
@@ -41,7 +42,7 @@
       $("table.webform-component-table-element td:nth-child(1), table.webform-component-table-element th:nth-child(1)").hide();
      
       // Control width for uni global header and footer
-      _control_width(); 
+			_control_width(); 
 
       // Theme the search box and search button of intranet, as we are not able to enable standard search module,
       // so we cannot enable the search configuration module, hence need to theme it here, which is bad.
@@ -53,7 +54,7 @@
   function _control_width() {
     // Initial
     var document_width = $(document).width();
-    $('body').width(document_width);
+		$('body').once('body').width(document_width);
 
     $(window).resize(function() {
       if(!$.browser.msie) {
