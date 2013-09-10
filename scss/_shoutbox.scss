@@ -23,3 +23,9 @@
     }
   }
 }
+
+/* Make sure long words break and don't push the block wide. */
+.col-2 .shoutbox-msg {
+  overflow-wrap: break-word;
+  width: 220px;
+}
