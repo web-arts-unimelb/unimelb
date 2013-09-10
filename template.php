@@ -542,6 +542,15 @@ function unimelb_form_search_block_form_alter(&$form, &$form_state) {
 }
 
 /**
+ * Implements hook_preprocess_shoutbox_post().
+ *
+ * Change the text format from plain to filtered, so links works.
+ */
+function unimelb_preprocess_shoutbox_post(&$vars) {
+  $vars['shout']->shout = check_markup($vars['shout']->shout, 'filtered_html');
+}
+
+/**
  * Theme the shoutbox block message regarding auto-update interval
  *
  * @param $interval
