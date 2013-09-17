@@ -41,8 +41,8 @@
   // Profile_links is set by the uom_custom module.
   if (!empty($user_profile['profile_links'])):
     print render($user_profile['profile_links']);
-  // else:
-  //   print render($user_profile);
+  else:
+    print render($user_profile);
   endif;
 ?>
 </div>

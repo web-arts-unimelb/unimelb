@@ -83,6 +83,7 @@
 #views-exposed-form-staff-page {
   .views-exposed-form {
     #edit-field-person-area-tid-wrapper,
+    #edit-field-person-type-honorary-wrapper,
     #edit-field-person-type-tid-wrapper {
       /* Filter title label */
       label[for="edit-field-person-area-tid"],
@@ -105,6 +106,10 @@
       position: absolute;
       right: -10px;
       top: 8px;
+    }
+    /* Move the floating single field up to the bottom of the preceding list. */
+    #edit-field-person-type-honorary-wrapper {
+      padding: 0 2px 0 0;
     }
   }
 }
