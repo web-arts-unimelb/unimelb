@@ -542,6 +542,29 @@ function unimelb_form_search_block_form_alter(&$form, &$form_state) {
 }
 
 /**
+ * Implements hook_preprocess_shoutbox_post().
+ *
+ * Change the text format from plain to filtered, so links works.
+ */
+function unimelb_preprocess_shoutbox_post(&$vars) {
+  $vars['shout']->shout = check_markup($vars['shout']->shout, 'filtered_html');
+}
+
+/**
+ * Theme the shoutbox block message regarding auto-update interval
+ *
+ * @param $interval
+ *     The number of seconds the shouts auto-refresh
+ */
+function unimelb_shoutbox_interval_message($variables) {
+  // Check if autoupdate is enabled
+  $interval = $variables['interval'];
+  if ($interval) {
+    return '<div class="shoutbox-interval-msg">' . t('Announcements refresh every !interval', array('!interval' => format_interval($interval)));
+  }
+}
+
+/**
  * Theme the link on the bottom of the block pointing to the shout page
  *
  * @param $page_path

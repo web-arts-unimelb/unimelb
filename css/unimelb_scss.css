@@ -676,6 +676,11 @@ h3.ui-state-active a {
 #shoutbox-body table tbody tr.odd {
   background: transparent; }
 
+/* Make sure long words break and don't push the block wide. */
+.col-2 .shoutbox-msg {
+  overflow-wrap: break-word;
+  width: 220px; }
+
 /* Override header margin if the first element on the page or if in a block. */
 div.field-item + h2, div.field-item + h3, div.field-item + h4, div.field-item + h5, div.field-item + h6,
 div.col-2 + h2,
