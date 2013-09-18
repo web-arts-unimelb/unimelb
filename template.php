@@ -547,7 +547,10 @@ function unimelb_form_search_block_form_alter(&$form, &$form_state) {
  * Change the text format from plain to filtered, so links works.
  */
 function unimelb_preprocess_shoutbox_post(&$vars) {
-  $vars['shout']->shout = check_markup($vars['shout']->shout, 'filtered_html');
+	$shout = $vars['shout']->shout;
+  $shout = preg_replace('/^\s+|\n|\r|\s+$/m', '', $shout); // Remove line break + spaces at both ends
+
+  $vars['shout']->shout = check_markup($shout, 'filtered_html');	
 }
 
 /**
