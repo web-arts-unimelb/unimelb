@@ -47,6 +47,9 @@
       // Theme the search box and search button of intranet, as we are not able to enable standard search module,
       // so we cannot enable the search configuration module, hence need to theme it here, which is bad.
       //_theme_intranet_search_box_and_button();
+
+			// Display professional staff label on staff listing page
+			_staff_listing_staff_label();
     }
   }
 
@@ -71,9 +74,26 @@
     });
   }
 
+	function _staff_listing_staff_label() {
+		// Initial
+		$('<h4 class="staff_professional">Professional</h4>').insertBefore($('.grouped-staff-list .view-content table.views-table').last());
+
+		$('form#views-exposed-form-staff-page .form-item-field-person-type-tid input[type="radio"]').on('click', function(){
+			$(document).ajaxStop(function () {
+				$('h4.staff_professional').remove();
+				var tag_name = $('.grouped-staff-list .view-content table.views-table').last().prev().prop('tagName');
+				if(tag_name == 'TABLE') {
+					$('<h4 class="staff_professional">Professional</h4>').insertBefore($('.grouped-staff-list .view-content table.views-table').last());
+				}
+			});
+		});
+	}
+
+	/*
   function _theme_intranet_search_box_and_button() {
     $('form#searchapi-form input[name="search_api_views_fulltext"]').attr('size', '12');
     $('form#searchapi-form input[name="op"]').attr('value', 'Keyword search'); 
   }
-
+	*/
+	
 })(jQuery);

@@ -1276,6 +1276,11 @@ table.color {
 table.color td {
   border: 1px solid #444444; }
 
+/* Custom width */
+.ninety_five_percent_width {
+  width: 95%; }
+
+/* End custom width */
 /* Start rupc */
 .rupc-item-listing .mysection {
   margin-bottom: 20px;
