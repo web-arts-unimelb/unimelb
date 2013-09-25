@@ -242,6 +242,10 @@ ul.quicktabs-tabs.quicktabs-style-nostyle {
       font-size: 16px;
       font-weight: bold;
       padding: 10px 0 3px; }
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-area-tid-wrapper label[for^="edit-field-person-type-tid-"],
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-honorary-wrapper label[for^="edit-field-person-type-tid-"],
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-tid-wrapper label[for^="edit-field-person-type-tid-"] {
+      font-weight: normal; }
     #views-exposed-form-staff-page .views-exposed-form #edit-field-person-area-tid-wrapper .form-checkboxes label,
     #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-honorary-wrapper .form-checkboxes label,
     #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-tid-wrapper .form-checkboxes label {
@@ -253,6 +257,13 @@ ul.quicktabs-tabs.quicktabs-style-nostyle {
   #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-honorary-wrapper {
     padding: 0 2px 0 0; }
 
+/*
+#views-exposed-form-staff-page {
+	.views-exposed-form label{
+		font-weight: normal;
+	}
+}
+*/
 /**
  * Areas of study in views accordion.
  */

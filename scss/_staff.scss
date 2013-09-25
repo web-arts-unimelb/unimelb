@@ -94,6 +94,11 @@
         font-weight: bold;
         padding: 10px 0 3px;
       }
+
+			label[for^="edit-field-person-type-tid-"] {
+				font-weight: normal;
+			}
+
       /* Checkbox labels */
       .form-checkboxes {
         label {
@@ -113,3 +118,4 @@
     }
   }
 }
+
