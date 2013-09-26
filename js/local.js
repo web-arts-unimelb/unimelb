@@ -82,7 +82,7 @@
 			$(document).ajaxStop(function () {
 				$('h4.staff_professional').remove();
 				var tag_name = $('.grouped-staff-list .view-content table.views-table').last().prev().prop('tagName');
-				if(tag_name == 'TABLE') {
+				if(tag_name != 'H4') {
 					$('<h4 class="staff_professional">Professional</h4>').insertBefore($('.grouped-staff-list .view-content table.views-table').last());
 				}
 			});
