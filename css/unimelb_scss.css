@@ -257,13 +257,6 @@ ul.quicktabs-tabs.quicktabs-style-nostyle {
   #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-honorary-wrapper {
     padding: 0 2px 0 0; }
 
-/*
-#views-exposed-form-staff-page {
-	.views-exposed-form label{
-		font-weight: normal;
-	}
-}
-*/
 /**
  * Areas of study in views accordion.
  */
@@ -1292,18 +1285,18 @@ table.color td {
   width: 95%; }
 
 /* End custom width */
-/* Start rupc */
-.rupc-item-listing .mysection {
+/* Start event listing page */
+.event-item-listing .mysection {
   margin-bottom: 20px;
   clear: both;
   min-height: 9em; }
 
-.rupc-item-listing .mysection img {
+.event-item-listing .mysection img {
   float: left;
   margin-right: 10px;
   margin-top: 3px; }
 
-/* End rupc */
+/* End event listing page */
 /* Quotes for the Study Area. */
 .quote blockquote {
   background: url("http://brand.unimelb.edu.au/web-templates/1-1-0/images/quote_marks.png") no-repeat 0px 12px;
