@@ -1233,6 +1233,10 @@ ul.inline li,
 ul.links.inline li {
   float: none; }
 
+/* Don't clear if a header is preceded by a floated image. */
+#main-content h4 {
+  clear: none; }
+
 /* Use this class to clear left or right, allow wysiwgy float left or right */
 .clear-left {
   clear: left; }
