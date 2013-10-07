@@ -694,6 +694,20 @@ ul.links.inline {
   }
 }
 
+/* Don't clear if a header is preceded by a floated image. */
+h3 + img.wysiwyg-right,
+h4 + img.wysiwyg-right,
+h5 + img.wysiwyg-right,
+h6 + img.wysiwyg-right,
+.pullquote + img.wysiwyg-left,
+h3 + img.wysiwyg-left,
+h4 + img.wysiwyg-left,
+h5 + img.wysiwyg-left,
+h6 + img.wysiwyg-left,
+.pullquote + img.wysiwyg-left {
+  clear: none;
+}
+
 /* Use this class to clear left or right, allow wysiwgy float left or right */
 .clear-left {
 	clear: left;
