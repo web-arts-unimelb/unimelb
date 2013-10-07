@@ -213,6 +213,51 @@ ul.quicktabs-tabs.quicktabs-style-nostyle {
   padding: 0; }
 
 /**
+ * Staff list views on the schools sites.
+ */
+.view-id-staff .staff-contact {
+  width: 40%; }
+.view-id-staff .staff-name {
+  width: 25%; }
+
+/**
+ * Exposed filter on the staff page.
+ */
+#views-exposed-form-staff-page .views-exposed-form {
+  /* Position the throbber at the top right of the filter block */
+  /* Move the floating single field up to the bottom of the preceding list. */ }
+  #views-exposed-form-staff-page .views-exposed-form #edit-field-person-area-tid-wrapper,
+  #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-honorary-wrapper,
+  #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-tid-wrapper {
+    /* Filter title label */
+    /* Checkbox labels */ }
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-area-tid-wrapper label[for="edit-field-person-area-tid"],
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-area-tid-wrapper label[for="edit-field-person-type-tid"],
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-honorary-wrapper label[for="edit-field-person-area-tid"],
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-honorary-wrapper label[for="edit-field-person-type-tid"],
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-tid-wrapper label[for="edit-field-person-area-tid"],
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-tid-wrapper label[for="edit-field-person-type-tid"] {
+      color: #036;
+      font-family: 'Droid Sans','Helvetica Neue',Arial,sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px 0 3px; }
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-area-tid-wrapper label[for^="edit-field-person-type-tid-"],
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-honorary-wrapper label[for^="edit-field-person-type-tid-"],
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-tid-wrapper label[for^="edit-field-person-type-tid-"] {
+      font-weight: normal; }
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-area-tid-wrapper .form-checkboxes label,
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-honorary-wrapper .form-checkboxes label,
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-tid-wrapper .form-checkboxes label {
+      font-weight: normal; }
+  #views-exposed-form-staff-page .views-exposed-form .views-submit-button {
+    position: absolute;
+    right: -10px;
+    top: 8px; }
+  #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-honorary-wrapper {
+    padding: 0 2px 0 0; }
+
+/**
  * Areas of study in views accordion.
  */
 .ui-widget .ui-accordion-content {
@@ -222,7 +267,6 @@ ul.quicktabs-tabs.quicktabs-style-nostyle {
 
 .ui-accordion .ui-accordion-header,
 .ui-corner-bottom,
-.ui-corner-all,
 .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default,
@@ -295,6 +339,9 @@ h3.ui-state-active a {
     width: 340px; }
   .view-id-landing_pages table.cols-3 tbody td {
     width: 220px; }
+  .view-id-landing_pages table.cols-3 tbody td.cols-percentage {
+    /* Full expanded and no navigation */
+    width: 32%; }
   .view-id-landing_pages table.cols-4 tbody td {
     width: 100px; }
   .view-id-landing_pages table.cols-4 tbody td.cols-percentage {
@@ -527,6 +574,20 @@ h3.ui-state-active a {
 .main .quicktabs_main .quicktabs-tabpage .field-type-taxonomy-term-reference {
   display: none; }
 
+/**
+ * Staff and team lists on intranet.
+ */
+.view-id-team .views-table ol,
+.view-id-team .views-table ul {
+  margin: 10px 0 10px 0;
+  padding: 0 0 0 20px;
+  list-style-type: disc; }
+
+.view-id-team .views-table ul li {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0; }
+
 /* FoA Slider CSS. */
 #slider .col-2 {
   margin-left: 0;
@@ -619,6 +680,11 @@ h3.ui-state-active a {
 #shoutbox-body table tbody tr.odd {
   background: transparent; }
 
+/* Make sure long words break and don't push the block wide. */
+.col-2 .shoutbox-msg {
+  overflow-wrap: break-word;
+  width: 220px; }
+
 /* Override header margin if the first element on the page or if in a block. */
 div.field-item + h2, div.field-item + h3, div.field-item + h4, div.field-item + h5, div.field-item + h6,
 div.col-2 + h2,
@@ -673,7 +739,8 @@ table {
   float: right;
   min-height: 85px;
   right: 0;
-  width: auto; }
+  width: auto;
+  /* Logintoboggan block in header menu. */ }
   #header-menu ul li {
     -moz-text-shadow: .5px .5px 2px #024;
     -o-text-shadow: .5px .5px 2px #024;
@@ -694,6 +761,10 @@ table {
       #header-menu ul li a:link:hover,
       #header-menu ul li a:active:hover {
         color: #f5faff; }
+  #header-menu .block-logintoboggan a,
+  #header-menu .block-logintoboggan a:active,
+  #header-menu .block-logintoboggan a:visited {
+    color: white; }
 
 /* Feature menu */
 #feature-menu {
@@ -1124,19 +1195,21 @@ form legend {
   border-radius: 0.5em; }
 
 /* Start - form */
+/* Is this webform? It overrides headers on all forms everywhere... */
 form h1,
 form h2,
 form h3,
 form h4,
 form h5 {
   border-bottom: 0;
-  font-weight: bold;
   margin: 0;
   margin-left: 0;
   padding: 0;
   text-align: left; }
 form h3 {
   font-size: 18px; }
+form h4 {
+  font-weight: normal; }
 form p {
   font-weight: normal; }
 form fieldset.webform-component-fieldset.form-wrapper {
@@ -1207,18 +1280,23 @@ table.color {
 table.color td {
   border: 1px solid #444444; }
 
-/* Start rupc */
-.rupc-item-listing .mysection {
+/* Custom width */
+.ninety_five_percent_width {
+  width: 95%; }
+
+/* End custom width */
+/* Start event listing page */
+.event-item-listing .mysection {
   margin-bottom: 20px;
   clear: both;
   min-height: 9em; }
 
-.rupc-item-listing .mysection img {
+.event-item-listing .mysection img {
   float: left;
   margin-right: 10px;
   margin-top: 3px; }
 
-/* End rupc */
+/* End event listing page */
 /* Quotes for the Study Area. */
 .quote blockquote {
   background: url("http://brand.unimelb.edu.au/web-templates/1-1-0/images/quote_marks.png") no-repeat 0px 12px;
@@ -1398,6 +1476,13 @@ div.arts-dropdown {
   margin-bottom: 10px; }
 
 /* End uom event */
+/* Start study area */
+div.study-area-style {
+  background-color: #E0EAF4;
+  padding: 12px;
+  border-radius: 0.5em; }
+
+/* End study area */
 /* Add in some responsible sprinkles. */
 /**
  * Media queries.

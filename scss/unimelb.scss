@@ -121,6 +121,15 @@ table {
       }
     }
   }
+
+  /* Logintoboggan block in header menu. */
+  .block-logintoboggan {
+    a,
+    a:active,
+    a:visited {
+      color: white;
+    }
+  }
 }
 
 /* Feature menu */
@@ -261,6 +270,8 @@ div.secondary_menu_block ul.menu {
 }
 
 /* End secondary menu */
+
+
 
 /* Content editing */
 .filter-help a {
@@ -641,6 +652,7 @@ form legend {
 
 
 /* Start - form */
+/* Is this webform? It overrides headers on all forms everywhere... */
 form {
   h1,
   h2,
@@ -648,7 +660,6 @@ form {
   h4,
   h5 {
     border-bottom: 0;
-    font-weight: bold;
     margin: 0;
     margin-left: 0;
     padding: 0;
@@ -657,6 +668,10 @@ form {
 
   h3 {
     font-size: 18px;
+  }
+
+  h4 {
+    font-weight: normal;
   }
 
   p {
@@ -770,20 +785,26 @@ table.color td {
   border: 1px solid #444444;
 }
 
+/* Custom width */
+.ninety_five_percent_width {
+	width:95%;
+}
+/* End custom width */
 
-/* Start rupc */
-.rupc-item-listing .mysection {
+
+/* Start event listing page */
+.event-item-listing .mysection {
 	margin-bottom: 20px;
 	clear:both;
   min-height: 9em;
 }
 
-.rupc-item-listing .mysection img {
+.event-item-listing .mysection img {
 	float:left;
 	margin-right: 10px;
 	margin-top: 3px;
 }
-/* End rupc */
+/* End event listing page */
 
 /* Quotes for the Study Area. */
 .quote blockquote {
@@ -1049,8 +1070,15 @@ div.arts-dropdown {
 .uom-event, x:-moz-any-link, x:default {
     margin-bottom: 10px;
 }
-
 /* End uom event */
+
+/* Start study area */
+div.study-area-style {
+	background-color: #E0EAF4;
+	padding: 12px;
+	border-radius: 0.5em;	
+}
+/* End study area */
 
 /* Add in some responsible sprinkles. */
 @import "responsive";
