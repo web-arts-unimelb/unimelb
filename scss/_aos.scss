@@ -1,68 +1,100 @@
-/**
- * Areas of study in views accordion.
- */
-// .view-id-areas_of_study {
+/*! Areas of study in views accordion.  */
 
-  // Why you mess with the font, jquery.ui.theme.css?
-  .ui-widget .ui-accordion-content {
-    font-family: sans-serif;
-    font-size: 13px;
-    line-height: 1.5em;
+// Why you mess with the font, jquery.ui.theme.css?
+.ui-widget h3 {
+  font-family: "Droid Sans",Sans-serif;
+}
+.ui-widget .ui-accordion-content {
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 1.5em;
+}
+
+.ui-accordion .ui-accordion-header .ui-icon {
+  left: -0.4em;
+}
+.ui-icon-triangle-1-e {
+  background-position: -28px -16px;
+}
+.ui-icon-triangle-1-s {
+  background-position: -60px -16px;
+}
+.ui-accordion-icons .ui-accordion-header a {
+  padding-left: 1.2em;
+}
+
+.ui-accordion .ui-accordion-header,
+.ui-corner-bottom,
+/*.ui-corner-all,*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+
+h3.ui-accordion-header,
+h3.ui-state-default,
+h3.ui-state-focus,
+h3.ui-state-active {
+  font-family: "Droid Sans",Sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* Links need a bit more work */
+#main-content h3.ui-accordion-header {
+  a:link {
+    text-decoration: none;
+    color: #4c5e71;
   }
-
-  .ui-accordion .ui-accordion-header,
-  .ui-corner-bottom,
-  /*.ui-corner-all,*/
-  .ui-state-default,
-  .ui-widget-content .ui-state-default,
-  .ui-widget-header .ui-state-default,
-  .ui-state-active,
-  .ui-widget-content .ui-state-active,
-  .ui-widget-header .ui-state-active {
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    background: none;
-    border: none;
-    border-radius: 0;
-  }
-
-  h3.ui-accordion-header,
-  h3.ui-state-default,
-  h3.ui-state-focus,
-  h3.ui-state-active {
-    a {
+  &.ui-state-default {
+    a:link {
       color: #4c5e71;
-      font-family: 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: bold;
     }
   }
+  &.ui-state-active {
+    a:link {
+      color: #003366;
+    }
+  }
+}
 
-  .view-content.ui-accordion {
-    table {
-      caption {
-        height: 0;
-        left: -9999px;
-        position: absolute;
-      }
+//         All titles 18px Droid sans bold
+//         Please remove the title underline
+//         Expanded title colour: #003366
+//         Collapsed title colour: # 4c5e71
+//         Align arrow to the left
 
-      thead {
-        tr,
-        th {
-          border-bottom: 0;
-        }
+.view-content.ui-accordion {
+  table {
+    caption {
+      height: 0;
+      left: -9999px;
+      position: absolute;
+    }
+
+    thead {
+      tr,
+      th {
+        border-bottom: 0;
       }
     }
   }
+}
 
-  .ui-accordion .ui-accordion-content {
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    background: none;
-    border: none;
-    border-radius: 0;
-    padding: 0;
-  }
-
-// }
+.ui-accordion .ui-accordion-content {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
