@@ -231,15 +231,20 @@ ul.quicktabs-tabs.quicktabs-style-nostyle {
   #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-tid-wrapper,
   #views-exposed-form-staff-page .views-exposed-form #edit-field-person-supervision-value-wrapper {
     /* Filter title label */
+    /* Radio labels */
     /* Checkbox labels */ }
     #views-exposed-form-staff-page .views-exposed-form #edit-field-person-area-tid-wrapper label[for="edit-field-person-area-tid"],
     #views-exposed-form-staff-page .views-exposed-form #edit-field-person-area-tid-wrapper label[for="edit-field-person-type-tid"],
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-area-tid-wrapper label[for="edit-field-person-supervision-value"],
     #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-honorary-wrapper label[for="edit-field-person-area-tid"],
     #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-honorary-wrapper label[for="edit-field-person-type-tid"],
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-honorary-wrapper label[for="edit-field-person-supervision-value"],
     #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-tid-wrapper label[for="edit-field-person-area-tid"],
     #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-tid-wrapper label[for="edit-field-person-type-tid"],
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-tid-wrapper label[for="edit-field-person-supervision-value"],
     #views-exposed-form-staff-page .views-exposed-form #edit-field-person-supervision-value-wrapper label[for="edit-field-person-area-tid"],
-    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-supervision-value-wrapper label[for="edit-field-person-type-tid"] {
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-supervision-value-wrapper label[for="edit-field-person-type-tid"],
+    #views-exposed-form-staff-page .views-exposed-form #edit-field-person-supervision-value-wrapper label[for="edit-field-person-supervision-value"] {
       color: #036;
       font-family: 'Droid Sans','Helvetica Neue',Arial,sans-serif;
       font-size: 16px;
