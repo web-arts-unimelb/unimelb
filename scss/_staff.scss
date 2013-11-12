@@ -122,3 +122,15 @@
   }
 }
 
+/* Schools staff profile gallery tab. */
+#block-views-staff-block-1 {
+  table {
+    tbody tr:nth-child(2n+1),
+    td,
+    th,
+    tr {
+      background: transparent;
+      border: none;
+    }
+  }
+}

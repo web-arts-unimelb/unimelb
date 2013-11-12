@@ -267,6 +267,14 @@ ul.quicktabs-tabs.quicktabs-style-nostyle {
   #views-exposed-form-staff-page .views-exposed-form #edit-field-person-type-honorary-wrapper {
     padding: 0 2px 0 0; }
 
+/* Schools staff profile gallery tab. */
+#block-views-staff-block-1 table tbody tr:nth-child(2n+1),
+#block-views-staff-block-1 table td,
+#block-views-staff-block-1 table th,
+#block-views-staff-block-1 table tr {
+  background: transparent;
+  border: none; }
+
 /* Areas of study in views accordion.  */
 .ui-widget h3 {
   font-family: "Droid Sans",Sans-serif; }
