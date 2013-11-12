@@ -1071,5 +1071,13 @@ div.study-area-style {
 }
 /* End study area */
 
+/* Start view slideshow for news block */
+.views-slideshow-controls-text-previous a,
+.views-slideshow-controls-text-next a {
+	text-decoration: none !important;
+}
+
+/* End view slideshow for news block */
+
 /* Add in some responsible sprinkles. */
 @import "responsive";
