@@ -223,48 +223,48 @@ ul.quicktabs-tabs.quicktabs-style-nostyle {
 /**
  * Exposed filter on the staff page.
  */
-form[id*='views-exposed-form-staff-page'] .views-exposed-form {
+form[id*='views-exposed-form-staff-academic'] .views-exposed-form {
   /* Position the throbber at the top right of the filter block */
   /* Move the floating single field up to the bottom of the preceding list. */ }
-  form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-area-tid-wrapper,
-  form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-type-honorary-wrapper,
-  form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-type-tid-wrapper,
-  form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-supervision-value-wrapper {
+  form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-area-tid-wrapper,
+  form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-honorary-wrapper,
+  form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-tid-wrapper,
+  form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-supervision-value-wrapper {
     /* Filter title label */
     /* Radio labels */
     /* Checkbox labels */ }
-    form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-area-tid-wrapper label[for="edit-field-person-area-tid"],
-    form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-area-tid-wrapper label[for="edit-field-person-type-tid"],
-    form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-area-tid-wrapper label[for="edit-field-person-supervision-value"],
-    form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-type-honorary-wrapper label[for="edit-field-person-area-tid"],
-    form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-type-honorary-wrapper label[for="edit-field-person-type-tid"],
-    form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-type-honorary-wrapper label[for="edit-field-person-supervision-value"],
-    form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-type-tid-wrapper label[for="edit-field-person-area-tid"],
-    form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-type-tid-wrapper label[for="edit-field-person-type-tid"],
-    form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-type-tid-wrapper label[for="edit-field-person-supervision-value"],
-    form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-supervision-value-wrapper label[for="edit-field-person-area-tid"],
-    form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-supervision-value-wrapper label[for="edit-field-person-type-tid"],
-    form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-supervision-value-wrapper label[for="edit-field-person-supervision-value"] {
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-area-tid-wrapper label[for="edit-field-person-area-tid"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-area-tid-wrapper label[for="edit-field-person-type-tid"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-area-tid-wrapper label[for="edit-field-person-supervision-value"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-honorary-wrapper label[for="edit-field-person-area-tid"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-honorary-wrapper label[for="edit-field-person-type-tid"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-honorary-wrapper label[for="edit-field-person-supervision-value"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-tid-wrapper label[for="edit-field-person-area-tid"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-tid-wrapper label[for="edit-field-person-type-tid"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-tid-wrapper label[for="edit-field-person-supervision-value"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-supervision-value-wrapper label[for="edit-field-person-area-tid"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-supervision-value-wrapper label[for="edit-field-person-type-tid"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-supervision-value-wrapper label[for="edit-field-person-supervision-value"] {
       color: #036;
       font-family: 'Droid Sans','Helvetica Neue',Arial,sans-serif;
       font-size: 16px;
       font-weight: bold;
       padding: 10px 0 3px; }
-    form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-area-tid-wrapper label[for^="edit-field-person-type-tid-"],
-    form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-type-honorary-wrapper label[for^="edit-field-person-type-tid-"],
-    form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-type-tid-wrapper label[for^="edit-field-person-type-tid-"],
-    form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-supervision-value-wrapper label[for^="edit-field-person-type-tid-"] {
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-area-tid-wrapper label[for^="edit-field-person-type-tid-"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-honorary-wrapper label[for^="edit-field-person-type-tid-"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-tid-wrapper label[for^="edit-field-person-type-tid-"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-supervision-value-wrapper label[for^="edit-field-person-type-tid-"] {
       font-weight: normal; }
-    form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-area-tid-wrapper .form-checkboxes label,
-    form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-type-honorary-wrapper .form-checkboxes label,
-    form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-type-tid-wrapper .form-checkboxes label,
-    form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-supervision-value-wrapper .form-checkboxes label {
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-area-tid-wrapper .form-checkboxes label,
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-honorary-wrapper .form-checkboxes label,
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-tid-wrapper .form-checkboxes label,
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-supervision-value-wrapper .form-checkboxes label {
       font-weight: normal; }
-  form[id*='views-exposed-form-staff-page'] .views-exposed-form .views-submit-button {
+  form[id*='views-exposed-form-staff-academic'] .views-exposed-form .views-submit-button {
     position: absolute;
     right: -10px;
     top: 8px; }
-  form[id*='views-exposed-form-staff-page'] .views-exposed-form #edit-field-person-type-honorary-wrapper {
+  form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-honorary-wrapper {
     padding: 0 2px 0 0; }
 
 /* Schools staff profile gallery tab. */
