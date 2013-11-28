@@ -600,13 +600,23 @@ div.status {
   */
 
   /* Control the view exposed filter position */
-  div.views-widget-filter-field_award_study_level_value {
+	div.views-widget-filter-field_award_study_area_tid {
+		margin-left: 10px;
+	}	
+
+  div.views-widget-filter-field_award_study_level_value,
+	div.views-widget-filter-field_award_travel_support_value,
+	div.views-widget-filter-field_award_type_value
+	{
     width: 200px;
+		margin-left: 10px;
   }
 
-  div.views-widget-filter-field_award_travel_support_value {
-    width: 200px;
-  }
+	/* Control the search button */
+	div.views-submit-button {
+		clear:left;
+		float:right;
+	}
 
   /* Advanced search */
   #search-form label {
@@ -636,6 +646,23 @@ div.status {
   td.views-field-nothing {
     width: 25%;
   }
+
+	div.views-widget-filter-field_award_study_area_tid {
+    margin-left: 10px;
+  }
+
+  div.views-widget-filter-field_award_study_level_value, 
+  div.views-widget-filter-field_award_type_value_1
+  {
+    width: 200px;
+    margin-left: 10px;
+  }
+
+	/* Control the search button */
+  div.views-submit-button {
+    clear:left;
+    float:right;
+  }	
 }
 
 /* Control the search button */
