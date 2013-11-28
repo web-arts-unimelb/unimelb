@@ -619,6 +619,25 @@ div.status {
   }
 }
 
+/* Prize search result */
+.page-node-1129 .view-id-awards,
+.page-node-1131 .view-id-awards {
+	td.the_column_1,
+  td.views-field-title {
+    width: 50%;
+  }
+
+  td.the_column_2,
+  td.views-field-field-award-study-area {
+    width: 25%;
+  }
+
+  td.the_column_3,
+  td.views-field-nothing {
+    width: 25%;
+  }
+}
+
 /* Control the search button */
 .award-search {
 	/* Input button in view filter */
