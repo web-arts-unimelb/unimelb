@@ -85,11 +85,13 @@ form[id*='views-exposed-form-staff-academic'] {
     #edit-field-person-area-tid-wrapper,
     #edit-field-person-type-honorary-wrapper,
     #edit-field-person-type-tid-wrapper,
-    #edit-field-person-supervision-value-wrapper {
+    #edit-field-person-supervision-value-wrapper,
+    #edit-combine-wrapper {
       /* Filter title label */
       label[for="edit-field-person-area-tid"],
       label[for="edit-field-person-type-tid"],
-      label[for="edit-field-person-supervision-value"] {
+      label[for="edit-field-person-supervision-value"],
+      label[for="edit-combine"] {
         color: #036;
         font-family: 'Droid Sans','Helvetica Neue',Arial,sans-serif;
         font-size: 16px;
@@ -109,12 +111,44 @@ form[id*='views-exposed-form-staff-academic'] {
         }
       }
     }
+
     /* Position the throbber at the top right of the filter block */
+    /* Can't do center:50% middle: 50%, so approximate it for a typical window size. */
     .views-submit-button {
-      position: absolute;
-      right: -10px;
-      top: 8px;
+      .ajax-progress .throbber {
+        background: #ffffff;
+        border: 1px solid $uni-blue;
+        opacity: 0.7;
+        @include rounded($radius: 1em);
+
+        left: 40%;
+        position: fixed;
+        top: 45%;
+        background-image: url('../images/staff-loading-snake.gif');
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 70px;
+        width: 70px;
+        z-index: 1000;
+      }
     }
+/**
+.ajax-progress-throbber {
+  background-color: #232323;
+  background-image: url("../images/loading-small.gif");
+  background-position: center center;
+  background-repeat: no-repeat;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  height: 24px;
+  opacity: .9;
+  padding: 4px;
+  width: 24px;
+}
+*/
+
+
     /* Move the floating single field up to the bottom of the preceding list. */
     #edit-field-person-type-honorary-wrapper {
       padding: 0 2px 0 0;
