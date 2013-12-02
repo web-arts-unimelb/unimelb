@@ -97,11 +97,9 @@
   <link rel="stylesheet" href="<?php print $scheme; ?>brand.unimelb.edu.au/web-templates/<?php print $version; ?>/css/complete.css" />
   <script type="text/javascript" src="<?php print $scheme; ?>brand.unimelb.edu.au/web-templates/<?php print $version; ?>/js/complete.js"></script>
 
-<!-- Not sure that this works the right way around. Investigate -->
-<?php if (empty($overlay)) { ?>
   <link rel="stylesheet" href="<?php print $scheme; ?>brand.unimelb.edu.au/global-header/css/style.css" />
   <script type="text/javascript" src="<?php print $scheme; ?>brand.unimelb.edu.au/global-header/js/injection.js"></script>
-<?php } ?>
+
   <!-- /GLOBAL RESOURCES -->
 
   <!-- THEME STYLES -->
