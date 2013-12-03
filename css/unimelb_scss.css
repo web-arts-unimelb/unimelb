@@ -225,26 +225,51 @@ ul.quicktabs-tabs.quicktabs-style-nostyle {
  */
 form[id*='views-exposed-form-staff-academic'] .views-exposed-form {
   /* Position the throbber at the top right of the filter block */
+  /* Can't do center:50% middle: 50%, so approximate it for a typical window size. */
+  /**
+  .ajax-progress-throbber {
+    background-color: #232323;
+    background-image: url("../images/loading-small.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    height: 24px;
+    opacity: .9;
+    padding: 4px;
+    width: 24px;
+  }
+  */
   /* Move the floating single field up to the bottom of the preceding list. */ }
   form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-area-tid-wrapper,
   form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-honorary-wrapper,
   form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-tid-wrapper,
-  form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-supervision-value-wrapper {
+  form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-supervision-value-wrapper,
+  form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-combine-wrapper {
     /* Filter title label */
     /* Radio labels */
     /* Checkbox labels */ }
     form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-area-tid-wrapper label[for="edit-field-person-area-tid"],
     form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-area-tid-wrapper label[for="edit-field-person-type-tid"],
     form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-area-tid-wrapper label[for="edit-field-person-supervision-value"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-area-tid-wrapper label[for="edit-combine"],
     form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-honorary-wrapper label[for="edit-field-person-area-tid"],
     form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-honorary-wrapper label[for="edit-field-person-type-tid"],
     form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-honorary-wrapper label[for="edit-field-person-supervision-value"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-honorary-wrapper label[for="edit-combine"],
     form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-tid-wrapper label[for="edit-field-person-area-tid"],
     form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-tid-wrapper label[for="edit-field-person-type-tid"],
     form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-tid-wrapper label[for="edit-field-person-supervision-value"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-tid-wrapper label[for="edit-combine"],
     form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-supervision-value-wrapper label[for="edit-field-person-area-tid"],
     form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-supervision-value-wrapper label[for="edit-field-person-type-tid"],
-    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-supervision-value-wrapper label[for="edit-field-person-supervision-value"] {
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-supervision-value-wrapper label[for="edit-field-person-supervision-value"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-supervision-value-wrapper label[for="edit-combine"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-combine-wrapper label[for="edit-field-person-area-tid"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-combine-wrapper label[for="edit-field-person-type-tid"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-combine-wrapper label[for="edit-field-person-supervision-value"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-combine-wrapper label[for="edit-combine"] {
       color: #036;
       font-family: 'Droid Sans','Helvetica Neue',Arial,sans-serif;
       font-size: 16px;
@@ -253,17 +278,31 @@ form[id*='views-exposed-form-staff-academic'] .views-exposed-form {
     form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-area-tid-wrapper label[for^="edit-field-person-type-tid-"],
     form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-honorary-wrapper label[for^="edit-field-person-type-tid-"],
     form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-tid-wrapper label[for^="edit-field-person-type-tid-"],
-    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-supervision-value-wrapper label[for^="edit-field-person-type-tid-"] {
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-supervision-value-wrapper label[for^="edit-field-person-type-tid-"],
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-combine-wrapper label[for^="edit-field-person-type-tid-"] {
       font-weight: normal; }
     form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-area-tid-wrapper .form-checkboxes label,
     form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-honorary-wrapper .form-checkboxes label,
     form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-tid-wrapper .form-checkboxes label,
-    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-supervision-value-wrapper .form-checkboxes label {
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-supervision-value-wrapper .form-checkboxes label,
+    form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-combine-wrapper .form-checkboxes label {
       font-weight: normal; }
-  form[id*='views-exposed-form-staff-academic'] .views-exposed-form .views-submit-button {
-    position: absolute;
-    right: -10px;
-    top: 8px; }
+  form[id*='views-exposed-form-staff-academic'] .views-exposed-form .views-submit-button .ajax-progress .throbber {
+    background: #ffffff;
+    border: 1px solid #003366;
+    opacity: 0.7;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    border-radius: 1em;
+    left: 40%;
+    position: fixed;
+    top: 45%;
+    background-image: url("../images/staff-loading-snake.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 70px;
+    z-index: 1000; }
   form[id*='views-exposed-form-staff-academic'] .views-exposed-form #edit-field-person-type-honorary-wrapper {
     padding: 0 2px 0 0; }
 
@@ -1196,6 +1235,7 @@ div.status {
   }
   */
   /* Control the view exposed filter position */
+  /* Control the search button */
   /* Advanced search */ }
   .page-node-317 .view-id-awards td.the_column_1,
   .page-node-317 .view-id-awards td.views-field-title {
@@ -1206,15 +1246,54 @@ div.status {
   .page-node-317 .view-id-awards td.the_column_3,
   .page-node-317 .view-id-awards td.views-field-nothing {
     width: 25%; }
-  .page-node-317 .view-id-awards div.views-widget-filter-field_award_study_level_value {
-    width: 200px; }
-  .page-node-317 .view-id-awards div.views-widget-filter-field_award_travel_support_value {
-    width: 200px; }
+  .page-node-317 .view-id-awards div.views-widget-filter-field_award_study_area_tid {
+    margin-left: 10px; }
+  .page-node-317 .view-id-awards div.views-widget-filter-field_award_study_level_value,
+  .page-node-317 .view-id-awards div.views-widget-filter-field_award_travel_support_value,
+  .page-node-317 .view-id-awards div.views-widget-filter-field_award_type_value {
+    width: 200px;
+    margin-left: 10px; }
+  .page-node-317 .view-id-awards div.views-submit-button {
+    clear: left;
+    float: right; }
   .page-node-317 .view-id-awards #search-form label {
     display: inline; }
   .page-node-317 .view-id-awards fieldset.search-advanced {
     background: transparent;
     border: 0; }
+
+/* Prize search result */
+.page-node-1129 .view-id-awards,
+.page-node-1131 .view-id-awards {
+  /* Control the search button */ }
+  .page-node-1129 .view-id-awards td.the_column_1,
+  .page-node-1129 .view-id-awards td.views-field-title,
+  .page-node-1131 .view-id-awards td.the_column_1,
+  .page-node-1131 .view-id-awards td.views-field-title {
+    width: 50%; }
+  .page-node-1129 .view-id-awards td.the_column_2,
+  .page-node-1129 .view-id-awards td.views-field-field-award-study-area,
+  .page-node-1131 .view-id-awards td.the_column_2,
+  .page-node-1131 .view-id-awards td.views-field-field-award-study-area {
+    width: 25%; }
+  .page-node-1129 .view-id-awards td.the_column_3,
+  .page-node-1129 .view-id-awards td.views-field-nothing,
+  .page-node-1131 .view-id-awards td.the_column_3,
+  .page-node-1131 .view-id-awards td.views-field-nothing {
+    width: 25%; }
+  .page-node-1129 .view-id-awards div.views-widget-filter-field_award_study_area_tid,
+  .page-node-1131 .view-id-awards div.views-widget-filter-field_award_study_area_tid {
+    margin-left: 10px; }
+  .page-node-1129 .view-id-awards div.views-widget-filter-field_award_study_level_value,
+  .page-node-1129 .view-id-awards div.views-widget-filter-field_award_type_value_1,
+  .page-node-1131 .view-id-awards div.views-widget-filter-field_award_study_level_value,
+  .page-node-1131 .view-id-awards div.views-widget-filter-field_award_type_value_1 {
+    width: 200px;
+    margin-left: 10px; }
+  .page-node-1129 .view-id-awards div.views-submit-button,
+  .page-node-1131 .view-id-awards div.views-submit-button {
+    clear: left;
+    float: right; }
 
 /* Control the search button */
 .award-search {
@@ -1341,6 +1420,9 @@ table.color td {
   float: left;
   margin-right: 10px;
   margin-top: 3px; }
+
+.event-item-listing .mysection h4 {
+  padding-top: 0; }
 
 /* End event listing page */
 /* Quotes for the Study Area. */
