@@ -1347,6 +1347,8 @@ form fieldset.webform-component-fieldset.form-wrapper {
   color: inherit; }
   .ui-widget-content a {
     color: #4c5e71; }
+  .ui-widget-content a.icon.document {
+    color: #ffffff; }
 
 /* End fix quicktab in arts */
 /* Links. */
