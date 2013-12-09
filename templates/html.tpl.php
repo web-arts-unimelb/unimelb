@@ -54,6 +54,11 @@
 
 <title><?php print $site_name . ' | ' . $page_title; ?></title>
 
+<!-- Windows tiles -->
+<meta name="application-name" content="<?php print $site_name; ?>"/>
+<meta name="msapplication-TileColor" content="#003366"/>
+<!-- Windows tiles -->
+
 <!-- SEO relevant meta data to describe content of page -->
 	<meta name="DC.Title" content="<?php print $site_name . ' | ' . $page_title; ?>" />
 	<meta name="keywords" content="<?php print $unimelb_meta_keywords; ?>" />
