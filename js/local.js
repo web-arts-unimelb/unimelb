@@ -53,20 +53,38 @@
 
   function _control_width() {
     // Initial
-    var document_width = $(document).width();
+		var document_width = null;
+		if(!$.browser.msie) {
+			// Non IE
+    	document_width = $(document).width();
+		}
+		else {
+			// IE
+			document_width = document.body.clientWidth;
+		}
 		$('body').once('body').width(document_width);
 
+		// Listen	
     $(window).resize(function() {
-      if(!$.browser.msie) {
-        var threshold_window_width = 617;
-        var window_width = $(window).width();
-        if(window_width <= threshold_window_width) {
-          $('body').width(window_width);
-        }
-        else {
-          var document_width = $(document).width();
-          $('body').width(document_width);
-        }
+			var threshold_window_width = 617;			
+			var window_width = null;
+			var document_width = null;
+
+			if(!$.browser.msie) {
+				window_width = $(window).width();
+				document_width = $(document).width();
+			}
+			else {
+				window_width = document.documentElement.clientWidth;
+        document_width = document.body.clientWidth;
+			}
+			
+			if(window_width <= threshold_window_width) {
+      	$('body').width(window_width);
+      }
+      else {
+        var document_width = $(document).width();
+        $('body').width(document_width);
       }
     });
   }
