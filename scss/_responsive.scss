@@ -147,11 +147,14 @@
 
 	
 	/* Start school site home page two columns */
+	html {
+		overflow-x: hidden;
+	}
+
 	body .page-preview {
 		width: auto;
 		margin-left: 0;
 	}	
-
 	/* End school site home page two columns */
 
 
