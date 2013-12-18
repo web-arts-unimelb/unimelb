@@ -1715,7 +1715,8 @@ div.study-area-style {
     background-image: url("../images/arts-dropdown-bg.png");
     float: left;
     clear: left;
-    margin-top: -9px !important; }
+    margin-top: -9px !important;
+    margin-left: 0; }
     div#arts-dropdown-site-search form {
       margin-top: 0 !important; }
 
@@ -1730,6 +1731,12 @@ div.study-area-style {
     margin-left: 0;
     width: 100%; }
 
+  /* Start school site home page two columns */
+  body .page-preview {
+    width: auto;
+    margin-left: 0; }
+
+  /* End school site home page two columns */
   div#local {
     -ms-word-break: break-all;
     word-break: break-all;

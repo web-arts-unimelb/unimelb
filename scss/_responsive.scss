@@ -123,6 +123,7 @@
 		float: left;
 		clear: left;
 		margin-top: -9px !important;
+		margin-left: 0;
 
 		form {
 			margin-top: 0 !important;
@@ -143,6 +144,15 @@
     margin-left: 0;
     width: 100%;
   }
+
+	
+	/* Start school site home page two columns */
+	body .page-preview {
+		width: auto;
+		margin-left: 0;
+	}	
+
+	/* End school site home page two columns */
 
 
 	// Start footer

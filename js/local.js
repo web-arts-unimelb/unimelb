@@ -54,15 +54,24 @@
   function _control_width() {
     // Initial
 		var document_width = null;
+		var window_width = null;
+
 		if(!$.browser.msie) {
 			// Non IE
-    	document_width = $(document).width();
+			window_width = $(window).width();
+			if(window_width <= 630) {
+				// Assume viewing in mobile
+				$('body').once('body').width(window_width);
+			}
+			else {
+    		document_width = $(document).width();
+				$('body').once('body').width(document_width);
+			}
 		}
 		else {
 			// IE
 			document_width = document.body.clientWidth;
 		}
-		$('body').once('body').width(document_width);
 
 		// Listen	
     $(window).resize(function() {
