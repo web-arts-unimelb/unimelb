@@ -1634,24 +1634,43 @@ div.study-area-style {
 /* variables.scss
  * Variables and mixins to pre-ignite any new web development project
  * ------------------------------------------------------------------ */
+/* Design from mobile first */
 @media all and (max-width: 479px) {
-  .view-display-id-page .view-content .views-row {
+  div[class^='view-display-id-block'] .view-content .views-row,
+  div[class*=' view-display-id-block'] .view-content .views-row,
+  div[class^='view-display-id-page'] .view-content .views-row,
+  div[class*=' view-display-id-page'] .view-content .views-row {
     width: 100%;
     float: left; } }
 @media all and (min-width: 480px) and (max-width: 959px) {
-  .view-display-id-page .view-content .views-row {
+  div[class^='view-display-id-block'] .view-content .views-row,
+  div[class*=' view-display-id-block'] .view-content .views-row,
+  div[class^='view-display-id-page'] .view-content .views-row,
+  div[class*=' view-display-id-page'] .view-content .views-row {
     width: 49%;
     float: left; }
-    .view-display-id-page .view-content .views-row:nth-child(2n - 1) {
+    div[class^='view-display-id-block'] .view-content .views-row:nth-child(2n - 1),
+    div[class*=' view-display-id-block'] .view-content .views-row:nth-child(2n - 1),
+    div[class^='view-display-id-page'] .view-content .views-row:nth-child(2n - 1),
+    div[class*=' view-display-id-page'] .view-content .views-row:nth-child(2n - 1) {
       margin-right: 2%; } }
 @media all and (min-width: 960px) {
-  .view-display-id-page .view-content .views-row {
+  div[class^='view-display-id-block'] .view-content .views-row,
+  div[class*=' view-display-id-block'] .view-content .views-row,
+  div[class^='view-display-id-page'] .view-content .views-row,
+  div[class*=' view-display-id-page'] .view-content .views-row {
     float: left;
     width: 32%; }
-    .view-display-id-page .view-content .views-row:nth-child(3n - 1) {
+    div[class^='view-display-id-block'] .view-content .views-row:nth-child(3n - 1),
+    div[class*=' view-display-id-block'] .view-content .views-row:nth-child(3n - 1),
+    div[class^='view-display-id-page'] .view-content .views-row:nth-child(3n - 1),
+    div[class*=' view-display-id-page'] .view-content .views-row:nth-child(3n - 1) {
       margin-right: 2%;
       margin-left: 2%; }
-    .view-display-id-page .view-content .views-row:nth-child(3n + 1) {
+    div[class^='view-display-id-block'] .view-content .views-row:nth-child(3n + 1),
+    div[class*=' view-display-id-block'] .view-content .views-row:nth-child(3n + 1),
+    div[class^='view-display-id-page'] .view-content .views-row:nth-child(3n + 1),
+    div[class*=' view-display-id-page'] .view-content .views-row:nth-child(3n + 1) {
       clear: left; } }
 /**
  * Responsive markup for smaller-screen devices such as tablets and phones.

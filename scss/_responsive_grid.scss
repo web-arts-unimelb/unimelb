@@ -1,6 +1,9 @@
 /* Design from mobile first */
 @media all and (max-width: 479px) {
-  .view-display-id-page {
+	div[class^='view-display-id-block'],
+	div[class*=' view-display-id-block'],
+	div[class^='view-display-id-page'],
+	div[class*=' view-display-id-page'] {
     .view-content {
       .views-row {
         width:100%;
@@ -11,7 +14,10 @@
 }
 
 @media all and (min-width: 480px) and (max-width: 959px) {
-  .view-display-id-page {
+	div[class^='view-display-id-block'],
+  div[class*=' view-display-id-block'],	
+  div[class^='view-display-id-page'], 
+  div[class*=' view-display-id-page'] { 
     .view-content {
       .views-row {
         width:49%;
@@ -25,7 +31,10 @@
 }
 
 @media all and (min-width: 960px) {
-  .view-display-id-page {
+	div[class^='view-display-id-block'],
+  div[class*=' view-display-id-block'],	
+  div[class^='view-display-id-page'],
+  div[class*=' view-display-id-page'] { 
     .view-content {
       .views-row {
         float:left;
