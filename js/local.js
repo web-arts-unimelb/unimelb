@@ -43,10 +43,6 @@
      
       // Control width for uni global header and footer
 			_control_width(); 
-
-      // Theme the search box and search button of intranet, as we are not able to enable standard search module,
-      // so we cannot enable the search configuration module, hence need to theme it here, which is bad.
-      //_theme_intranet_search_box_and_button();
     }
   }
 
@@ -97,12 +93,4 @@
       }
     });
   }
-
-	/*
-  function _theme_intranet_search_box_and_button() {
-    $('form#searchapi-form input[name="search_api_views_fulltext"]').attr('size', '12');
-    $('form#searchapi-form input[name="op"]').attr('value', 'Keyword search'); 
-  }
-	*/
-	
 })(jQuery);
