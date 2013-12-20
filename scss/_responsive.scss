@@ -3,6 +3,7 @@
  */
 
 @import "variables.scss";
+@import "responsive_video.scss";
 
 /**
  * Responsive markup for smaller-screen devices such as tablets and phones.
@@ -151,12 +152,14 @@
   }
 
 	
-	/* Start school site home page two columns */
+	/* Start school site */
+	/* home page two columns */
 	body .page-preview {
 		width: auto;
 		margin-left: 0;
-	}	
-	/* End school site home page two columns */
+	}
+	/* End school site */
+
 
 
 	// Start footer
@@ -207,3 +210,4 @@
     margin-left: -145px;
   }
 }
+
