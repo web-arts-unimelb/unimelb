@@ -43,6 +43,8 @@
      
       // Control width for uni global header and footer
 			_control_width(); 
+
+			_resize_youtube_video();
     }
   }
 
@@ -93,4 +95,51 @@
       }
     });
   }
+
+	// http://css-tricks.com/fluid-width-youtube-videos/
+	function _resize_youtube_video() {
+		// Find all YouTube videos
+    var $allVideos = $("iframe[src*='youtube.com']"),
+
+    // The element that is fluid width
+    $fluidEl = $("body");
+
+    // Figure out and save aspect ratio for each video
+    $allVideos.each(function() {
+    	$(this).data('aspectRatio', this.height / this.width);
+			$(this).data('origWidth', this.width);
+			$(this).data('origHeight', this.height);
+    });
+
+		$(window).resize(function() {
+				var newWidth = $fluidEl.width();
+				// Resize all videos according to their own aspect ratio
+				if(newWidth <= 630) {
+					$allVideos.each(function() {
+						var $el = $(this);
+					
+						$el.removeAttr('height');
+        		$el.removeAttr('width');
+
+						$el
+							.width(newWidth)
+							.height(newWidth * $el.data('aspectRatio'));
+					});
+				}
+				else {
+					$allVideos.each(function() {
+            var $el = $(this);
+
+            $el.removeAttr('height');
+            $el.removeAttr('width');
+
+            $el
+              .width($el.data('origWidth'))
+              .height($el.data('origHeight'));
+          });
+				}
+			// Kick off one resize to fix all videos on page load
+		}).resize();
+	}
+
 })(jQuery);
