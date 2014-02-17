@@ -11,7 +11,7 @@
  */
 ?>
 
-<?php if(isset($rows[0][0]) && !_views_view_grid__staff__block_is_empty($rows[0][0])):  ?>
+<?php if(isset($rows[0][0]) && !empty($rows[0][0]) && !_views_view_grid__staff__block_is_empty($rows[0][0])):  ?>
 
 <?php if (!empty($title)) : ?>
   <h3><?php print $title; ?></h3>
