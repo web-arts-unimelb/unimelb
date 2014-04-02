@@ -314,7 +314,7 @@ form[id*='views-exposed-form-staff-academic'] .views-exposed-form {
   background: transparent;
   border: none; }
 
-/* Areas of study in views accordion.  */
+/*! Areas of study in views accordion.  */
 .ui-widget h3 {
   font-family: "Droid Sans",Sans-serif; }
 
@@ -1228,45 +1228,59 @@ div.status {
   -webkit-transform: translateZ(0); }
 
 /* Award search results. */
-.page-node-317 .view-id-awards {
+.view-id-awards {
   /* Input button in view filter */
-  /*
-  .view-filters {
-    .views-exposed-form {
-      .views-exposed-widget {
-        .form-submit {
-          -webkit-margin-before: 1.95em;
-          margin-top: 2.17em;
-        }
-      }
-    }
-  }
-  */
-  /* Control the view exposed filter position */
-  /* Control the search button */
+  /* Keyword search */
+  /* Search submit button */
   /* Advanced search */ }
-  .page-node-317 .view-id-awards td.the_column_1,
-  .page-node-317 .view-id-awards td.views-field-title {
-    width: 50%; }
-  .page-node-317 .view-id-awards td.the_column_2,
-  .page-node-317 .view-id-awards td.views-field-field-award-study-area {
+  .view-id-awards td.the_column_1,
+  .view-id-awards td.views-field-title {
+    width: 45%; }
+  .view-id-awards td.the_column_2,
+  .view-id-awards td.views-field-field-award-study-area {
     width: 25%; }
-  .page-node-317 .view-id-awards td.the_column_3,
-  .page-node-317 .view-id-awards td.views-field-nothing {
-    width: 25%; }
-  .page-node-317 .view-id-awards div.views-widget-filter-field_award_study_area_tid {
-    margin-left: 10px; }
-  .page-node-317 .view-id-awards div.views-widget-filter-field_award_study_level_value,
-  .page-node-317 .view-id-awards div.views-widget-filter-field_award_travel_support_value,
-  .page-node-317 .view-id-awards div.views-widget-filter-field_award_type_value {
-    width: 200px;
-    margin-left: 10px; }
-  .page-node-317 .view-id-awards div.views-submit-button {
-    clear: left;
-    float: right; }
-  .page-node-317 .view-id-awards #search-form label {
-    display: inline; }
-  .page-node-317 .view-id-awards fieldset.search-advanced {
+  .view-id-awards td.the_column_3,
+  .view-id-awards td.views-field-nothing {
+    width: 15%; }
+  .view-id-awards td.the_column_4 {
+    width: 15%; }
+  .view-id-awards .view-filters form {
+    height: 320px; }
+  .view-id-awards .views-exposed-form {
+    position: relative; }
+  .view-id-awards div.views-widget-filter-keys {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 150px; }
+  .view-id-awards div.views-widget-filter-field_award_type_value {
+    position: absolute;
+    left: 0px;
+    top: 60px;
+    width: 150px; }
+  .view-id-awards div.views-widget-filter-field_award_study_area_tid {
+    position: absolute;
+    left: 160px;
+    top: 0px;
+    width: 250px;
+    height: 300px; }
+  .view-id-awards div.views-widget-filter-field_award_study_level_value {
+    position: absolute;
+    left: 420px;
+    top: 0px; }
+  .view-id-awards div.views-widget-filter-field_award_travel_support_value {
+    position: absolute;
+    left: 420px;
+    top: 120px; }
+  .view-id-awards div.views-widget-filter-field_award_application_date_value {
+    position: absolute;
+    left: 420px;
+    top: 180px; }
+  .view-id-awards div.views-submit-button {
+    position: absolute;
+    right: 0px;
+    top: 250px; }
+  .view-id-awards fieldset.search-advanced {
     background: transparent;
     border: 0; }
 
@@ -1759,23 +1773,6 @@ div.study-area-style {
   body .page-preview {
     width: auto;
     margin-left: 0; }
-
-  /* Youtube video */
-  .media-youtube-video {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden; }
-
-  .media-youtube-video iframe,
-  .media-youtube-video object,
-  .media-youtube-video embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
 
   /* End school site */
   div#local {
