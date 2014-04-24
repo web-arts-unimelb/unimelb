@@ -56,8 +56,8 @@ function unimelb_preprocess_html(&$variables) {
   }
   $creators[] = $variables['site_name'];
 
-  $variables['unimelb_meta_creator'] = implode(', ', $creators);
-  $variables['unimelb_meta_authoriser'] = theme_get_setting('unimelb_settings_auth-name');
+  $variables['unimelb_meta_creator'] = strip_tags( implode(', ', $creators) );
+  $variables['unimelb_meta_authoriser'] = strip_tags( theme_get_setting('unimelb_settings_auth-name') );
 
   $variables['unimelb_meta_date'] = theme_get_setting('unimelb_settings_date-created');
   if (empty($variables['unimelb_meta_date'])) {
