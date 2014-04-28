@@ -45,6 +45,9 @@
 			_control_width(); 
 
 			_resize_youtube_video();
+
+			// Control award exposed filter position
+			_control_award_filters();
     }
   }
 
@@ -140,6 +143,21 @@
 				}
 			// Kick off one resize to fix all videos on page load
 		}).resize();
+	}
+
+
+	function _control_award_filters() {
+		var gap = 10;
+		var keyword_search_width = $('.views-widget-filter-keys').width();	
+		var study_area_width = $('.views-widget-filter-field_award_study_area_tid').width();
+
+		var mid_position = keyword_search_width + gap;
+		$('.views-widget-filter-field_award_study_area_tid').css('left', mid_position);
+	
+		var right_position = mid_position + study_area_width + gap;
+		$('.views-widget-filter-field_award_study_level_value').css('left', right_position);
+		$('.views-widget-filter-field_award_travel_support_value').css('left', right_position);
+		$('.views-widget-filter-field_award_application_date_value').css('left', right_position);
 	}
 
 })(jQuery);
