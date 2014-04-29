@@ -626,6 +626,12 @@ div.status {
 		width: 150px;
   }
 
+	div.views-widget-filter-field_award_application_date_value {
+    position: absolute;
+    top: 120px;
+		left: 0px;
+  }
+
 	div.views-widget-filter-field_award_study_area_tid {
 		position: absolute;
     top: 0px;
@@ -642,11 +648,6 @@ div.status {
 		position: absolute;
     top: 120px;
   }
-
-	div.views-widget-filter-field_award_application_date_value {
-		position: absolute;
-    top: 180px;
-	}
 
 	/* Search submit button */
 	div.views-submit-button {

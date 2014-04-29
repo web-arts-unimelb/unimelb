@@ -1258,6 +1258,10 @@ div.status {
     left: 0px;
     top: 60px;
     width: 150px; }
+  .view-id-awards div.views-widget-filter-field_award_application_date_value {
+    position: absolute;
+    top: 120px;
+    left: 0px; }
   .view-id-awards div.views-widget-filter-field_award_study_area_tid {
     position: absolute;
     top: 0px;
@@ -1268,9 +1272,6 @@ div.status {
   .view-id-awards div.views-widget-filter-field_award_travel_support_value {
     position: absolute;
     top: 120px; }
-  .view-id-awards div.views-widget-filter-field_award_application_date_value {
-    position: absolute;
-    top: 180px; }
   .view-id-awards div.views-submit-button {
     position: absolute;
     right: 0px;
