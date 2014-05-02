@@ -1245,7 +1245,7 @@ div.status {
   .view-id-awards td.the_column_4 {
     width: 15%; }
   .view-id-awards .view-filters form {
-    height: 320px; }
+    height: 240px; }
   .view-id-awards .views-exposed-form {
     position: relative; }
   .view-id-awards div.views-widget-filter-keys {
@@ -1264,8 +1264,7 @@ div.status {
     left: 0px; }
   .view-id-awards div.views-widget-filter-field_award_study_area_tid {
     position: absolute;
-    top: 0px;
-    height: 300px; }
+    top: 0px; }
   .view-id-awards div.views-widget-filter-field_award_study_level_value {
     position: absolute;
     top: 0px; }
@@ -1275,7 +1274,7 @@ div.status {
   .view-id-awards div.views-submit-button {
     position: absolute;
     right: 0px;
-    top: 250px; }
+    top: 180px; }
   .view-id-awards fieldset.search-advanced {
     background: transparent;
     border: 0; }
