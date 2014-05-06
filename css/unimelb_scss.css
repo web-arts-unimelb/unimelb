@@ -1253,14 +1253,16 @@ div.status {
     left: 0px;
     top: 0px;
     width: 150px; }
+    .view-id-awards div.views-widget-filter-keys .description {
+      font-size: 0.70em; }
   .view-id-awards div.views-widget-filter-field_award_type_value {
     position: absolute;
     left: 0px;
-    top: 60px;
+    top: 90px;
     width: 150px; }
   .view-id-awards div.views-widget-filter-field_award_application_date_value {
     position: absolute;
-    top: 120px;
+    top: 150px;
     left: 0px; }
   .view-id-awards div.views-widget-filter-field_award_study_area_tid {
     position: absolute;
@@ -1271,6 +1273,8 @@ div.status {
   .view-id-awards div.views-widget-filter-field_award_travel_support_value {
     position: absolute;
     top: 120px; }
+  .view-id-awards .award_study_area_option_tag {
+    color: black; }
   .view-id-awards div.views-submit-button {
     position: absolute;
     right: 0px;

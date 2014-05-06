@@ -617,18 +617,22 @@ div.status {
 		left: 0px;
 		top: 0px;
 		width: 150px;
+
+		.description {
+			font-size: 0.70em;
+		}
 	}
 
 	div.views-widget-filter-field_award_type_value {
 		position: absolute;
     left: 0px;
-    top: 60px;
+    top: 90px;
 		width: 150px;
   }
 
 	div.views-widget-filter-field_award_application_date_value {
     position: absolute;
-    top: 120px;
+    top: 150px;
 		left: 0px;
   }
 
@@ -643,11 +647,14 @@ div.status {
     top: 0px;
 	}
 
-	div.views-widget-filter-field_award_travel_support_value
-	{
+	div.views-widget-filter-field_award_travel_support_value {
 		position: absolute;
     top: 120px;
   }
+
+	.award_study_area_option_tag {
+		color: black;	
+	}
 
 	/* Search submit button */
 	div.views-submit-button {
