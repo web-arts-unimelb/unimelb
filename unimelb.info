@@ -64,6 +64,7 @@ stylesheets[all][] = css/unimelb_drupal_distro.css
 stylesheets[all][] = css/unimelb_wysiwyg.css
 stylesheets[all][] = css/override/jquerymenu.css
 stylesheets[all][] = css/override/misc.css
+stylesheets[all][] = css/complete-fix.css
 stylesheets[all][] = css/unimelb_scss.css
 
 ; Sassy proccessed stylesheets.
