@@ -121,7 +121,7 @@
 
 <body class="<?php print $brand_logo; ?><?php if($is_front) { print ' home '; } else { print ' blue '; } ?> <?php print $classes; ?>" <?php if($attributes) { print ' ' . $attributes; } ?>>
 
-<!-- Google Tag Manager -->
+<!-- Start Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-7JB9"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
