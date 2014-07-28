@@ -65,7 +65,6 @@ stylesheets[all][] = css/unimelb_wysiwyg.css
 stylesheets[all][] = css/override/jquerymenu.css
 stylesheets[all][] = css/override/misc.css
 stylesheets[all][] = css/unimelb_scss.css
-stylesheets[all][] = css/complete-fix.css
 
 ; Sassy proccessed stylesheets.
 ;stylesheets[all][] = scss/unimelb.scss
