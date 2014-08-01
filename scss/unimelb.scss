@@ -1156,9 +1156,9 @@ div.arts-dropdown {
 /* Start uom event */
 /* http://css-tricks.com/snippets/css/cross-browser-min-height/ */
 .uom-event {
-	min-height: 4.5em;
 	height: auto !important; 
-  height: 4.5em;
+  height: 68px;
+	min-height: 68px;
 }
 
 /* Mozilla only */
