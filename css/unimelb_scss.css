@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Unimelb overrides to theme elements.  */
 /* Settings! */
 /**
@@ -314,7 +315,7 @@ form[id*='views-exposed-form-staff-academic'] .views-exposed-form {
   background: transparent;
   border: none; }
 
-/* Areas of study in views accordion.  */
+/*! Areas of study in views accordion.  */
 .ui-widget h3 {
   font-family: "Droid Sans",Sans-serif; }
 
@@ -828,6 +829,9 @@ p.button a:hover, p.button a:focus {
 
 p.button a:hover, p.button a:focus {
   *background: #446791; }
+
+div#block-views-news-block-home-news {
+  margin-top: 20px; }
 
 /* Override header margin if the first element on the page or if in a block. */
 div.field-item + h2, div.field-item + h3, div.field-item + h4, div.field-item + h5, div.field-item + h6,
@@ -1674,8 +1678,11 @@ div.arts-dropdown {
   background: none; }
 
 /* Start uom event */
+/* http://css-tricks.com/snippets/css/cross-browser-min-height/ */
 .uom-event {
-  min-height: 4.5em; }
+  min-height: 4.5em;
+  height: auto !important;
+  height: 4.5em; }
 
 /* Mozilla only */
 .uom-event, x:-moz-any-link, x:default {

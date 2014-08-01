@@ -7,7 +7,7 @@
 @import "header";
 
 /* Styling for output produces by various modules. */
-@import "displaysuite", "quicktabs", "staff", "aos", "views", "slider", "shoutbox", "webform", "p_button_fix";
+@import "displaysuite", "quicktabs", "staff", "aos", "views", "slider", "shoutbox", "webform", "p_button_fix", 'school';
 
 /* Override header margin if the first element on the page or if in a block. */
 div.field-item,
@@ -1154,8 +1154,11 @@ div.arts-dropdown {
 }
 
 /* Start uom event */
+/* http://css-tricks.com/snippets/css/cross-browser-min-height/ */
 .uom-event {
 	min-height: 4.5em;
+	height: auto !important; 
+  height: 4.5em;
 }
 
 /* Mozilla only */
