@@ -829,6 +829,9 @@ p.button a:hover, p.button a:focus {
 p.button a:hover, p.button a:focus {
   *background: #446791; }
 
+.rupc-item-listing .views-row {
+  height: 130px; }
+
 /* Override header margin if the first element on the page or if in a block. */
 div.field-item + h2, div.field-item + h3, div.field-item + h4, div.field-item + h5, div.field-item + h6,
 div.col-2 + h2,
