@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Unimelb overrides to theme elements.  */
 /* Settings! */
 /**
@@ -314,7 +315,7 @@ form[id*='views-exposed-form-staff-academic'] .views-exposed-form {
   background: transparent;
   border: none; }
 
-/* Areas of study in views accordion.  */
+/*! Areas of study in views accordion.  */
 .ui-widget h3 {
   font-family: "Droid Sans",Sans-serif; }
 
@@ -1681,15 +1682,19 @@ div.arts-dropdown {
 
 /* Start uom event */
 /* http://css-tricks.com/snippets/css/cross-browser-min-height/ */
+/*
 .uom-event {
-  height: auto !important;
+	height: auto !important; 
   height: 68px;
-  min-height: 68px; }
-
+	min-height: 68px;
+}
+*/
 /* Mozilla only */
+/*
 .uom-event, x:-moz-any-link, x:default {
-  margin-bottom: 10px; }
-
+    margin-bottom: 10px;
+}
+*/
 /* End uom event */
 /* Start study area */
 div.study-area-style {
