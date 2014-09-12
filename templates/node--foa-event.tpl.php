@@ -145,8 +145,8 @@ function _render_contact($email, $phone) {
 			'value' => $phone,
 			'safe_value' => $phone,
 		);
-		$phone = _unimelb_formatters_format_unimelb_phone($item)['safe_value'];
-		$phone_out = '<strong>Phone: </strong>'. l($phone, "tel:$phone", array('absolute' => TRUE)); 
+		$item = _unimelb_formatters_format_unimelb_phone($item);
+		$phone_out = '<strong>Phone: </strong>'. l($item['safe_value'], "tel:". $item['safe_value'], array('absolute' => TRUE)); 
 	}
 
 	$attachment = implode('<br/>', array($email_out, $phone_out));
