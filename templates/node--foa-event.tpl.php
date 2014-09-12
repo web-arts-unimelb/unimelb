@@ -106,8 +106,15 @@
 
 	<?php if(!empty($node->field_foa_event_book_url)): ?>
     <?php
-			$url = $node->field_foa_event_book_url[LANGUAGE_NONE][0]['value']; 
-      $output = '<h3>Booking</h3>'. l($url, $url);
+			$url = $node->field_foa_event_book_url[LANGUAGE_NONE][0]['value'];
+			$title_html = 'Register';
+			
+			$attr = array(
+				'attributes' => array(
+					'class' => 'button'
+				)
+			); 
+      $output = '<h3>Booking</h3>'. l($title_html, $url, $attr);
       echo $output;
     ?>
   <?php endif; ?>
@@ -134,6 +141,11 @@ function _render_contact($email, $phone) {
 	}
 	
 	if(!empty($phone)) {
+		$item = array(
+			'value' => $phone,
+			'safe_value' => $phone,
+		);
+		$phone = _unimelb_formatters_format_unimelb_phone($item)['safe_value'];
 		$phone_out = '<strong>Phone: </strong>'. l($phone, "tel:$phone", array('absolute' => TRUE)); 
 	}
 
