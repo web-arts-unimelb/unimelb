@@ -114,7 +114,7 @@
 					'class' => 'button'
 				)
 			); 
-      $output = '<h3>Booking</h3>'. l($title_html, $url, $attr);
+      $output = l($title_html, $url, $attr);
       echo $output;
     ?>
   <?php endif; ?>
