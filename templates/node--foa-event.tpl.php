@@ -114,7 +114,7 @@
 					'class' => 'button'
 				)
 			); 
-      $output = l($title_html, $url, $attr);
+      $output = '<br/>'. l($title_html, $url, $attr);
       echo $output;
     ?>
   <?php endif; ?>
