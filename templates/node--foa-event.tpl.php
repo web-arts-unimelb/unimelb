@@ -104,27 +104,27 @@
 		?>
   <?php endif; ?>
 
-	<?php if(!empty($node->field_foa_event_book_url)): ?>
-    <?php
-			$url = $node->field_foa_event_book_url[LANGUAGE_NONE][0]['value'];
-			$title_html = 'Register';
-			
-			$attr = array(
-				'attributes' => array(
-					'class' => 'button'
-				)
-			); 
-      $output = '<br/>'. l($title_html, $url, $attr);
-      echo $output;
-    ?>
-  <?php endif; ?>
-
 	<?php if(!empty($node->field_foa_event_p_link)): ?>
 		<?php
 			$presenters = $node->field_foa_event_p_link[LANGUAGE_NONE];
 			echo _render_presenter($presenters);	
 		?>
 	<?php endif; ?>
+
+	<?php if(!empty($node->field_foa_event_book_url)): ?>
+    <?php
+      $url = $node->field_foa_event_book_url[LANGUAGE_NONE][0]['value'];
+      $title_html = 'Register';
+
+      $attr = array(
+        'attributes' => array(
+          'class' => 'button'
+        )
+      );
+      $output = '<br/>'. l($title_html, $url, $attr);
+      echo $output;
+    ?>
+  <?php endif; ?>
 
 </div>
 
