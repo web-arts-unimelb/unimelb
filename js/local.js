@@ -119,36 +119,29 @@
 		});
 
 		$(window).resize(function() {
-				var newWidth = $fluidEl.width();
-				// Resize all videos according to their own aspect ratio
-				if(newWidth <= 630) {
-					$all_media.each(function() {
-						var $el = $(this);
-				
-						$el.removeAttr('height');
-		    		$el.removeAttr('width');
+			var newWidth = $fluidEl.width();
+			// Resize all videos according to their own aspect ratio
+			if(newWidth <= 630) {
+				$all_media.each(function() {
+					var $el = $(this);
+			
+					$el
+						.width(newWidth)
+						.height(newWidth * $el.data('aspectRatio'));
+				});
+			}
+			else {
+				$all_media.each(function() {
+	        var $el = $(this);
 
-						$el
-							.width(newWidth)
-							.height(newWidth * $el.data('aspectRatio'));
-					});
-				}
-				else {
-					$all_media.each(function() {
-		        var $el = $(this);
-
-		        $el.removeAttr('height');
-		        $el.removeAttr('width');
-
-		        $el
-		          .width($el.data('origWidth'))
-		          .height($el.data('origHeight'));
-		      });
-				}
-			// Kick off one resize to fix all videos on page load
-		}).resize();
+	        $el
+	          .width($el.data('origWidth'))
+	          .height($el.data('origHeight'));
+	      });
+			}
+		});
 	}
-
+	
 
 	function _control_award_filters() {
 		var gap = 10;
