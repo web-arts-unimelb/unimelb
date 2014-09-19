@@ -44,7 +44,9 @@
       // Control width for uni global header and footer
 			_control_width(); 
 
-			_resize_youtube_video();
+			_resize_media('youtube.com');
+			_resize_media('soundcloud.com');
+			_resize_media('vimeo.com');
 
 			// Control award exposed filter position
 			_control_award_filters();
@@ -99,30 +101,32 @@
     });
   }
 
+
 	// http://css-tricks.com/fluid-width-youtube-videos/
-	function _resize_youtube_video() {
-		// Find all YouTube videos
-    var $allVideos = $("iframe[src*='youtube.com']"),
+	function _resize_media(media_name) {
+		// e.g. media_name = 'youtube.com'
+		var media_name_id = "iframe[src*='" + media_name + "']"; 
+		var $all_media = $(media_name_id),
 
-    // The element that is fluid width
-    $fluidEl = $("body");
+		// The element that is fluid width
+		$fluidEl = $("body");
 
-    // Figure out and save aspect ratio for each video
-    $allVideos.each(function() {
-    	$(this).data('aspectRatio', this.height / this.width);
+		// Figure out and save aspect ratio for each video
+		$all_media.each(function() {
+			$(this).data('aspectRatio', this.height / this.width);
 			$(this).data('origWidth', this.width);
 			$(this).data('origHeight', this.height);
-    });
+		});
 
 		$(window).resize(function() {
 				var newWidth = $fluidEl.width();
 				// Resize all videos according to their own aspect ratio
 				if(newWidth <= 630) {
-					$allVideos.each(function() {
+					$all_media.each(function() {
 						var $el = $(this);
-					
+				
 						$el.removeAttr('height');
-        		$el.removeAttr('width');
+		    		$el.removeAttr('width');
 
 						$el
 							.width(newWidth)
@@ -130,16 +134,16 @@
 					});
 				}
 				else {
-					$allVideos.each(function() {
-            var $el = $(this);
+					$all_media.each(function() {
+		        var $el = $(this);
 
-            $el.removeAttr('height');
-            $el.removeAttr('width');
+		        $el.removeAttr('height');
+		        $el.removeAttr('width');
 
-            $el
-              .width($el.data('origWidth'))
-              .height($el.data('origHeight'));
-          });
+		        $el
+		          .width($el.data('origWidth'))
+		          .height($el.data('origHeight'));
+		      });
 				}
 			// Kick off one resize to fix all videos on page load
 		}).resize();
