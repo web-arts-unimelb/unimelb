@@ -1784,7 +1784,7 @@ div.study-area-style {
   body #site-search,
   body.backstretch #site-search {
     clear: both;
-    float: left; }
+    /*float: left;*/ }
 
   #slider .slider {
     display: none; }
