@@ -118,6 +118,9 @@
 			$(this).data('origHeight', this.height);
 		});
 
+		// Init
+		_resize_media_init($fluidEl, $all_media);	
+	
 		$(window).resize(function() {
 			var newWidth = $fluidEl.width();
 			// Resize all videos according to their own aspect ratio
@@ -140,6 +143,29 @@
 	      });
 			}
 		});
+	}
+
+
+	function _resize_media_init($fluidEl, $all_media) {
+		var newWidth = $fluidEl.width();
+		if(newWidth <= 630) {
+    	$all_media.each(function() {
+    	var $el = $(this);
+
+      $el
+        .width(newWidth)
+        .height(newWidth * $el.data('aspectRatio'));
+      });
+    }
+    else {
+      $all_media.each(function() {
+        var $el = $(this);
+
+        $el
+          .width($el.data('origWidth'))
+          .height($el.data('origHeight'));
+      });
+    }
 	}
 	
 
