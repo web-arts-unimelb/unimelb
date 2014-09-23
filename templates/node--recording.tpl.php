@@ -93,7 +93,10 @@
    		}
 		?>
 
-		<span class="read-more"><a href="#">Read more</a></span>
+		<div class="read-more-section">
+			<div class="read-more">Read more</div>
+			<div class="arrow-down"></div>
+		</div>
 	</div>
 
 	<?php
