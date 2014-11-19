@@ -1,13 +1,14 @@
 /* Design from mobile first */
+
 @media all and (max-width: 479px) {
-	.responsive-grid {
+	.my-responsive-grid {
 		width:100%;
     float:left;
 	}
 }
     
 @media all and (min-width: 480px) and (max-width: 959px) {
-	.responsive-grid {
+	.my-responsive-grid {
   	width:49%;
     float:left;
     &:nth-child(2n - 1) {
@@ -17,17 +18,17 @@
 }
 
 @media all and (min-width: 960px) {
-		.responsive-grid { 
-  		float:left;
-    	width:32%;
-    	&:nth-child(3n - 1) {
-    		margin-right:2%;
-      	margin-left:2%;
-    	}
+	.my-responsive-grid { 
+  	float:left;
+    width:32%;
+    &:nth-child(3n - 1) {
+    	margin-right:2%;
+      margin-left:2%;
+   	}
 
-    	&:nth-child(3n + 1) {
-    		clear:left;
-    	}
-		}
+    &:nth-child(3n + 1) {
+   		clear:left;
+   	}
+	}
 }
 
