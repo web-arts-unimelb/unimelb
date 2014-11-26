@@ -1,7 +1,7 @@
 /* Design from mobile first */
 
 @media all and (max-width: 479px) {
-	.my-responsive-grid {
+	.my-responsive-grid-three {
 		width:100%;
     float:left;
 
@@ -14,7 +14,7 @@
 }
     
 @media all and (min-width: 480px) and (max-width: 959px) {
-	.my-responsive-grid {
+	.my-responsive-grid-three {
   	width:49%;
     float:left;
     &:nth-child(2n - 1) {
@@ -30,7 +30,7 @@
 }
 
 @media all and (min-width: 960px) {
-	.my-responsive-grid { 
+	.my-responsive-grid-three { 
   	float:left;
     width:32%;
     &:nth-child(3n - 1) {

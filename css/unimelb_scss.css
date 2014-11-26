@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Unimelb overrides to theme elements.  */
 /* Settings! */
 /**
@@ -314,7 +315,7 @@ form[id*='views-exposed-form-staff-academic'] .views-exposed-form {
   background: transparent;
   border: none; }
 
-/* Areas of study in views accordion.  */
+/*! Areas of study in views accordion.  */
 .ui-widget h3 {
   font-family: "Droid Sans",Sans-serif; }
 
@@ -1737,29 +1738,29 @@ div.study-area-style {
       clear: left; } }
 /* Design from mobile first */
 @media all and (max-width: 479px) {
-  .my-responsive-grid {
+  .my-responsive-grid-three {
     width: 100%;
     float: left;
     margin-top: 1.5em; }
-    .my-responsive-grid h2 {
+    .my-responsive-grid-three h2 {
       margin: 0; } }
 @media all and (min-width: 480px) and (max-width: 959px) {
-  .my-responsive-grid {
+  .my-responsive-grid-three {
     width: 49%;
     float: left;
     margin-top: 1.5em; }
-    .my-responsive-grid:nth-child(2n - 1) {
+    .my-responsive-grid-three:nth-child(2n - 1) {
       margin-right: 2%; }
-    .my-responsive-grid h2 {
+    .my-responsive-grid-three h2 {
       margin: 0; } }
 @media all and (min-width: 960px) {
-  .my-responsive-grid {
+  .my-responsive-grid-three {
     float: left;
     width: 32%; }
-    .my-responsive-grid:nth-child(3n - 1) {
+    .my-responsive-grid-three:nth-child(3n - 1) {
       margin-right: 2%;
       margin-left: 2%; }
-    .my-responsive-grid:nth-child(3n + 1) {
+    .my-responsive-grid-three:nth-child(3n + 1) {
       clear: left; } }
 /**
  * Responsive markup for smaller-screen devices such as tablets and phones.
