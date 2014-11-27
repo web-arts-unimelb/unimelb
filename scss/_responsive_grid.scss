@@ -7,9 +7,10 @@
 
 		h2 {
 			margin: 0;
+			font-size: 18px;
 		}
 
-		margin-top: 1.5em;
+		margin-bottom: 0.5em;
 	}
 }
     
@@ -23,9 +24,10 @@
 
 		h2 {
       margin: 0;
+			font-size: 18px;
     }
 
-		margin-top: 1.5em;
+		margin-bottom: 0.5em;
   }
 }
 
@@ -41,6 +43,14 @@
     &:nth-child(3n + 1) {
    		clear:left;
    	}
+
+		h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+		margin-bottom: 0.5em;
 	}
+
 }
 
