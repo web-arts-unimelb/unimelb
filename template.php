@@ -140,7 +140,6 @@ function unimelb_preprocess_html(&$variables) {
  * undefined function errors.
  */
 function unimelb_preprocess_page(&$variables) {
-
   /**
    * If looking at a node with a redirect field, redirect now. Not later.
    */
@@ -527,18 +526,44 @@ function unimelb_jquerymenu_links($variables) {
  * Custom search form.
  */
 function unimelb_form_search_block_form_alter(&$form, &$form_state) {
-  $form['search_block_form']['#title'] = ''; // Set a default value for the textfield
-  $form['search_block_form']['#default_value'] = t('Search'); // Set a default value for the textfield
-  $form['actions']['submit']['#value'] = t('Go');
+	global $base_url;
+	global $conf;
 
-  // Add extra attributes to the text box
-  $form['search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = 'Search';}";
-  $form['search_block_form']['#attributes']['onfocus'] = "if (this.value == 'Search') {this.value = '';}";
-  // Prevent user from searching the default text
-  $form['#attributes']['onsubmit'] = "if(this.search_block_form.value=='Search'){ alert('Please enter a search'); return false; }";
+	if(in_array($base_url, $conf['possible_intranet_url'])) {
+		$form['search_block_form']['#title'] = ''; // Set a default value for the textfield
 
-  // Alternative (HTML5) placeholder attribute instead of using the javascript
-  $form['search_block_form']['#attributes']['placeholder'] = t('Search');
+    // Gary
+    $form['search_block_form']['#default_value'] = t(''); // Set a default value for the textfield
+
+    $form['actions']['submit']['#value'] = t('Go');
+
+    // Add extra attributes to the text box
+    $form['search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = '';}";
+    $form['search_block_form']['#attributes']['onfocus'] = "if (this.value == 'Search') {this.value = '';}";
+    // Prevent user from searching the default text
+    $form['#attributes']['onsubmit'] = "if(this.search_block_form.value=='Search'){ alert('Please enter a search'); return false; }";
+
+    // Alternative (HTML5) placeholder attribute instead of using the javascript
+    $form['search_block_form']['#attributes']['placeholder'] = t('');
+	}
+	else {
+
+  	$form['search_block_form']['#title'] = ''; // Set a default value for the textfield
+
+		// Gary
+ 		$form['search_block_form']['#default_value'] = t('Search'); // Set a default value for the textfield
+
+  	$form['actions']['submit']['#value'] = t('Go');
+
+  	// Add extra attributes to the text box
+  	$form['search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = 'Search';}";
+  	$form['search_block_form']['#attributes']['onfocus'] = "if (this.value == 'Search') {this.value = '';}";
+  	// Prevent user from searching the default text
+  	$form['#attributes']['onsubmit'] = "if(this.search_block_form.value=='Search'){ alert('Please enter a search'); return false; }";
+
+  	// Alternative (HTML5) placeholder attribute instead of using the javascript
+  	$form['search_block_form']['#attributes']['placeholder'] = t('Search');
+	}
 }
 
 /**

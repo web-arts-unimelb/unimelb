@@ -135,6 +135,14 @@
 		form {
 			margin-top: 0 !important;
 		}
+	
+		// Reset for intranet
+		width: 160px;
+
+		// Reset for intranet
+		form input[name="search_block_form"] {
+			width: 115px;
+		}
 	}
 	// End dropdown menu
 

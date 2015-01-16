@@ -19,6 +19,7 @@ regions[content_bottom]  = Content Bottom
 
 ; Regions only shown on the front page. Not all regions
 ; are visible in all layouts.
+regions[home_column_0]   = home_column_0
 regions[home_column_1]   = home_column_1
 regions[home_column_2]   = home_column_2
 regions[home_column_3]   = home_column_3

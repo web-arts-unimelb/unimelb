@@ -99,6 +99,7 @@ function unimelb_form_system_theme_settings_alter(&$form, $form_state) {
       '2' => t('2 - Two responsive in the main content, no navigation.'),
       '2-1' => t('2-2-2-2+1 - Two responsive in the main content, one fixed in navigation.'),
 			'2-1-12' => t('2-2-2-2+1 12 blocks - There are 12 blocks. Two responsive in the main content, one fixed in navigation.'),
+			'1-2-1-12' => t('1+2-2-2-2+1 - similar to 2-1-12, but with a block on top'),
       '3-1' => t('3-3-3-3+1 - Three responsive in the main content, one fixed in navigation.'),
       '6-1' => t('6-3-3+1 - Six plus three responsive in the main content, one fixed in navigation.'),
       '4-2' => t('4-2-4-2 - Four plus two responsive in the main content, no navigation.'),
