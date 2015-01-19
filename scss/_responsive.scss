@@ -135,15 +135,31 @@
 		form {
 			margin-top: 0 !important;
 		}
+
+		// Hide label
+		.search-label {
+			display: none;
+		}
 	
 		// Reset for intranet
-		width: 160px;
+		//width: 220px;
 
 		// Reset for intranet
-		form input[name="search_block_form"] {
-			width: 115px;
-		}
+		//form input[name="search_block_form"] {
+		//	width: 115px;
+		//}
 	}
+
+	// Hack
+	div.arts-dropdown div#arts-dropdown-site-search form input[name="search_block_form"] {
+		width: 125px;
+	}
+
+	// Hack
+	div.arts-dropdown div#arts-dropdown-site-search {
+		width: 220px;
+	}
+
 	// End dropdown menu
 
 	/* Start secondary menu */
