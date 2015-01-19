@@ -531,11 +531,11 @@ function unimelb_form_search_block_form_alter(&$form, &$form_state) {
 
 	if(in_array($base_url, $conf['possible_intranet_url'])) {
 		$form['search_block_form']['#title'] = ''; // Set a default value for the textfield
-
+	
     // Gary
     $form['search_block_form']['#default_value'] = t(''); // Set a default value for the textfield
 
-    $form['actions']['submit']['#value'] = t('Go');
+    $form['actions']['submit']['#value'] = t('Search');
 
     // Add extra attributes to the text box
     $form['search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = '';}";

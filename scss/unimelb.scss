@@ -1056,7 +1056,8 @@ div.arts-dropdown {
     text-align: center;
     text-decoration: none;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-    width: 160px;
+		/* 160px */
+    width: 820px;
 		 
 
     form {
@@ -1081,7 +1082,8 @@ div.arts-dropdown {
 			// Search input width
 			// Oginal width is 115px, so increase 500px == 615px
 			input[name=search_block_form] {
-				width: 115px;
+				/* 115px */
+				width: 490px;
 			}
     }
   }
