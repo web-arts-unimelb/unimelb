@@ -529,22 +529,24 @@ function unimelb_form_search_block_form_alter(&$form, &$form_state) {
 	global $base_url;
 	global $conf;
 
-	if(in_array($base_url, $conf['possible_intranet_url'])) {
-		$form['search_block_form']['#title'] = ''; // Set a default value for the textfield
+	if(isset($conf['possible_intranet_url'])) {
+		if(in_array($base_url, $conf['possible_intranet_url'])) {
+			$form['search_block_form']['#title'] = ''; // Set a default value for the textfield
 	
-    // Gary
-    $form['search_block_form']['#default_value'] = t(''); // Set a default value for the textfield
+    	// Gary
+    	$form['search_block_form']['#default_value'] = t(''); // Set a default value for the textfield
 
-    $form['actions']['submit']['#value'] = t('Search');
+    	$form['actions']['submit']['#value'] = t('Search');
 
-    // Add extra attributes to the text box
-    $form['search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = '';}";
-    $form['search_block_form']['#attributes']['onfocus'] = "if (this.value == 'Search') {this.value = '';}";
-    // Prevent user from searching the default text
-    $form['#attributes']['onsubmit'] = "if(this.search_block_form.value=='Search'){ alert('Please enter a search'); return false; }";
+    	// Add extra attributes to the text box
+    	$form['search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = '';}";
+    	$form['search_block_form']['#attributes']['onfocus'] = "if (this.value == 'Search') {this.value = '';}";
+    	// Prevent user from searching the default text
+    	$form['#attributes']['onsubmit'] = "if(this.search_block_form.value=='Search'){ alert('Please enter a search'); return false; }";
 
-    // Alternative (HTML5) placeholder attribute instead of using the javascript
-    $form['search_block_form']['#attributes']['placeholder'] = t('');
+    	// Alternative (HTML5) placeholder attribute instead of using the javascript
+    	$form['search_block_form']['#attributes']['placeholder'] = t('');
+		}
 	}
 	else {
 

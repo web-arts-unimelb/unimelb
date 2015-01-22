@@ -1056,9 +1056,7 @@ div.arts-dropdown {
     text-align: center;
     text-decoration: none;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-		/* 160px */
-    width: 800px;
-		 
+		width: 160px;
 
     form {
       margin-bottom: 0;
@@ -1082,11 +1080,26 @@ div.arts-dropdown {
 			// Search input width
 			// Oginal width is 115px, so increase 500px == 615px
 			input[name=search_block_form] {
-				/* 115px */
-				width: 490px;
+				width: 115px;
 			}
     }
   }
+
+	// http://stackoverflow.com/questions/20242313/extend-and-override-existing-style-with-sass-scss
+	// For staff intranet
+	div#arts-staff-dropdown-site-search {
+		@extend div#arts-dropdown-site-search;
+
+		width: 800px;
+
+		form {
+			input[name=search_block_form] {
+        width: 490px;
+				margin-left: 10px;
+      }
+		}
+	}
+
 }
 
 .float_right {

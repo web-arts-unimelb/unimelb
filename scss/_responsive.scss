@@ -140,26 +140,17 @@
 		.search-label {
 			display: none;
 		}
-	
-		// Reset for intranet
-		//width: 220px;
-
-		// Reset for intranet
-		//form input[name="search_block_form"] {
-		//	width: 115px;
-		//}
 	}
 
-	// Hack
-	div.arts-dropdown div#arts-dropdown-site-search form input[name="search_block_form"] {
+	// For staff intranet 
+	div.arts-dropdown div#arts-staff-dropdown-site-search form input[name="search_block_form"] {
 		width: 125px;
 	}
 
-	// Hack
-	div.arts-dropdown div#arts-dropdown-site-search {
+	// For staff intranet 
+	div.arts-dropdown div#arts-staff-dropdown-site-search {
 		width: 220px;
 	}
-
 	// End dropdown menu
 
 	/* Start secondary menu */

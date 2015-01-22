@@ -129,7 +129,21 @@
       </div>
 
       <?php if(!empty($site_search_box)): ?>
-        <div id="arts-dropdown-site-search" class="col-2 rightside float_right" style="margin-top: 0;">
+				<?php
+					global $conf;
+					global $base_url;
+
+					if(isset($conf['possible_intranet_url'])) {
+						if(in_array($base_url, $conf['possible_intranet_url'])) {
+							$search_div_id = 'arts-staff-dropdown-site-search';							
+						}
+					}
+					else {
+						$search_div_id = 'arts-dropdown-site-search';
+					}
+				?>
+
+        <div id="<?php echo $search_div_id; ?>" class="col-2 rightside float_right" style="margin-top: 0;">
           <?php print render($site_search_box); ?>
         </div>
       <?php endif; ?>
