@@ -868,6 +868,9 @@ h2 #block-views-highlights-news,
 h2 #block-views-zones-home-promo {
   margin-top: 1em; }
 
+.red-color {
+  color: red; }
+
 /* Table has a bottom margin. */
 table {
   margin-bottom: 1em; }
