@@ -51,7 +51,6 @@
     }
   }
 
-
   function _control_width() {
     // Initial
 		var document_width = null;

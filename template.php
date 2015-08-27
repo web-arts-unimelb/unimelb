@@ -130,6 +130,19 @@ function unimelb_preprocess_html(&$variables) {
       drupal_add_js("http://${debug_host}:${debug_port}/target/target-script-min.js#anonymous", 'external');
     }
   }
+
+	// After switching to ssl, we have issue, so .... 
+  // https://api.drupal.org/api/drupal/includes%21common.inc/function/drupal_add_html_head/7
+	// http://googlewebmastercentral.blogspot.com.au/2009/02/specify-your-canonical.html
+  $href = $GLOBALS['base_url']. request_uri();
+  $my_link = array(
+    '#tag' => 'link',
+    '#attributes' => array(
+      'rel' => 'canonical',
+      'href' => $href,
+    ),
+  );
+  drupal_add_html_head($my_link, 'canonical');
 }
 
 /**
